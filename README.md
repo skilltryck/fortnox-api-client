@@ -76,6 +76,7 @@ const fortnox = new FortnoxApiClient(
     clientSecret: 'your client secret',
 
     // To use endpoints you need to provide either accessToken or refreshToken to the client
+    // If refreshToken is provided, the accessToken will be acquired on first request and refreshToken will also refresh
     // To acquire these tokens see above information about authentication/authorization
     accessToken: 'token for Fortnox API',
     refreshToken: 'token for Fortnox API'
