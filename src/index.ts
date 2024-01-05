@@ -51,6 +51,10 @@ export class FortnoxApiClient {
       throw new Error(`Fortnox API Client error: Missing accessToken and refreshToken in constructor (on of them is required)`);
     }
 
+    if (options.accessToken && options.refreshToken) {
+      throw new Error(`Fortnox API Client error: Please provide either accessToken or refreshToken in the constructor`);
+    }
+
     if (options.accessToken) {
       this.tokens.accessToken = options.accessToken;
     }
@@ -153,7 +157,7 @@ export class FortnoxApiClient {
       refresh_token: this.tokens.refreshToken
     });
 
-    const accessTokenRequest = await axios.post('https://api.fortnox.se/oauth-v1/token', params, {
+    const accessTokenRequest = await axios.post('https://apps.fortnox.se/oauth-v1/token', params, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         Authorization: `Basic ${Buffer.from(`${this.options.clientId}:${this.options.clientSecret}`).toString('base64')}`
@@ -230,7 +234,7 @@ export class FortnoxApiClient {
       redirect_uri: redirectUri
     });
 
-    const accessTokenRequest = await axios.post('https://api.fortnox.se/oauth-v1/token', params, {
+    const accessTokenRequest = await axios.post('https://apps.fortnox.se/oauth-v1/token', params, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`
