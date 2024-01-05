@@ -7,6 +7,12 @@ import https from 'https';
 import CacheableLookup from 'cacheable-lookup';
 import FormData from 'form-data';
 
+export {
+  IFortnoxApiClientConfig,
+  IFortnoxApiClientOptions,
+  FortnoxScope,
+};
+
 // DNS cache to prevent ENOTFOUND and other such issues
 const dnsCache = new CacheableLookup();
 let dnsCacheInstalled = false;
@@ -39,6 +45,10 @@ export class FortnoxApiClient {
 
     if (!options.clientSecret) {
       throw new Error('Fortnox API Client error: Missing options.clientSecret');
+    }
+
+    if (!options.accessToken && !options.refreshToken) {
+      throw new Error(`Fortnox API Client error: Missing accessToken and refreshToken in constructor (on of them is required)`);
     }
 
     if (options.accessToken) {
@@ -84,18 +94,50 @@ export class FortnoxApiClient {
       securityWorker: this.config.securityWorker || this.securityWorker
     });
 
-    this.api.setSecurityData(this.tokens);
+    this.api.setSecurityData(this);
+
+    // Install security worker manually
+    this.installSecurityWorker();
 
     // Install axios error handler
     this.installErrorHandler();
+  }
+
+  // Add securityWorker as request interceptor because endpoints are not flagged as secure(?)
+  private installSecurityWorker() {
+    this.api.instance.interceptors.request.use(
+      async (config) => {
+        const securityWorker = this.config.securityWorker || this.securityWorker;
+
+        if (securityWorker) {
+          const securityConfig = await securityWorker(this);
+
+          if (securityConfig?.headers) {
+            config.headers.set('Authorization', securityConfig.headers.Authorization);
+          }
+        }
+
+        // The API requires these headers to be set
+        config.headers.set('Content-Type', 'application/json');
+        config.headers.set('Accept', 'application/json');
+
+        return config;
+      },
+      (error) => {
+        throw error;
+      }
+    );
   }
 
   private installErrorHandler() {
     this.api.instance.interceptors.response.use(
       (response) => response,
       (error) => {
-        error.message =
-          `Fortnox HTTP error ${error.response.status} (${error.response.statusText}): ` + JSON.stringify(error.response.data);
+        if (error?.response) {
+          error.message =
+            `Fortnox HTTP error ${error.response.status} (${error.response.statusText}): ` + JSON.stringify(error.response.data);
+        }
+
         throw error;
       }
     );
@@ -116,30 +158,30 @@ export class FortnoxApiClient {
         'Content-Type': 'application/x-www-form-urlencoded',
         Authorization: `Basic ${Buffer.from(`${this.options.clientId}:${this.options.clientSecret}`).toString('base64')}`
       }
+    }).catch((error) => {
+      if (error?.response) {
+        error.message = `Fortnox HTTP error ${error.response.status} (${error.response.statusText}): ` + JSON.stringify(error.response.data);
+      }
+
+      throw error;
     });
 
     this.tokens.accessToken = accessTokenRequest.data.access_token;
     this.tokens.refreshToken = accessTokenRequest.data.refresh_token;
 
     return this.tokens;
-
-    // this.api.setSecurityData(this.tokens);
   }
 
   // https://www.fortnox.se/developer/authorization/make-request
-  private async securityWorker(tokens: IAccessTokens) {
-    if (!tokens.accessToken && !tokens.refreshToken) {
-      throw new Error(`Fortnox API Client securityWorker Error: Missing accessToken and refreshToken`);
-    }
-
-    if (!tokens.accessToken && tokens.refreshToken) {
-      await this.refreshTokens();
+  private async securityWorker(fortnox: FortnoxApiClient): Promise<AxiosRequestConfig> {
+    if (!fortnox.tokens.accessToken && fortnox.tokens.refreshToken) {
+      await fortnox.refreshTokens();
     }
 
     const axiosRequestConfig: AxiosRequestConfig = {};
 
     axiosRequestConfig.headers = {
-      Authorization: `Bearer ${tokens.accessToken}`
+      Authorization: `Bearer ${fortnox.tokens.accessToken}`
     };
 
     return axiosRequestConfig;
@@ -193,6 +235,12 @@ export class FortnoxApiClient {
         'Content-Type': 'application/x-www-form-urlencoded',
         Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`
       }
+    }).catch((error) => {
+      if (error?.response) {
+        error.message = `Fortnox HTTP error ${error.response.status} (${error.response.statusText}): ` + JSON.stringify(error.response.data);
+      }
+
+      throw error;
     });
 
     return { accessToken: accessTokenRequest.data.access_token, refreshToken: accessTokenRequest.data.refresh_token };
