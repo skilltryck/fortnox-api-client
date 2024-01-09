@@ -2,7 +2,6 @@
 
 **FortnoxApiClient** is a third party [Fortnox API](https://apps.fortnox.se/apidocs) client for NodeJS. It is a wrapper around an API client that has been [automatically generated](https://www.npmjs.com/package/swagger-typescript-api) using the [OpenAPI schema](https://apps.fortnox.se/api/apidocs/swagger-v1) provided by Fortnox.
 
-
 ## Installation
 
 Add to project's package.json:
@@ -67,21 +66,20 @@ const tokens = await FortnoxApiClient.getTokensByAuthorizationCode(
 // tokens.accessToken = 1hour token to use Fortnox API
 // tokens.refreshToken = 45day long lived token to refresh access token when necessary
 ```
+
 ## Setup client with options
 
 ```javascript
-const fortnox = new FortnoxApiClient(
-  {
-    clientId: 'your client id',
-    clientSecret: 'your client secret',
+const fortnox = new FortnoxApiClient({
+  clientId: 'your client id',
+  clientSecret: 'your client secret',
 
-    // To use endpoints you need to provide either accessToken or refreshToken to the client
-    // If refreshToken is provided, the accessToken will be acquired on first request and refreshToken will also refresh
-    // To acquire these tokens see above information about authentication/authorization
-    accessToken: 'token for Fortnox API',
-    refreshToken: 'token for Fortnox API'
-  }
-);
+  // To use endpoints you need to provide either accessToken or refreshToken to the client
+  // If refreshToken is provided, the accessToken will be acquired on first request and refreshToken will also refresh
+  // To acquire these tokens see above information about authentication/authorization
+  accessToken: 'token for Fortnox API',
+  refreshToken: 'token for Fortnox API'
+});
 ```
 
 Example usage after initialization:
@@ -99,3 +97,4 @@ Available methods can be found in the [API documentation](https://apps.fortnox.s
 - Fortnox: https://www.fortnox.se/
 - Fortnox API Guide: https://apps.fortnox.se/apidocs
 - Fortnox Authorization Guide: https://www.fortnox.se/developer/authorization
+- Fortnox API scopes: https://www.fortnox.se/developer/guides-and-good-to-know/scopes
