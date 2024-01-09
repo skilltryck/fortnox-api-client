@@ -87,7 +87,7 @@ const fortnox = new FortnoxApiClient(
 Example usage after initialization:
 
 ```javascript
-const company = await fortnox.api.v3.getCompanyInformationResource();
+const company = await fortnox.api.companyinformation.getCompanyInformationResource();
 
 console.log(company);
 ```
