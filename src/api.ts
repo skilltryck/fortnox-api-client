@@ -5806,7 +5806,7 @@ export class HttpClient<SecurityDataType = unknown> {
  * Search the documentation using the search field in the top left corner.
  */
 export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
-  api = {
+  warehouse = {
     /**
      * @description <p> List stock points, optionally include a query parameter `q` to filter on stock point code or name. <p> Use query param `state` to filter on ACTIVE, INACTIVE or ALL (default is to include only ACTIVE stock points). <p> Stock locations are NOT included in the response.
      *
@@ -7600,7 +7600,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  time = {
     /**
      * @description <p> <b>Response property descriptions:</b><br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>id</i></b> - The unique id of a basic common combination of article registrations. (The basic common combination means "user/purchase date/customer/project/cost center", which leads to a dialog with several article registrations.)<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>purchaseDate</i></b> - The date on which the article is purchased or registered for charging.<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>ownerId</i></b> - The user ID who creates the basic common combination.<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>version</i></b> - The version of the basic common combination (article dialog) being updated, which is used for handling the concurrency issue.<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>registrationType</i></b> - It is always "ARTICLE" for article list endpoint.<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b>Sub-Class - ArticleRegistration:</b><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>id</i></b> - The unique id of an article registration.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>registrationId</i></b> - The id of the basic common combination.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>orderIndex</i></b> - the order index for the article registration in regard of the common combination.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>ownerId</i></b> - The user ID who owns the article registration.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>totalQuantity</i></b> - The quantity of the article.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>unitPrice</i></b> - The unit price connected to the article registration, which might be locked on an invoice/order basis or for non-invoiceable.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>unitCost</i></b> - The unit cost connected to the article registration, which might be locked on an invoice/order basis.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>invoiceBasisId</i></b> - The ID of invoice/order basis which is used for creating an invoice/order.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>nonInvoiceable</i></b> - If the article registration would be ignored for charging or not.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>note</i></b> - The note on the article registration.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>documentId</i></b> - The document ID which includes the article registration and is created in Invoicing application.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>documentType</i></b> - The document type which could be "invoice" or "order". </p>
      *
@@ -7747,132 +7748,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
-    /**
-     * No description
-     *
-     * @tags AttachmentResource
-     * @name GetAttachments
-     * @summary Get attached files on an entity
-     * @request GET:/api/fileattachments/attachments-v1
-     * @response `200` `(Attachment)[]` A list of attachments
-     */
-    getAttachments: (
-      query: {
-        /** ids of the entities whose attachments should be fetched */
-        entityid: number[];
-        /** type of the entities whose attachments should be fetched */
-        entitytype: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG";
-      },
-      params: RequestParams = {},
-    ) =>
-      this.request<Attachment[], any>({
-        path: `/api/fileattachments/attachments-v1`,
-        method: "GET",
-        query: query,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags AttachmentResource
-     * @name Attach
-     * @summary Attach files to one or more entities
-     * @request POST:/api/fileattachments/attachments-v1
-     * @response `200` `(Attachment)[]` A list of attachments
-     */
-    attach: (attachments: Attachment[], params: RequestParams = {}) =>
-      this.request<Attachment[], any>({
-        path: `/api/fileattachments/attachments-v1`,
-        method: "POST",
-        body: attachments,
-        type: ContentType.Json,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags AttachmentResource
-     * @name GetNumberOfAttachmentsForEntity
-     * @summary List number of attachments
-     * @request GET:/api/fileattachments/attachments-v1/numberofattachments
-     * @response `200` `(NumberOfAttachments)[]` A list of the number of attachments on each entity
-     */
-    getNumberOfAttachmentsForEntity: (
-      query: {
-        /** ids of the entities to look for number of attachments on */
-        entityids: number[];
-        /** type of the entities  to look for number of attachments on */
-        entitytype: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG";
-      },
-      params: RequestParams = {},
-    ) =>
-      this.request<NumberOfAttachments[], any>({
-        path: `/api/fileattachments/attachments-v1/numberofattachments`,
-        method: "GET",
-        query: query,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags AttachmentResource
-     * @name ValidateIncludedOnSend
-     * @summary Validates a list of attachments that will be included on send
-     * @request POST:/api/fileattachments/attachments-v1/validateincludedonsend
-     * @response `default` `void` nothing
-     */
-    validateIncludedOnSend: (attachments: Attachment[], params: RequestParams = {}) =>
-      this.request<any, void>({
-        path: `/api/fileattachments/attachments-v1/validateincludedonsend`,
-        method: "POST",
-        body: attachments,
-        type: ContentType.Json,
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags AttachmentResource
-     * @name UpdateAttachment
-     * @summary Update attachment
-     * @request PUT:/api/fileattachments/attachments-v1/{attachmentId}
-     * @response `200` `Attachment` The updated attachment
-     */
-    updateAttachment: (attachmentId: string, attachment: Attachment, params: RequestParams = {}) =>
-      this.request<Attachment, any>({
-        path: `/api/fileattachments/attachments-v1/${attachmentId}`,
-        method: "PUT",
-        body: attachment,
-        type: ContentType.Json,
-        format: "json",
-        ...params,
-      }),
-
-    /**
-     * No description
-     *
-     * @tags AttachmentResource
-     * @name Detach
-     * @summary Detach file
-     * @request DELETE:/api/fileattachments/attachments-v1/{attachmentId}
-     * @response `default` `void` void
-     */
-    detach: (attachmentId: string, params: RequestParams = {}) =>
-      this.request<any, void>({
-        path: `/api/fileattachments/attachments-v1/${attachmentId}`,
-        method: "DELETE",
-        ...params,
-      }),
   };
-  v3 = {
+  absencetransactions = {
     /**
      * @description Supports query-string parameters <strong>employeeid</strong> and <strong>date</strong> for filtering the result.
      *
@@ -8021,7 +7898,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  accountcharts = {
     /**
      * @description Retrieves a list of all the available account charts.
      *
@@ -8038,7 +7916,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  accounts = {
     /**
      * @description Retrieves the details of an account. You need to supply the unique account number that was returned when the account was created or retrieved from the list of accounts.
      *
@@ -8143,7 +8022,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  archive = {
     /**
      * @description If no path is provided the root will be returned. Providing fileId will return given file from fileattachments.
      *
@@ -8264,7 +8144,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  articlefileconnections = {
     /**
      * @description The article file connections register can return a list of records or a single record. By specifying a FileId in the URL, a single record will be returned. Not specifying a FileId will return a list of records.
      *
@@ -8336,7 +8217,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  articles = {
     /**
      * @description Retrieves the details of an article. You need to supply the unique article number that was returned when the article was created or retrieved from the list of articles.
      *
@@ -8449,7 +8331,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  assetfileconnections = {
     /**
      * @description The asset register can return a list of assets or a single asset. By specifying a FileId in the URL, a single asset will be returned. Not specifying a FileId will return a list of records.
      *
@@ -8501,7 +8384,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  assets = {
     /**
      * No description
      *
@@ -8791,7 +8675,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  attendancetransactions = {
     /**
      * @description Supports query-string parameters <strong>employeeid</strong> and <strong>date</strong> for filtering the result.
      *
@@ -8879,7 +8764,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  companyinformation = {
     /**
      * No description
      *
@@ -8896,7 +8782,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  settings = {
     /**
      * No description
      *
@@ -8914,6 +8801,24 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
 
+    /**
+     * @description If no date is returned, no period is locked.
+     *
+     * @tags LockedPeriodResource
+     * @name GetLockedPeriodResource
+     * @summary Retrieve the locked period
+     * @request GET:/3/settings/lockedperiod/
+     * @response `200` `LockedPeriodWrap` the locked period
+     */
+    getLockedPeriodResource: (params: RequestParams = {}) =>
+      this.request<LockedPeriodWrap, any>({
+        path: `/3/settings/lockedperiod/`,
+        method: "GET",
+        format: "json",
+        ...params,
+      }),
+  };
+  contractaccruals = {
     /**
      * @description The contract accruals register can return a list of records or a single record. By specifying a DocumentNumber in the URL, a single record will be returned. Not specifying a DocumentNumber will return a list of records.
      *
@@ -9005,7 +8910,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  contracts = {
     /**
      * No description
      *
@@ -9135,7 +9041,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  contracttemplates = {
     /**
      * @description The contract template resource can return a list of records or a single record. By specifying a TemplateNumber in the URL, a single record will be returned. Not specifying a TemplateNumber will return a list of records.
      *
@@ -9211,7 +9118,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  costcenters = {
     /**
      * @description The cost centers register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
      *
@@ -9299,7 +9207,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  currencies = {
     /**
      * @description The currency register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
      *
@@ -9387,7 +9296,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  customerreferences = {
     /**
      * @description </p>
      *
@@ -9489,7 +9399,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  customers = {
     /**
      * @description The customers are returned sorted by customer number with the lowest number appearing first.
      *
@@ -9606,7 +9517,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  employees = {
     /**
      * @description ScheduleId, MonthlySalary and HourlyPay reflect current values, all ScheduleIds are returned in DatedSchedules and all MonthlySalary and HourlyPay pairs are returned in DatedWages.
      *
@@ -9678,7 +9590,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  euvatlimitregulation = {
     /**
      * No description
      *
@@ -9705,7 +9618,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  expenses = {
     /**
      * @description Retrieve expense codes.
      *
@@ -9758,7 +9672,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  noxfinansinvoices = {
     /**
      * @description <p> When sending an invoice with Fortnox Finans you will get the invoice status returned if everything succeeded, if there were any problems, an error will be returned. <p> Please note that it can take 1 min to several hours before you will get back status, OCR number and link to PDF document, meanwhile the invoice will have status UNKNOWN or NOT_AUTHORIZED. <p> Fortnox Finans is currently only accepting invoices in SEK <p> <i>Parameters in the body:</i> <ul> <li><b>InvoiceNumber</b>: the invoice number for the invoice which should be sent with Fortnox Finans</li> <li><b>SendMethod</b>: how to send the invoice; EMAIL, LETTER, EINVOICE or NONE</li> <li><b>Service</b>: which service to use; LEDGERBASE or REMINDER</li> </ul> <p>
      *
@@ -9883,7 +9798,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  financialyears = {
     /**
      * @description Add the query param to filter on specific date.
      *
@@ -9946,7 +9862,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  inbox = {
     /**
      * No description
      *
@@ -10027,7 +9944,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  invoiceaccruals = {
     /**
      * @description The invoice accruals register can return a list of records or a single record. By specifying a InvoiceNumber in the URL, a single record will be returned. Not specifying a InvoiceNumber will return a list of records.
      *
@@ -10119,7 +10037,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  invoicepayments = {
     /**
      * No description
      *
@@ -10238,7 +10157,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  invoices = {
     /**
      * No description
      *
@@ -10527,7 +10447,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  labels = {
     /**
      * No description
      *
@@ -10598,24 +10519,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
-    /**
-     * @description If no date is returned, no period is locked.
-     *
-     * @tags LockedPeriodResource
-     * @name GetLockedPeriodResource
-     * @summary Retrieve the locked period
-     * @request GET:/3/settings/lockedperiod/
-     * @response `200` `LockedPeriodWrap` the locked period
-     */
-    getLockedPeriodResource: (params: RequestParams = {}) =>
-      this.request<LockedPeriodWrap, any>({
-        path: `/3/settings/lockedperiod/`,
-        method: "GET",
-        format: "json",
-        ...params,
-      }),
-
+  };
+  me = {
     /**
  * No description
  *
@@ -10633,7 +10538,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  modesofpayments = {
     /**
      * @description The modes of payments register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
      *
@@ -10705,7 +10611,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  offers = {
     /**
      * No description
      *
@@ -10929,7 +10836,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  orders = {
     /**
      * No description
      *
@@ -11142,7 +11050,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  predefinedaccounts = {
     /**
      * No description
      *
@@ -11199,7 +11108,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  predefinedvoucherseries = {
     /**
      * No description
      *
@@ -11256,7 +11166,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  pricelists = {
     /**
      * @description The price lists register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
      *
@@ -11328,7 +11239,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  prices = {
     /**
      * No description
      *
@@ -11461,7 +11373,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  printtemplates = {
     /**
      * No description
      *
@@ -11478,7 +11391,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  projects = {
     /**
      * No description
      *
@@ -11566,7 +11480,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  salarytransactions = {
     /**
      * @description Supports query-string parameters <b>employeeid</b> and <b>date</b> for filtering the result.
      *
@@ -11671,7 +11586,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  scheduletimes = {
     /**
      * No description
      *
@@ -11729,7 +11645,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  sie = {
     /**
      * @description Retrieves a SIE file as streamed content
      *
@@ -11756,7 +11673,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         query: query,
         ...params,
       }),
-
+  };
+  supplierinvoiceaccruals = {
     /**
      * @description The supplier invoice accruals register can return a list of records or a single record. By specifying a SupplierInvoiceNumber in the URL, a single record will be returned. Not specifying a SupplierInvoiceNumber will return a list of records.
      *
@@ -11851,7 +11769,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  supplierinvoiceexternalurlconnections = {
     /**
      * No description
      *
@@ -11927,7 +11846,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  supplierinvoicefileconnections = {
     /**
      * @description The supplier invoice file connections register can return a list of records or a single record. By specifying a FileId in the URL, a single record will be returned. Not specifying a FileId will return a list of records.
      *
@@ -11999,7 +11919,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  supplierinvoicepayments = {
     /**
      * No description
      *
@@ -12111,7 +12032,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  supplierinvoices = {
     /**
      * No description
      *
@@ -12286,7 +12208,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  suppliers = {
     /**
      * @description The supplier register can return a list of records or a single record. By specifying a SupplierNumber in the URL, a single record will be returned. Not specifying a SupplierNumber will return a list of records.
      *
@@ -12358,7 +12281,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  taxreductions = {
     /**
      * No description
      *
@@ -12453,7 +12377,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  termsofdeliveries = {
     /**
      * @description The terms of deliveries register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
      *
@@ -12525,7 +12450,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  termsofpayments = {
     /**
      * No description
      *
@@ -12613,7 +12539,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  emailsenders = {
     /**
      * No description
      *
@@ -12668,7 +12595,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  units = {
     /**
      * @description The units register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
      *
@@ -12756,7 +12684,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  vacationdebtbasis = {
     /**
      * No description
      *
@@ -12773,7 +12702,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  voucherfileconnections = {
     /**
      * @description The voucher file connections register can return a list of records or a single record. By specifying a FileId in the URL, a single record will be returned. Not specifying a FileId will return a list of records.
      *
@@ -12845,7 +12775,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-
+  };
+  vouchers = {
     /**
      * No description
      *
@@ -12959,7 +12890,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  voucherseries = {
     /**
      * @description The voucher series register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
      *
@@ -13031,7 +12963,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-
+  };
+  wayofdeliveries = {
     /**
      * @description The way of delivery register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
      *
@@ -13116,6 +13049,131 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     removeWayOfDeliveriesResource: (code: string, params: RequestParams = {}) =>
       this.request<any, void>({
         path: `/3/wayofdeliveries/${code}`,
+        method: "DELETE",
+        ...params,
+      }),
+  };
+  fileattachments = {
+    /**
+     * No description
+     *
+     * @tags AttachmentResource
+     * @name GetAttachments
+     * @summary Get attached files on an entity
+     * @request GET:/api/fileattachments/attachments-v1
+     * @response `200` `(Attachment)[]` A list of attachments
+     */
+    getAttachments: (
+      query: {
+        /** ids of the entities whose attachments should be fetched */
+        entityid: number[];
+        /** type of the entities whose attachments should be fetched */
+        entitytype: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG";
+      },
+      params: RequestParams = {},
+    ) =>
+      this.request<Attachment[], any>({
+        path: `/api/fileattachments/attachments-v1`,
+        method: "GET",
+        query: query,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags AttachmentResource
+     * @name Attach
+     * @summary Attach files to one or more entities
+     * @request POST:/api/fileattachments/attachments-v1
+     * @response `200` `(Attachment)[]` A list of attachments
+     */
+    attach: (attachments: Attachment[], params: RequestParams = {}) =>
+      this.request<Attachment[], any>({
+        path: `/api/fileattachments/attachments-v1`,
+        method: "POST",
+        body: attachments,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags AttachmentResource
+     * @name GetNumberOfAttachmentsForEntity
+     * @summary List number of attachments
+     * @request GET:/api/fileattachments/attachments-v1/numberofattachments
+     * @response `200` `(NumberOfAttachments)[]` A list of the number of attachments on each entity
+     */
+    getNumberOfAttachmentsForEntity: (
+      query: {
+        /** ids of the entities to look for number of attachments on */
+        entityids: number[];
+        /** type of the entities  to look for number of attachments on */
+        entitytype: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG";
+      },
+      params: RequestParams = {},
+    ) =>
+      this.request<NumberOfAttachments[], any>({
+        path: `/api/fileattachments/attachments-v1/numberofattachments`,
+        method: "GET",
+        query: query,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags AttachmentResource
+     * @name ValidateIncludedOnSend
+     * @summary Validates a list of attachments that will be included on send
+     * @request POST:/api/fileattachments/attachments-v1/validateincludedonsend
+     * @response `default` `void` nothing
+     */
+    validateIncludedOnSend: (attachments: Attachment[], params: RequestParams = {}) =>
+      this.request<any, void>({
+        path: `/api/fileattachments/attachments-v1/validateincludedonsend`,
+        method: "POST",
+        body: attachments,
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags AttachmentResource
+     * @name UpdateAttachment
+     * @summary Update attachment
+     * @request PUT:/api/fileattachments/attachments-v1/{attachmentId}
+     * @response `200` `Attachment` The updated attachment
+     */
+    updateAttachment: (attachmentId: string, attachment: Attachment, params: RequestParams = {}) =>
+      this.request<Attachment, any>({
+        path: `/api/fileattachments/attachments-v1/${attachmentId}`,
+        method: "PUT",
+        body: attachment,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags AttachmentResource
+     * @name Detach
+     * @summary Detach file
+     * @request DELETE:/api/fileattachments/attachments-v1/{attachmentId}
+     * @response `default` `void` void
+     */
+    detach: (attachmentId: string, params: RequestParams = {}) =>
+      this.request<any, void>({
+        path: `/api/fileattachments/attachments-v1/${attachmentId}`,
         method: "DELETE",
         ...params,
       }),
