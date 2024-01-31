@@ -22,6 +22,7 @@ export type FortnoxScope =
   | 'price'
   | 'project'
   | 'profile'
+  | 'supplier'
   | 'supplierinvoice';
 
 export interface IAccessTokens {

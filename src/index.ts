@@ -1,4 +1,4 @@
-import { Api, ApiConfig } from './api';
+import { Api, ApiConfig, ContentType, FolderFileRowWrap, RequestParams } from './api';
 import axios, { AxiosRequestConfig } from 'axios';
 import { HttpsAgent } from 'agentkeepalive';
 import { IFortnoxApiClientConfig, IFortnoxApiClientOptions, IAccessTokens, FortnoxScope } from './interfaces';
@@ -7,11 +7,7 @@ import https from 'https';
 import CacheableLookup from 'cacheable-lookup';
 import FormData from 'form-data';
 
-export {
-  IFortnoxApiClientConfig,
-  IFortnoxApiClientOptions,
-  FortnoxScope,
-};
+export { IFortnoxApiClientConfig, IFortnoxApiClientOptions, FortnoxScope, FileBuffer };
 
 // DNS cache to prevent ENOTFOUND and other such issues
 const dnsCache = new CacheableLookup();
@@ -121,8 +117,13 @@ export class FortnoxApiClient {
           }
         }
 
-        // The API requires these headers to be set
-        config.headers.set('Content-Type', 'application/json');
+        // // The API requires these headers to be set
+        if (config.data instanceof FormData) {
+          config.headers.set('Content-Type', 'multipart/form-data');
+        } else {
+          config.headers.set('Content-Type', 'application/json');
+        }
+
         config.headers.set('Accept', 'application/json');
 
         return config;
@@ -157,18 +158,21 @@ export class FortnoxApiClient {
       refresh_token: this.tokens.refreshToken
     });
 
-    const accessTokenRequest = await axios.post('https://apps.fortnox.se/oauth-v1/token', params, {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        Authorization: `Basic ${Buffer.from(`${this.options.clientId}:${this.options.clientSecret}`).toString('base64')}`
-      }
-    }).catch((error) => {
-      if (error?.response) {
-        error.message = `Fortnox HTTP error ${error.response.status} (${error.response.statusText}): ` + JSON.stringify(error.response.data);
-      }
+    const accessTokenRequest = await axios
+      .post('https://apps.fortnox.se/oauth-v1/token', params, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Authorization: `Basic ${Buffer.from(`${this.options.clientId}:${this.options.clientSecret}`).toString('base64')}`
+        }
+      })
+      .catch((error) => {
+        if (error?.response) {
+          error.message =
+            `Fortnox HTTP error ${error.response.status} (${error.response.statusText}): ` + JSON.stringify(error.response.data);
+        }
 
-      throw error;
-    });
+        throw error;
+      });
 
     this.tokens.accessToken = accessTokenRequest.data.access_token;
     this.tokens.refreshToken = accessTokenRequest.data.refresh_token;
@@ -234,18 +238,21 @@ export class FortnoxApiClient {
       redirect_uri: redirectUri
     });
 
-    const accessTokenRequest = await axios.post('https://apps.fortnox.se/oauth-v1/token', params, {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`
-      }
-    }).catch((error) => {
-      if (error?.response) {
-        error.message = `Fortnox HTTP error ${error.response.status} (${error.response.statusText}): ` + JSON.stringify(error.response.data);
-      }
+    const accessTokenRequest = await axios
+      .post('https://apps.fortnox.se/oauth-v1/token', params, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`
+        }
+      })
+      .catch((error) => {
+        if (error?.response) {
+          error.message =
+            `Fortnox HTTP error ${error.response.status} (${error.response.statusText}): ` + JSON.stringify(error.response.data);
+        }
 
-      throw error;
-    });
+        throw error;
+      });
 
     return { accessToken: accessTokenRequest.data.access_token, refreshToken: accessTokenRequest.data.refresh_token };
   }
