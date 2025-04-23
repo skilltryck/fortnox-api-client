@@ -8353,6 +8353,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         lastmodified?: string
         /** field to sort returned list */
         sortby?: "articlenumber" | "quantityinstock" | "reservedquantity" | "stockvalue"
+        /** filter by page */
+        page?: number
       },
       params: RequestParams = {}
     ) =>
