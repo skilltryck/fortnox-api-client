@@ -10,285 +10,285 @@
  */
 
 export interface Delete {
-  Date?: string;
+  Date?: string
 }
 
 export interface AccountListItemWrap {
-  Accounts?: AccountListItem[];
+  Accounts?: AccountListItem[]
 }
 
 export interface Customer {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 1024
    */
-  Address1?: string;
+  Address1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Address2?: string;
+  Address2?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  City?: string;
-  Country?: string;
+  City?: string
+  Country?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Comments?: string;
+  Comments?: string
   /**
    * @minLength 3
    * @maxLength 3
    */
-  Currency?: string;
-  CostCenter?: string;
+  Currency?: string
+  CostCenter?: string
   /**
    * @minLength 2
    * @maxLength 2
    */
-  CountryCode?: string;
-  Active?: boolean;
+  CountryCode?: string
+  Active?: boolean
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  CustomerNumber?: string;
-  DefaultDeliveryTypes?: CustomerDefaultDeliveryTypes;
-  DefaultTemplates?: CustomerDefaultTemplates;
+  CustomerNumber?: string
+  DefaultDeliveryTypes?: CustomerDefaultDeliveryTypes
+  DefaultTemplates?: CustomerDefaultTemplates
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryAddress1?: string;
+  DeliveryAddress1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryAddress2?: string;
+  DeliveryAddress2?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryCity?: string;
+  DeliveryCity?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryCountry?: string;
+  DeliveryCountry?: string
   /**
    * @minLength 2
    * @maxLength 2
    */
-  DeliveryCountryCode?: string;
+  DeliveryCountryCode?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryFax?: string;
+  DeliveryFax?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryName?: string;
+  DeliveryName?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryPhone1?: string;
+  DeliveryPhone1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryPhone2?: string;
+  DeliveryPhone2?: string
   /**
    * @minLength 0
    * @maxLength 10
    */
-  DeliveryZipCode?: string;
+  DeliveryZipCode?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Email?: string;
+  Email?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailInvoice?: string;
+  EmailInvoice?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailInvoiceBCC?: string;
+  EmailInvoiceBCC?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailInvoiceCC?: string;
+  EmailInvoiceCC?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailOffer?: string;
+  EmailOffer?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailOfferBCC?: string;
+  EmailOfferBCC?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailOfferCC?: string;
+  EmailOfferCC?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailOrder?: string;
+  EmailOrder?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailOrderBCC?: string;
+  EmailOrderBCC?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  EmailOrderCC?: string;
+  EmailOrderCC?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  ExternalReference?: string;
+  ExternalReference?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Fax?: string;
+  Fax?: string
   /**
    * @minLength 13
    * @maxLength 13
    */
-  GLN?: string;
+  GLN?: string
   /**
    * @minLength 13
    * @maxLength 13
    */
-  GLNDelivery?: string;
-  InvoiceAdministrationFee?: string;
+  GLNDelivery?: string
+  InvoiceAdministrationFee?: string
   /** @format double */
-  InvoiceDiscount?: number;
-  InvoiceFreight?: string;
+  InvoiceDiscount?: number
+  InvoiceFreight?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  InvoiceRemark?: string;
+  InvoiceRemark?: string
   /**
    * @minLength 1
    * @maxLength 1024
    */
-  Name: string;
-  OrganisationNumber?: string;
+  Name: string
+  OrganisationNumber?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  OurReference?: string;
+  OurReference?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone1?: string;
+  Phone1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone2?: string;
-  PriceList?: string;
-  Project?: string;
+  Phone2?: string
+  PriceList?: string
+  Project?: string
   /**
    * @minLength 4
    * @maxLength 4
    */
-  SalesAccount?: string;
-  ShowPriceVATIncluded?: boolean;
-  TermsOfDelivery?: string;
-  TermsOfPayment?: string;
-  Type?: "PRIVATE" | "COMPANY";
-  VATNumber?: string;
-  VATType?: "SEVAT" | "SEREVERSEDVAT" | "EUREVERSEDVAT" | "EUVAT" | "EXPORT";
+  SalesAccount?: string
+  ShowPriceVATIncluded?: boolean
+  TermsOfDelivery?: string
+  TermsOfPayment?: string
+  Type?: "PRIVATE" | "COMPANY"
+  VATNumber?: string
+  VATType?: "SEVAT" | "SEREVERSEDVAT" | "EUREVERSEDVAT" | "EUVAT" | "EXPORT"
   /**
    * @minLength 0
    * @maxLength 128
    */
-  VisitingAddress?: string;
+  VisitingAddress?: string
   /**
    * @minLength 0
    * @maxLength 128
    */
-  VisitingCity?: string;
+  VisitingCity?: string
   /**
    * @minLength 0
    * @maxLength 128
    */
-  VisitingCountry?: string;
+  VisitingCountry?: string
   /**
    * @minLength 2
    * @maxLength 2
    */
-  VisitingCountryCode?: string;
+  VisitingCountryCode?: string
   /**
    * @minLength 0
    * @maxLength 10
    */
-  VisitingZipCode?: string;
-  WayOfDelivery?: string;
+  VisitingZipCode?: string
+  WayOfDelivery?: string
   /**
    * @minLength 0
    * @maxLength 128
    */
-  WWW?: string;
+  WWW?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  YourReference?: string;
+  YourReference?: string
   /**
    * @minLength 0
    * @maxLength 10
    */
-  ZipCode?: string;
+  ZipCode?: string
 }
 
 export interface TaxReductionListItemList {
-  TaxReductions?: TaxReductionListItem[];
+  TaxReductions?: TaxReductionListItem[]
 }
 
 export interface ListAsset {
-  "@url"?: string;
+  "@url"?: string
   /** @format int32 */
-  Id?: number;
-  Number?: string;
-  Description?: string;
-  Status?: string;
-  StatusId?: string;
-  Type?: string;
+  Id?: number
+  Number?: string
+  Description?: string
+  Status?: string
+  StatusId?: string
+  Type?: string
   /** @format int32 */
-  TypeId?: number;
+  TypeId?: number
   /** @format int32 */
-  AcquisitionValue?: number;
-  AcquisitionDate?: string;
-  DepreciationFinal?: string;
-  DepreciatedTo?: string;
+  AcquisitionValue?: number
+  AcquisitionDate?: string
+  DepreciationFinal?: string
+  DepreciatedTo?: string
 }
 
 export interface UpdateAssetWrap {
-  AssetType?: UpdateAsset;
+  AssetType?: UpdateAsset
 }
 
 export interface SupplierInvoiceSupplierInvoiceRow {
@@ -297,107 +297,121 @@ export interface SupplierInvoiceSupplierInvoiceRow {
    * @min 1000
    * @max 9999
    */
-  Account?: number;
-  ArticleNumber?: string;
-  Code?: "TOT" | "VAT" | "FRT" | "AFE" | "ROV" | "CND" | "CNC" | "PRD" | "PRC" | "SRD" | "SRC" | "PRE" | "GWB" | "ACC";
-  CostCenter?: string;
-  AccountDescription?: string;
-  ItemDescription?: string;
+  Account?: number
+  ArticleNumber?: string
+  Code?:
+    | "TOT"
+    | "VAT"
+    | "FRT"
+    | "AFE"
+    | "ROV"
+    | "CND"
+    | "CNC"
+    | "PRD"
+    | "PRC"
+    | "SRD"
+    | "SRC"
+    | "PRE"
+    | "GWB"
+    | "ACC"
+  CostCenter?: string
+  AccountDescription?: string
+  ItemDescription?: string
   /** @format double */
-  Debit?: number;
+  Debit?: number
   /** @format double */
-  DebitCurrency?: number;
+  DebitCurrency?: number
   /** @format double */
-  Credit?: number;
+  Credit?: number
   /** @format double */
-  CreditCurrency?: number;
-  Project?: string;
+  CreditCurrency?: number
+  Project?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  TransactionInformation?: string;
+  TransactionInformation?: string
   /** @format double */
-  Price?: number;
+  Price?: number
   /** @format int32 */
-  Quantity?: number;
+  Quantity?: number
   /** @format double */
-  Total?: number;
-  Unit?: string;
-  StockPointCode?: string;
-  StockLocationCode?: string;
+  Total?: number
+  Unit?: string
+  StockPointCode?: string
+  StockLocationCode?: string
 }
 
 export interface SalaryTransactionListItemList {
-  SalaryTransactions?: SalaryTransactionListItem[];
+  SalaryTransactions?: SalaryTransactionListItem[]
 }
 
 export interface History {
   /** @format int32 */
-  Id?: number;
-  Date?: string;
+  Id?: number
+  Date?: string
   /** @format int32 */
-  EventId?: number;
-  Amount?: string;
+  EventId?: number
+  Amount?: string
   /** @format int32 */
-  UserId?: number;
-  UserName?: string;
-  Notes?: string;
+  UserId?: number
+  UserName?: string
+  Notes?: string
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  VoucherYear?: number;
+  VoucherYear?: number
   /** @format int32 */
-  SupplierInvoice?: number;
+  SupplierInvoice?: number
 }
 
 export interface ArticleWrap {
-  Article?: Article;
+  Article?: Article
 }
 
 export interface ListAssetWrap {
-  Assets?: ListAsset[];
+  Assets?: ListAsset[]
 }
 
 export interface TaxReductionWrap {
-  TaxReduction: TaxReduction;
+  TaxReduction: TaxReduction
 }
 
 export interface UpdateAsset {
-  Description?: string;
-  Notes?: string;
+  Description?: string
+  Notes?: string
 }
 
 export interface SupplierInvoicePaymentListItem {
-  "@url"?: string;
+  "@url"?: string
   /** @format double */
-  Amount?: number;
-  Booked?: boolean;
+  Amount?: number
+  Booked?: boolean
   /**
    * @minLength 3
    * @maxLength 3
    */
-  Currency?: string;
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format double */
-  CurrencyUnit?: number;
-  InvoiceNumber: string;
+  CurrencyUnit?: number
+  InvoiceNumber: string
   /** @format int32 */
-  Number?: number;
+  Number?: number
   /** @format date */
-  PaymentDate?: string;
-  Source?: "manual" | "direct";
-  WriteOffExist?: boolean;
+  PaymentDate?: string
+  Source?: "manual" | "direct"
+  WriteOffExist?: boolean
 }
 
 export interface SupplierInvoiceListItemWrap {
-  SupplierInvoices?: SupplierInvoiceListItem[];
+  SupplierInvoices?: SupplierInvoiceListItem[]
 }
 
 export interface ContractListItemList {
-  Contracts?: ContractListItem[];
+  Contracts?: ContractListItem[]
 }
 
 export interface Currency {
@@ -405,134 +419,134 @@ export interface Currency {
    * @minLength 3
    * @maxLength 3
    */
-  currency: string;
+  currency: string
   /**
    * @min 0.000001
    * @exclusiveMin false
    */
-  rate: number;
+  rate: number
   /**
    * @format int32
    * @min 1
    */
-  unit?: number;
+  unit?: number
 }
 
 export interface CurrencyWrap {
-  Currency: Currency;
+  Currency: Currency
 }
 
 export interface DocumentReference {
-  type?: string;
-  id?: string;
+  type?: string
+  id?: string
 }
 
 export interface CostCenterWrap {
-  CostCenter?: CostCenter;
+  CostCenter?: CostCenter
 }
 
 export interface DeleteWrap {
-  Asset?: Delete;
+  Asset?: Delete
 }
 
 export interface InvoiceAccrualWrap {
-  InvoiceAccrual?: InvoiceAccrual;
+  InvoiceAccrual?: InvoiceAccrual
 }
 
 export interface MetaInformation {
   /** @format int32 */
-  "@TotalResources"?: number;
+  "@TotalResources"?: number
   /** @format int32 */
-  "@TotalPages"?: number;
+  "@TotalPages"?: number
   /** @format int32 */
-  "@CurrentPage"?: number;
+  "@CurrentPage"?: number
 }
 
 export interface ContractAccrualWrap {
-  ContractAccrual?: ContractAccrual;
+  ContractAccrual?: ContractAccrual
 }
 
 export interface FolderFolderRow {
-  "@url"?: string;
-  Id?: string;
-  Name?: string;
+  "@url"?: string
+  Id?: string
+  Name?: string
 }
 
 export interface VoucherSeries {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 10
    */
-  Code: string;
+  Code: string
   /**
    * @minLength 0
    * @maxLength 200
    */
-  Description?: string;
-  Manual?: boolean;
+  Description?: string
+  Manual?: boolean
   /** @format int32 */
-  NextVoucherNumber?: number;
+  NextVoucherNumber?: number
   /** @format int32 */
-  Year?: number;
-  Approver?: VoucherSeriesApprover;
+  Year?: number
+  Approver?: VoucherSeriesApprover
 }
 
 export interface Project {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 0
    * @maxLength 512
    */
-  Comments?: string;
+  Comments?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  ContactPerson?: string;
+  ContactPerson?: string
   /**
    * @minLength 1
    * @maxLength 50
    */
-  Description: string;
+  Description: string
   /** @format date */
-  EndDate?: string;
+  EndDate?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  ProjectLeader?: string;
+  ProjectLeader?: string
   /**
    * @minLength 0
    * @maxLength 20
    */
-  ProjectNumber?: string;
-  Status?: "NOTSTARTED" | "ONGOING" | "COMPLETED";
+  ProjectNumber?: string
+  Status?: "NOTSTARTED" | "ONGOING" | "COMPLETED"
   /** @format date */
-  StartDate?: string;
+  StartDate?: string
 }
 
 export interface Depreciation {
-  DepreciateUntil?: string;
-  AssetIds?: number[];
+  DepreciateUntil?: string
+  AssetIds?: number[]
 }
 
 export interface CustomerReference {
-  CustomerReferenceRows?: CustomerReferenceCustomerReferenceRow[];
+  CustomerReferenceRows?: CustomerReferenceCustomerReferenceRow[]
 }
 
 export interface SupplierInvoiceFileConnectionWrap {
-  SupplierInvoiceFileConnection?: SupplierInvoiceFileConnection;
+  SupplierInvoiceFileConnection?: SupplierInvoiceFileConnection
 }
 
 export interface PurchaseOrderRowNote {
-  note?: string;
+  note?: string
   /** @format int64 */
-  rowNum?: number;
+  rowNum?: number
   /** @format int64 */
-  purchaseOrderId?: number;
+  purchaseOrderId?: number
   /** @format uuid */
-  purchaseOrderRowId?: string;
+  purchaseOrderRowId?: string
 }
 
 export interface Employee {
@@ -540,30 +554,30 @@ export interface Employee {
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId?: string;
-  PersonalIdentityNumber?: string;
-  FirstName: string;
-  LastName: string;
-  FullName?: string;
-  Address1?: string;
-  Address2?: string;
-  PostCode?: string;
-  City?: string;
-  Country?: string;
-  Phone1?: string;
-  Phone2?: string;
-  Email: string;
+  EmployeeId?: string
+  PersonalIdentityNumber?: string
+  FirstName: string
+  LastName: string
+  FullName?: string
+  Address1?: string
+  Address2?: string
+  PostCode?: string
+  City?: string
+  Country?: string
+  Phone1?: string
+  Phone2?: string
+  Email: string
   /** @format date */
-  EmploymentDate?: string;
-  EmploymentForm?: "TV" | "PRO" | "TID" | "SVT" | "VIK" | "PRJ" | "PRA" | "FER" | "SES" | "NEJ";
-  SalaryForm?: "MAN" | "TIM";
+  EmploymentDate?: string
+  EmploymentForm?: "TV" | "PRO" | "TID" | "SVT" | "VIK" | "PRJ" | "PRA" | "FER" | "SES" | "NEJ"
+  SalaryForm?: "MAN" | "TIM"
   /**
    * @minLength 0
    * @maxLength 30
    */
-  JobTitle?: string;
-  PersonelType?: "TJM" | "ARB";
-  ScheduleId?: string;
+  JobTitle?: string
+  PersonelType?: "TJM" | "ARB"
+  ScheduleId?: string
   ForaType?:
     | "A"
     | "A51"
@@ -636,46 +650,46 @@ export interface Employee {
     | "A48"
     | "T"
     | "T6"
-    | "-";
-  MonthlySalary?: string;
-  HourlyPay?: string;
-  TaxAllowance?: "HUV" | "EXT" | "TMP" | "STU" | "EJ" | "???";
-  TaxTable?: string;
+    | "-"
+  MonthlySalary?: string
+  HourlyPay?: string
+  TaxAllowance?: "HUV" | "EXT" | "TMP" | "STU" | "EJ" | "???"
+  TaxTable?: string
   /**
    * @format int32
    * @min 1
    * @max 6
    */
-  TaxColumn?: number;
-  AutoNonRecurringTax?: boolean;
-  NonRecurringTax?: string;
-  Inactive?: boolean;
-  ClearingNo?: string;
-  BankAccountNo?: string;
+  TaxColumn?: number
+  AutoNonRecurringTax?: boolean
+  NonRecurringTax?: string
+  Inactive?: boolean
+  ClearingNo?: string
+  BankAccountNo?: string
   /** @format date */
-  EmployedTo?: string;
-  AverageWeeklyHours?: string;
-  AverageHourlyWage?: string;
-  DatedWages?: EmployeeDatedWage[];
-  DatedSchedules?: EmployeeDatedSchedule[];
+  EmployedTo?: string
+  AverageWeeklyHours?: string
+  AverageHourlyWage?: string
+  DatedWages?: EmployeeDatedWage[]
+  DatedSchedules?: EmployeeDatedSchedule[]
 }
 
 export interface PriceListItemList {
-  Prices?: PriceListItem[];
+  Prices?: PriceListItem[]
 }
 
 export interface PredefinedVoucherSeries {
-  "@url"?: string;
-  Name?: string;
+  "@url"?: string
+  Name?: string
   /**
    * @minLength 0
    * @maxLength 1
    */
-  VoucherSeries: string;
+  VoucherSeries: string
 }
 
 export interface AbsenceTransactionPayload {
-  EmployeeId: string;
+  EmployeeId: string
   CauseCode:
     | "ASK"
     | "FPE"
@@ -698,290 +712,290 @@ export interface AbsenceTransactionPayload {
     | "SVE"
     | "TJL"
     | "UTB"
-    | "VAB";
+    | "VAB"
   /** @format date */
-  Date: string;
+  Date: string
   /** @format float */
-  Extent?: number;
+  Extent?: number
   /** @format float */
-  Hours?: number;
-  HolidayEntitling?: boolean;
-  CostCenter?: string;
-  Project?: string;
+  Hours?: number
+  HolidayEntitling?: boolean
+  CostCenter?: string
+  Project?: string
 }
 
 export interface CreateAssetFileConnection {
-  FileId?: string;
-  AssetId?: string;
+  FileId?: string
+  AssetId?: string
 }
 
 export interface InvoicePaymentListItem {
-  "@url"?: string;
+  "@url"?: string
   /** @format double */
-  Amount?: number;
-  Booked?: boolean;
+  Amount?: number
+  Booked?: boolean
   /**
    * @minLength 3
    * @maxLength 3
    */
-  Currency?: string;
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format double */
-  CurrencyUnit?: number;
+  CurrencyUnit?: number
   /** @format int32 */
-  InvoiceNumber: number;
-  Number?: string;
+  InvoiceNumber: number
+  Number?: string
   /** @format date */
-  PaymentDate?: string;
-  Source?: string;
-  WriteOffExist?: boolean;
+  PaymentDate?: string
+  Source?: string
+  WriteOffExist?: boolean
 }
 
 export interface OrderListItem {
-  "@url"?: string;
-  Cancelled?: boolean;
+  "@url"?: string
+  Cancelled?: boolean
   /**
    * @minLength 0
    * @maxLength 3
    */
-  Currency?: string;
-  CustomerName?: string;
-  CustomerNumber: string;
+  Currency?: string
+  CustomerName?: string
+  CustomerNumber: string
   /** @format date */
-  DeliveryDate?: string;
-  DocumentNumber?: string;
-  ExternalInvoiceReference1?: string;
-  ExternalInvoiceReference2?: string;
+  DeliveryDate?: string
+  DocumentNumber?: string
+  ExternalInvoiceReference1?: string
+  ExternalInvoiceReference2?: string
   /** @format date */
-  OrderDate?: string;
-  OrderType?: string;
-  Project?: string;
-  Sent?: boolean;
+  OrderDate?: string
+  OrderType?: string
+  Project?: string
+  Sent?: boolean
   /** @format double */
-  Total?: number;
+  Total?: number
 }
 
 export interface SupplierInvoicePaymentListItemList {
-  SupplierInvoicePayments?: SupplierInvoicePaymentListItem[];
+  SupplierInvoicePayments?: SupplierInvoicePaymentListItem[]
 }
 
 export interface TaxReductionListItem {
-  "@url"?: string;
+  "@url"?: string
   /** @format double */
-  ApprovedAmount?: number;
+  ApprovedAmount?: number
   /**
    * @minLength 1
    * @maxLength 2147483647
    */
-  CustomerName: string;
+  CustomerName: string
   /** @format int32 */
-  Id?: number;
-  ReferenceDocumentType: "OFFER" | "ORDER" | "INVOICE";
+  Id?: number
+  ReferenceDocumentType: "OFFER" | "ORDER" | "INVOICE"
   /** @format int32 */
-  ReferenceNumber: number;
+  ReferenceNumber: number
   /**
    * @minLength 10
    * @maxLength 13
    */
-  SocialSecurityNumber: string;
+  SocialSecurityNumber: string
 }
 
 export interface TermsOfPaymentWrap {
-  TermsOfPayment: TermsOfPayment;
+  TermsOfPayment: TermsOfPayment
 }
 
 export interface PriceWrap {
-  Price?: Price;
+  Price?: Price
 }
 
 export interface CustomerListItemList {
-  Customers?: CustomerListItem[];
+  Customers?: CustomerListItem[]
 }
 
 export interface ProjectWrap {
-  Project?: Project;
+  Project?: Project
 }
 
 export interface ContractWrap {
-  Contract?: Contract;
+  Contract?: Contract
 }
 
 export interface StockTaking {
   /** @format int64 */
-  id?: number;
+  id?: number
   /** @format date */
-  date?: string;
+  date?: string
   /**
    * @minLength 1
    * @maxLength 50
    */
-  name: string;
+  name: string
   /**
    * @minLength 1
    * @maxLength 50
    */
-  responsible: string;
+  responsible: string
   /** @pattern planning|started|completed|voided */
-  state: string;
-  rows?: StockTakingRow[];
+  state: string
+  rows?: StockTakingRow[]
   /** @format int32 */
-  sortingId?: number;
-  projectId?: string;
-  costCenterCode?: string;
-  usingStockPoints?: boolean;
+  sortingId?: number
+  projectId?: string
+  costCenterCode?: string
+  usingStockPoints?: boolean
 }
 
 export interface AssetFileConnection {
-  "@url"?: string;
-  FileId?: string;
-  Name?: string;
-  AssetId?: string;
+  "@url"?: string
+  FileId?: string
+  Name?: string
+  AssetId?: string
 }
 
 export interface VoucherSeriesListItemApprover {
   /** @format int32 */
-  Id?: number;
-  Name?: string;
+  Id?: number
+  Name?: string
 }
 
 export interface ArticleFileConnectionListItemWrap {
-  ArticleFileConnections?: ArticleFileConnectionListItem[];
+  ArticleFileConnections?: ArticleFileConnectionListItem[]
 }
 
 export interface PriceListItem {
-  "@url"?: string;
-  ArticleNumber: string;
+  "@url"?: string
+  ArticleNumber: string
   /** @format double */
-  FromQuantity?: number;
-  PriceList: string;
+  FromQuantity?: number
+  PriceList: string
   /** @format double */
-  Price?: number;
+  Price?: number
 }
 
 export interface OrderLabel {
   /** @format int32 */
-  Id?: number;
+  Id?: number
 }
 
 export interface InvoiceResponse {
-  "@url": string;
+  "@url": string
   /** @format float */
-  BalanceIncludeFees: number;
+  BalanceIncludeFees: number
   /** @format float */
-  BalanceIncludeFeesCurrency: number;
+  BalanceIncludeFeesCurrency: number
   /** @format float */
-  CurrentCapitalBalance: number;
+  CurrentCapitalBalance: number
   /** @format float */
-  CurrentCapitalBalanceCurrency: number;
-  InvoiceDocumentURL?: string;
+  CurrentCapitalBalanceCurrency: number
+  InvoiceDocumentURL?: string
   /** @format int32 */
-  InvoiceNumber: number;
-  NextEvent: string;
+  InvoiceNumber: number
+  NextEvent: string
   /** @format date */
-  NextEventDate: string;
-  OCRNumber: string;
-  Service: string;
-  ServiceName: string;
-  Status: string;
+  NextEventDate: string
+  OCRNumber: string
+  Service: string
+  ServiceName: string
+  Status: string
 }
 
 export interface FinancialYearWrap {
-  FinancialYear: FinancialYear;
+  FinancialYear: FinancialYear
 }
 
 export interface InvoicePayment {
-  "@url"?: string;
+  "@url"?: string
   /** @format double */
-  Amount?: number;
+  Amount?: number
   /** @format double */
-  AmountCurrency?: number;
-  Booked?: boolean;
+  AmountCurrency?: number
+  Booked?: boolean
   /**
    * @minLength 3
    * @maxLength 3
    */
-  Currency?: string;
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format double */
-  CurrencyUnit?: number;
-  ExternalInvoiceReference1?: string;
-  ExternalInvoiceReference2?: string;
-  InvoiceCustomerName?: string;
-  InvoiceCustomerNumber?: string;
+  CurrencyUnit?: number
+  ExternalInvoiceReference1?: string
+  ExternalInvoiceReference2?: string
+  InvoiceCustomerName?: string
+  InvoiceCustomerNumber?: string
   /** @format int32 */
-  InvoiceNumber: number;
+  InvoiceNumber: number
   /** @format date */
-  InvoiceDueDate?: string;
-  InvoiceOCR?: string;
-  InvoiceTotal?: string;
-  ModeOfPayment?: string;
+  InvoiceDueDate?: string
+  InvoiceOCR?: string
+  InvoiceTotal?: string
+  ModeOfPayment?: string
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  ModeOfPaymentAccount?: number;
-  Number?: string;
+  ModeOfPaymentAccount?: number
+  Number?: string
   /** @format date */
-  PaymentDate?: string;
+  PaymentDate?: string
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  VoucherYear?: number;
-  Source?: string;
-  WriteOffs?: InvoicePaymentWriteOff[];
+  VoucherYear?: number
+  Source?: string
+  WriteOffs?: InvoicePaymentWriteOff[]
 }
 
 export interface VoucherWrap {
-  Voucher?: Voucher;
+  Voucher?: Voucher
 }
 
 export interface InvoiceResponseWrap {
-  NoxFinansInvoice?: InvoiceResponse;
+  NoxFinansInvoice?: InvoiceResponse
 }
 
 export interface BaseArticleRegistration {
   /** @format uuid */
-  id?: string;
-  costCenter?: TRCostCenter;
-  customer: TRCustomer;
-  project?: TRProject;
-  articleRegistrations?: ArticleRegistration[];
-  registeredArticle?: ArticleRegistration;
+  id?: string
+  costCenter?: TRCostCenter
+  customer: TRCustomer
+  project?: TRProject
+  articleRegistrations?: ArticleRegistration[]
+  registeredArticle?: ArticleRegistration
   /** @format date */
-  purchaseDate: string;
-  ownerId?: string;
+  purchaseDate: string
+  ownerId?: string
   /** @format int64 */
-  version?: number;
+  version?: number
   /** @format date-time */
-  createdTime?: string;
-  registrationType?: "WORK" | "ABSENCE" | "ARTICLE";
+  createdTime?: string
+  registrationType?: "WORK" | "ABSENCE" | "ARTICLE"
 }
 
 export interface MeWrap {
-  MeInformation?: Me;
+  MeInformation?: Me
 }
 
 export interface OfferOfferRow {
   /** @format int32 */
-  AccountNumber?: number;
-  ArticleNumber?: string;
-  ContributionPercent?: string;
-  ContributionValue?: string;
-  CostCenter?: string;
-  Description?: string;
+  AccountNumber?: number
+  ArticleNumber?: string
+  ContributionPercent?: string
+  ContributionValue?: string
+  CostCenter?: string
+  Description?: string
   /** @format double */
-  Discount?: number;
-  DiscountType?: "AMOUNT" | "PERCENT";
-  HouseWork?: boolean;
+  Discount?: number
+  DiscountType?: "AMOUNT" | "PERCENT"
+  HouseWork?: boolean
   /**
    * @format double
    * @max 999
    */
-  HouseWorkHoursToReport?: number;
+  HouseWorkHoursToReport?: number
   HouseWorkType?:
     | "CONSTRUCTION"
     | "ELECTRICITY"
@@ -998,28 +1012,28 @@ export interface OfferOfferRow {
     | "BABYSITTING"
     | "OTHERCARE"
     | "TUTORING"
-    | "OTHERCOSTS";
+    | "OTHERCOSTS"
   /** @format double */
-  Price?: number;
-  Project?: string;
-  Quantity?: string;
+  Price?: number
+  Project?: string
+  Quantity?: string
   /** @format int32 */
-  RowId?: number;
+  RowId?: number
   /** @format double */
-  Total?: number;
-  Unit?: string;
+  Total?: number
+  Unit?: string
   /** @format int32 */
-  VAT?: number;
+  VAT?: number
 }
 
 export interface CreatePayload {
-  InvoiceNumber: string;
-  SendMethod: string;
-  Service: string;
+  InvoiceNumber: string
+  SendMethod: string
+  Service: string
 }
 
 export interface ScrapWrap {
-  Asset?: Scrap;
+  Asset?: Scrap
 }
 
 export interface ProductionOrderPatch {
@@ -1027,46 +1041,46 @@ export interface ProductionOrderPatch {
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
+  note?: string
 }
 
 export interface InvoiceListItem {
-  "@url"?: string;
+  "@url"?: string
   /** @format double */
-  Balance?: number;
-  Booked?: boolean;
-  Cancelled?: boolean;
-  CostCenter?: string;
-  Currency?: string;
+  Balance?: number
+  Booked?: boolean
+  Cancelled?: boolean
+  CostCenter?: string
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format double */
-  CurrencyUnit?: number;
-  CustomerName?: string;
-  CustomerNumber?: string;
-  DocumentNumber?: string;
+  CurrencyUnit?: number
+  CustomerName?: string
+  CustomerNumber?: string
+  DocumentNumber?: string
   /** @format date */
-  DueDate?: string;
-  ExternalInvoiceReference1?: string;
-  ExternalInvoiceReference2?: string;
+  DueDate?: string
+  ExternalInvoiceReference1?: string
+  ExternalInvoiceReference2?: string
   /** @format date */
-  InvoiceDate?: string;
-  InvoiceType?: "INVOICE" | "AGREEMENTINVOICE" | "INTRESTINVOICE" | "SUMMARYINVOICE" | "CASHINVOICE";
-  NoxFinans?: boolean;
-  OCR?: string;
+  InvoiceDate?: string
+  InvoiceType?: "INVOICE" | "AGREEMENTINVOICE" | "INTRESTINVOICE" | "SUMMARYINVOICE" | "CASHINVOICE"
+  NoxFinans?: boolean
+  OCR?: string
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  VoucherYear?: number;
-  WayOfDelivery?: string;
-  TermsOfPayment?: string;
-  Project?: string;
-  Sent?: boolean;
+  VoucherYear?: number
+  WayOfDelivery?: string
+  TermsOfPayment?: string
+  Project?: string
+  Sent?: boolean
   /** @format double */
-  Total?: number;
+  Total?: number
   /** @format date */
-  FinalPayDate?: string;
+  FinalPayDate?: string
 }
 
 export interface TRCustomer {
@@ -1074,140 +1088,141 @@ export interface TRCustomer {
    * @minLength 0
    * @maxLength 40
    */
-  id?: string;
+  id?: string
   /**
    * @minLength 0
    * @maxLength 255
    */
-  name?: string;
+  name?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  number?: string;
-  active?: boolean;
-  deleted?: boolean;
-  priceList?: string;
-  accountManager?: string;
-  defaultProjectId?: string;
+  number?: string
+  active?: boolean
+  deleted?: boolean
+  priceList?: string
+  accountManager?: string
+  defaultProjectId?: string
   /** @format int32 */
-  isBusiness?: number;
-  propertyDesignation?: string;
+  isBusiness?: number
+  propertyDesignation?: string
 }
 
 export interface PausePayload {
   /** @format date */
-  PausedUntilDate: string;
+  PausedUntilDate: string
 }
 
 export interface WriteUp {
   /** @format int32 */
-  Amount?: number;
-  Comment?: string;
-  Date?: string;
+  Amount?: number
+  Comment?: string
+  Date?: string
 }
 
 export interface PrintTemplateList {
-  PrintTemplates?: PrintTemplate[];
+  PrintTemplates?: PrintTemplate[]
 }
 
 export interface ReleaseParentOrder {
-  releasedParentOrder?: boolean;
+  releasedParentOrder?: boolean
 }
 
 export interface PartialPurchaseOrder {
   /** @format date */
-  deliveryDate?: string;
+  deliveryDate?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
+  note?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  internalReference?: string;
+  internalReference?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierName?: string;
+  supplierName?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  messageToSupplier?: string;
+  messageToSupplier?: string
 }
 
 export interface AccountChartWrap {
-  AccountCharts?: AccountChart[];
+  AccountCharts?: AccountChart[]
 }
 
 export interface StockLocation {
   /** @format uuid */
-  id?: string;
+  id?: string
   /**
    * @minLength 1
    * @maxLength 20
    */
-  code: string;
+  code: string
   /**
    * @minLength 0
    * @maxLength 25
    */
-  name?: string;
+  name?: string
   /** @format uuid */
-  stockPointId?: string;
+  stockPointId?: string
 }
 
 export interface LabelWrap {
-  Label: Label;
+  Label: Label
 }
 
 export interface ArticleListItemList {
-  Articles?: ArticleListItem[];
+  MetaInformation?: MetaInformation
+  Articles?: ArticleListItem[]
 }
 
 export interface Label {
   /** @format int32 */
-  Id?: number;
+  Id?: number
   /**
    * @minLength 1
    * @maxLength 25
    */
-  Description: string;
+  Description: string
 }
 
 export interface AverageCost {
-  itemId?: string;
+  itemId?: string
   /** @format uuid */
-  stockPointId?: string;
-  averageCostInSEK?: number;
+  stockPointId?: string
+  averageCostInSEK?: number
 }
 
 export interface Attachment {
   /** @format uuid */
-  id?: string;
+  id?: string
   /** @format int64 */
-  entityId?: number;
-  entityType?: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG";
-  fileId?: string;
-  includeOnSend?: boolean;
+  entityId?: number
+  entityType?: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG"
+  fileId?: string
+  includeOnSend?: boolean
 }
 
 export interface FolderWrap {
-  Folder?: Folder;
+  Folder?: Folder
 }
 
 export interface SupplierInvoiceAccrualListItemList {
-  SupplierInvoiceAccruals?: SupplierInvoiceAccrualListItem[];
+  SupplierInvoiceAccruals?: SupplierInvoiceAccrualListItem[]
 }
 
 export interface AccountPayloadOpeningQuantities {
-  Project?: string;
+  Project?: string
   /** @format int32 */
-  Balance?: number;
+  Balance?: number
 }
 
 export interface EmployeeListItem {
@@ -1215,30 +1230,30 @@ export interface EmployeeListItem {
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId?: string;
-  PersonalIdentityNumber?: string;
-  FirstName: string;
-  LastName: string;
-  FullName?: string;
-  Address1?: string;
-  Address2?: string;
-  PostCode?: string;
-  City?: string;
-  Country?: string;
-  Phone1?: string;
-  Phone2?: string;
-  Email: string;
+  EmployeeId?: string
+  PersonalIdentityNumber?: string
+  FirstName: string
+  LastName: string
+  FullName?: string
+  Address1?: string
+  Address2?: string
+  PostCode?: string
+  City?: string
+  Country?: string
+  Phone1?: string
+  Phone2?: string
+  Email: string
   /** @format date */
-  EmploymentDate?: string;
-  EmploymentForm?: "TV" | "PRO" | "TID" | "SVT" | "VIK" | "PRJ" | "PRA" | "FER" | "SES" | "NEJ";
-  SalaryForm?: "MAN" | "TIM";
+  EmploymentDate?: string
+  EmploymentForm?: "TV" | "PRO" | "TID" | "SVT" | "VIK" | "PRJ" | "PRA" | "FER" | "SES" | "NEJ"
+  SalaryForm?: "MAN" | "TIM"
   /**
    * @minLength 0
    * @maxLength 30
    */
-  JobTitle?: string;
-  PersonelType?: "TJM" | "ARB";
-  ScheduleId?: string;
+  JobTitle?: string
+  PersonelType?: "TJM" | "ARB"
+  ScheduleId?: string
   ForaType?:
     | "A"
     | "A51"
@@ -1311,59 +1326,59 @@ export interface EmployeeListItem {
     | "A48"
     | "T"
     | "T6"
-    | "-";
-  MonthlySalary?: string;
-  HourlyPay?: string;
-  TaxAllowance?: "HUV" | "EXT" | "TMP" | "STU" | "EJ" | "???";
-  TaxTable?: string;
+    | "-"
+  MonthlySalary?: string
+  HourlyPay?: string
+  TaxAllowance?: "HUV" | "EXT" | "TMP" | "STU" | "EJ" | "???"
+  TaxTable?: string
   /**
    * @format int32
    * @min 1
    * @max 6
    */
-  TaxColumn?: number;
-  AutoNonRecurringTax?: boolean;
-  NonRecurringTax?: string;
-  Inactive?: boolean;
-  ClearingNo?: string;
-  BankAccountNo?: string;
+  TaxColumn?: number
+  AutoNonRecurringTax?: boolean
+  NonRecurringTax?: string
+  Inactive?: boolean
+  ClearingNo?: string
+  BankAccountNo?: string
   /** @format date */
-  EmployedTo?: string;
-  AverageWeeklyHours?: string;
-  AverageHourlyWage?: string;
-  DatedWages?: EmployeeDatedWage[];
-  DatedSchedules?: EmployeeDatedSchedule[];
-  "@url"?: string;
+  EmployedTo?: string
+  AverageWeeklyHours?: string
+  AverageHourlyWage?: string
+  DatedWages?: EmployeeDatedWage[]
+  DatedSchedules?: EmployeeDatedSchedule[]
+  "@url"?: string
 }
 
 export interface FinancialYearWrapList {
-  FinancialYears?: FinancialYear[];
+  FinancialYears?: FinancialYear[]
 }
 
 export interface ContractTemplateInvoiceRow {
   /** @format int32 */
-  AccountNumber?: number;
-  ArticleNumber?: string;
-  CostCenter?: string;
-  DeliveredQuantity?: string;
-  Description?: string;
+  AccountNumber?: number
+  ArticleNumber?: string
+  CostCenter?: string
+  DeliveredQuantity?: string
+  Description?: string
   /** @format double */
-  Discount?: number;
-  DiscountType?: "PERCENT" | "AMOUNT";
+  Discount?: number
+  DiscountType?: "PERCENT" | "AMOUNT"
   /** @format double */
-  Price?: number;
-  Project?: string;
-  Unit?: string;
+  Price?: number
+  Project?: string
+  Unit?: string
 }
 
 export interface TrustedEmailSender {
-  TrustedSenders?: TrustedEmailSenderTrustedSender[];
-  RejectedSenders?: TrustedEmailSenderRejectedSender[];
+  TrustedSenders?: TrustedEmailSenderTrustedSender[]
+  RejectedSenders?: TrustedEmailSenderRejectedSender[]
 }
 
 export interface TRItemPrice {
-  list?: string;
-  price?: number;
+  list?: string
+  price?: number
 }
 
 export interface ResponseStateChange {
@@ -1374,28 +1389,28 @@ export interface ResponseStateChange {
     | "ACCEPTED_WITH_CHANGED_DLV_DATE"
     | "PARTLY_ACCEPTED_WITH_REQ_DLV_DATE"
     | "PARTLY_ACCEPTED_WITH_CHANGED_DLV_DATE"
-    | "REJECTED";
+    | "REJECTED"
 }
 
 export interface AccountChart {
-  Name?: string;
+  Name?: string
 }
 
 export interface WriteDown {
   /** @format int32 */
-  Amount?: number;
-  Comment?: string;
-  Date?: string;
+  Amount?: number
+  Comment?: string
+  Date?: string
 }
 
 export interface ManualObAsset {
   /** @format int32 */
-  Amount?: number;
-  Comment?: string;
+  Amount?: number
+  Comment?: string
 }
 
 export interface PredefinedAccountWrap {
-  PreDefinedAccount: PredefinedAccount;
+  PreDefinedAccount: PredefinedAccount
 }
 
 export interface TRCostCenter {
@@ -1403,100 +1418,100 @@ export interface TRCostCenter {
    * @minLength 0
    * @maxLength 40
    */
-  id?: string;
+  id?: string
   /**
    * @minLength 0
    * @maxLength 255
    */
-  name?: string;
-  active?: string;
+  name?: string
+  active?: string
 }
 
 export interface OrderListItemList {
-  Orders?: OrderListItem[];
+  Orders?: OrderListItem[]
 }
 
 export interface ModeOfPaymentList {
-  ModesOfPayments?: ModeOfPayment[];
+  ModesOfPayments?: ModeOfPayment[]
 }
 
 export interface CompanySettings {
-  Address?: string;
-  BG?: string;
-  BIC?: string;
-  BranchCode?: string;
-  City?: string;
-  ContactFirstName?: string;
-  ContactLastName?: string;
-  Country?: string;
-  CountryCode?: string;
-  DatabaseNumber?: string;
-  Domicile?: string;
-  Email?: string;
-  Fax?: string;
-  IBAN?: string;
-  Name?: string;
-  OrganizationNumber?: string;
-  PG?: string;
-  Phone1?: string;
-  Phone2?: string;
-  TaxEnabled?: boolean;
-  VATNumber?: string;
-  VisitAddress?: string;
-  VisitCity?: string;
-  VisitCountry?: string;
-  VisitCountryCode?: string;
-  VisitName?: string;
-  VisitZipCode?: string;
-  WWW?: string;
-  ZipCode?: string;
+  Address?: string
+  BG?: string
+  BIC?: string
+  BranchCode?: string
+  City?: string
+  ContactFirstName?: string
+  ContactLastName?: string
+  Country?: string
+  CountryCode?: string
+  DatabaseNumber?: string
+  Domicile?: string
+  Email?: string
+  Fax?: string
+  IBAN?: string
+  Name?: string
+  OrganizationNumber?: string
+  PG?: string
+  Phone1?: string
+  Phone2?: string
+  TaxEnabled?: boolean
+  VATNumber?: string
+  VisitAddress?: string
+  VisitCity?: string
+  VisitCountry?: string
+  VisitCountryCode?: string
+  VisitName?: string
+  VisitZipCode?: string
+  WWW?: string
+  ZipCode?: string
 }
 
 export interface SupplierListItemList {
-  Suppliers?: SupplierListItem[];
+  Suppliers?: SupplierListItem[]
 }
 
 export interface TermsOfDelivery {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 20
    */
-  Code: string;
+  Code: string
   /**
    * @minLength 0
    * @maxLength 200
    */
-  Description: string;
+  Description: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  DescriptionEnglish?: string;
+  DescriptionEnglish?: string
 }
 
 export interface SupplierInvoicePaymentWriteOff {
   /** @format double */
-  Amount?: number;
+  Amount?: number
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  AccountNumber?: number;
-  CostCenter?: string;
+  AccountNumber?: number
+  CostCenter?: string
   /**
    * @minLength 3
    * @maxLength 3
    */
-  Currency?: string;
-  Description?: string;
-  TransactionInformation?: string;
-  Project?: string;
+  Currency?: string
+  Description?: string
+  TransactionInformation?: string
+  Project?: string
 }
 
 export interface TermsOfDeliveryWrap {
-  TermsOfDelivery: TermsOfDelivery;
+  TermsOfDelivery: TermsOfDelivery
 }
 
 export interface InvoiceInvoiceRow {
@@ -1505,26 +1520,26 @@ export interface InvoiceInvoiceRow {
    * @min 1000
    * @max 9999
    */
-  AccountNumber?: number;
-  ArticleNumber?: string;
-  ContributionPercent?: string;
-  ContributionValue?: string;
-  CostCenter?: string;
-  DeliveredQuantity?: string;
+  AccountNumber?: number
+  ArticleNumber?: string
+  ContributionPercent?: string
+  ContributionValue?: string
+  CostCenter?: string
+  DeliveredQuantity?: string
   /**
    * @minLength 0
    * @maxLength 255
    */
-  Description?: string;
+  Description?: string
   /** @format double */
-  Discount?: number;
-  DiscountType?: "AMOUNT" | "PERCENT";
-  HouseWork?: boolean;
+  Discount?: number
+  DiscountType?: "AMOUNT" | "PERCENT"
+  HouseWork?: boolean
   /**
    * @format int32
    * @max 999
    */
-  HouseWorkHoursToReport?: number;
+  HouseWorkHoursToReport?: number
   HouseWorkType?:
     | "CONSTRUCTION"
     | "ELECTRICITY"
@@ -1549,221 +1564,221 @@ export interface InvoiceInvoiceRow {
     | "HOMEMAINTENANCE"
     | "FURNISHING"
     | "TRANSPORTATIONSERVICES"
-    | "WASHINGANDCAREOFCLOTHING";
+    | "WASHINGANDCAREOFCLOTHING"
   /** @format double */
-  Price?: number;
+  Price?: number
   /** @format double */
-  PriceExcludingVAT?: number;
-  Project?: string;
+  PriceExcludingVAT?: number
+  Project?: string
   /** @format int32 */
-  RowId?: number;
-  StockPointCode?: string;
+  RowId?: number
+  StockPointCode?: string
   /** @format double */
-  Total?: number;
+  Total?: number
   /** @format double */
-  TotalExcludingVAT?: number;
-  Unit?: string;
+  TotalExcludingVAT?: number
+  Unit?: string
   /** @format int32 */
-  VAT?: number;
+  VAT?: number
 }
 
 export interface AssetTypeWrapList {
-  MetaInformation?: MetaInformation;
-  Types?: AssetType[];
+  MetaInformation?: MetaInformation
+  Types?: AssetType[]
 }
 
 export interface AccountListItem {
-  "@url"?: string;
-  Active?: boolean;
+  "@url"?: string
+  Active?: boolean
   /** @format double */
-  BalanceBroughtForward?: number;
-  CostCenter?: string;
-  CostCenterSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
+  BalanceBroughtForward?: number
+  CostCenter?: string
+  CostCenterSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
   /**
    * @minLength 1
    * @maxLength 200
    */
-  Description: string;
+  Description: string
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  Number: number;
-  Project?: string;
-  ProjectSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
+  Number: number
+  Project?: string
+  ProjectSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
   /** @format int32 */
-  SRU?: number;
+  SRU?: number
   /** @format int32 */
-  Year?: number;
-  VATCode?: string;
+  Year?: number
+  VATCode?: string
 }
 
 export interface InvoicePaymentWriteOff {
   /** @format double */
-  Amount?: number;
+  Amount?: number
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  AccountNumber?: number;
-  CostCenter?: string;
+  AccountNumber?: number
+  CostCenter?: string
   /**
    * @minLength 3
    * @maxLength 3
    */
-  Currency?: string;
-  Description?: string;
-  TransactionInformation?: string;
-  Project?: string;
+  Currency?: string
+  Description?: string
+  TransactionInformation?: string
+  Project?: string
 }
 
 export interface Offer {
-  "@url"?: string;
-  "@urlTaxReductionList"?: string;
+  "@url"?: string
+  "@urlTaxReductionList"?: string
   /** @format double */
-  AdministrationFee?: number;
+  AdministrationFee?: number
   /** @format double */
-  AdministrationFeeVAT?: number;
+  AdministrationFeeVAT?: number
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Address1?: string;
+  Address1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Address2?: string;
+  Address2?: string
   /** @format double */
-  BasisTaxReduction?: number;
-  Cancelled?: boolean;
+  BasisTaxReduction?: number
+  Cancelled?: boolean
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  City?: string;
+  City?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Comments?: string;
+  Comments?: string
   /** @format double */
-  ContributionPercent?: number;
+  ContributionPercent?: number
   /** @format double */
-  ContributionValue?: number;
-  CopyRemarks?: boolean;
-  Country?: string;
-  CostCenter?: string;
-  Currency?: string;
+  ContributionValue?: number
+  CopyRemarks?: boolean
+  Country?: string
+  CostCenter?: string
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format int32 */
-  CurrencyUnit?: number;
-  CustomerName?: string;
-  CustomerNumber: string;
+  CurrencyUnit?: number
+  CustomerName?: string
+  CustomerNumber: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryAddress1?: string;
+  DeliveryAddress1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryAddress2?: string;
+  DeliveryAddress2?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryCity?: string;
-  DeliveryCountry?: string;
+  DeliveryCity?: string
+  DeliveryCountry?: string
   /** @format date */
-  DeliveryDate?: string;
+  DeliveryDate?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryName?: string;
-  DeliveryZipCode?: string;
-  DocumentNumber?: string;
-  EmailInformation?: OfferEmailInformation;
+  DeliveryName?: string
+  DeliveryZipCode?: string
+  DocumentNumber?: string
+  EmailInformation?: OfferEmailInformation
   /** @format date */
-  ExpireDate?: string;
+  ExpireDate?: string
   /** @format double */
-  Freight?: number;
+  Freight?: number
   /** @format double */
-  FreightVAT?: number;
+  FreightVAT?: number
   /** @format double */
-  Gross?: number;
-  HouseWork?: boolean;
-  InvoiceReference?: string;
-  Labels?: OfferLabel[];
-  Language?: string;
+  Gross?: number
+  HouseWork?: boolean
+  InvoiceReference?: string
+  Labels?: OfferLabel[]
+  Language?: string
   /** @format double */
-  Net?: number;
-  NotCompleted?: boolean;
+  Net?: number
+  NotCompleted?: boolean
   /** @format date */
-  OfferDate?: string;
-  OfferRows?: OfferOfferRow[];
-  OrderReference?: string;
-  OrganisationNumber?: string;
-  OurReference?: string;
-  Phone1?: string;
-  Phone2?: string;
-  PriceList?: string;
-  PrintTemplate?: string;
-  Project?: string;
-  Remarks?: string;
+  OfferDate?: string
+  OfferRows?: OfferOfferRow[]
+  OrderReference?: string
+  OrganisationNumber?: string
+  OurReference?: string
+  Phone1?: string
+  Phone2?: string
+  PriceList?: string
+  PrintTemplate?: string
+  Project?: string
+  Remarks?: string
   /** @format double */
-  RoundOff?: number;
-  Sent?: boolean;
+  RoundOff?: number
+  Sent?: boolean
   /** @format int32 */
-  TaxReduction?: number;
-  TermsOfDelivery?: string;
-  TermsOfPayment?: string;
+  TaxReduction?: number
+  TermsOfDelivery?: string
+  TermsOfPayment?: string
   /** @format double */
-  Total?: number;
+  Total?: number
   /** @format double */
-  TotalToPay?: number;
+  TotalToPay?: number
   /** @format double */
-  TotalVAT?: number;
-  VATIncluded?: boolean;
-  WayOfDelivery?: string;
-  YourReference?: string;
-  YourReferenceNumber?: string;
-  ZipCode?: string;
-  TaxReductionType?: "none" | "rot" | "rut" | "green";
+  TotalVAT?: number
+  VATIncluded?: boolean
+  WayOfDelivery?: string
+  YourReference?: string
+  YourReferenceNumber?: string
+  ZipCode?: string
+  TaxReductionType?: "none" | "rot" | "rut" | "green"
 }
 
 export interface SupplierInvoiceListItem {
-  "@url"?: string;
-  Balance?: string;
-  Booked?: boolean;
-  Cancel?: boolean;
-  CostCenter?: string;
-  Credit?: boolean;
-  Currency?: string;
-  CurrencyRate?: string;
+  "@url"?: string
+  Balance?: string
+  Booked?: boolean
+  Cancel?: boolean
+  CostCenter?: string
+  Credit?: boolean
+  Currency?: string
+  CurrencyRate?: string
   /** @format double */
-  CurrencyUnit?: number;
+  CurrencyUnit?: number
   /** @format date */
-  DueDate?: string;
-  ExternalInvoiceNumber?: string;
-  ExternalInvoiceSeries?: string;
-  GivenNumber?: string;
+  DueDate?: string
+  ExternalInvoiceNumber?: string
+  ExternalInvoiceSeries?: string
+  GivenNumber?: string
   /** @format date */
-  InvoiceDate?: string;
-  InvoiceNumber?: string;
-  Project?: string;
-  SupplierNumber: string;
-  SupplierName?: string;
-  Total?: string;
-  AuthorizerName?: string;
-  Vouchers?: SupplierInvoiceListItemVoucher[];
+  InvoiceDate?: string
+  InvoiceNumber?: string
+  Project?: string
+  SupplierNumber: string
+  SupplierName?: string
+  Total?: string
+  AuthorizerName?: string
+  Vouchers?: SupplierInvoiceListItemVoucher[]
   /** @format date */
-  FinalPayDate?: string;
+  FinalPayDate?: string
 }
 
 export interface ManualOutboundDocumentPatch {
@@ -1771,7 +1786,7 @@ export interface ManualOutboundDocumentPatch {
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
+  note?: string
 }
 
 export interface CustomOutboundDocument {
@@ -1780,56 +1795,56 @@ export interface CustomOutboundDocument {
    * @maxLength 25
    * @pattern ^[0-9]+
    */
-  id?: string;
+  id?: string
   /**
    * @minLength 1
    * @maxLength 25
    * @pattern [a-zA-Z0-9_-]+
    */
-  referenceType?: string;
+  referenceType?: string
   /** @format date */
-  date: string;
+  date: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
-  warehouseReady?: boolean;
-  voided?: boolean;
-  rows: CustomOutboundDocumentRow[];
-  forcedDelivery?: boolean;
-  averageCosts?: AverageCost[];
-  deliveryState: "registration" | "reservation" | "delivery";
+  note?: string
+  warehouseReady?: boolean
+  voided?: boolean
+  rows: CustomOutboundDocumentRow[]
+  forcedDelivery?: boolean
+  averageCosts?: AverageCost[]
+  deliveryState: "registration" | "reservation" | "delivery"
 }
 
 export interface StockTakingRow {
-  id?: string;
+  id?: string
   /** @format int64 */
-  stockTakingId?: number;
+  stockTakingId?: number
   /**
    * @minLength 0
    * @maxLength 50
    */
-  itemId?: string;
+  itemId?: string
   /** @format uuid */
-  stockPointId?: string;
+  stockPointId?: string
   /** @format uuid */
-  stockLocationId?: string;
+  stockLocationId?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  countedBy?: string;
-  stockTakenQuantity?: number;
-  totalQuantityInStock?: number;
+  countedBy?: string
+  stockTakenQuantity?: number
+  totalQuantityInStock?: number
   /** @format int32 */
-  currentRowNo?: number;
-  hasPostReleaseStockChanges?: boolean;
-  stockTakingRowId?: string;
+  currentRowNo?: number
+  hasPostReleaseStockChanges?: boolean
+  stockTakingRowId?: string
 }
 
 export interface VacationDebtBasisWrap {
-  VacationDebtBasis?: VacationDebtBasis;
+  VacationDebtBasis?: VacationDebtBasis
 }
 
 export interface VacationDebtBasisEmployee {
@@ -1837,69 +1852,69 @@ export interface VacationDebtBasisEmployee {
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId: string;
-  EmployeeName?: string;
+  EmployeeId: string
+  EmployeeName?: string
   /** @format double */
-  DaysEarned?: number;
+  DaysEarned?: number
   /** @format double */
-  WageEarned?: number;
+  WageEarned?: number
   /** @format double */
-  VariableEarned?: number;
+  VariableEarned?: number
   /** @format double */
-  DebtEarned?: number;
+  DebtEarned?: number
   /** @format double */
-  DaysUnused?: number;
+  DaysUnused?: number
   /** @format double */
-  WageUnused?: number;
+  WageUnused?: number
   /** @format double */
-  VariableUnused?: number;
+  VariableUnused?: number
   /** @format double */
-  DebtUnused?: number;
+  DebtUnused?: number
   /** @format double */
-  DaysSaved?: number;
+  DaysSaved?: number
   /** @format double */
-  WageSaved?: number;
+  WageSaved?: number
   /** @format double */
-  DebtSaved?: number;
+  DebtSaved?: number
   /** @format double */
-  DebtAdvance?: number;
+  DebtAdvance?: number
   /** @format double */
-  TotalDebtEmployee?: number;
+  TotalDebtEmployee?: number
   /** @format double */
-  TotalDebtEmployerContribution?: number;
+  TotalDebtEmployerContribution?: number
 }
 
 export interface CustomerDefaultTemplates {
-  CashInvoice?: string;
-  Invoice?: string;
-  Offer?: string;
-  Order?: string;
+  CashInvoice?: string
+  Invoice?: string
+  Offer?: string
+  Order?: string
 }
 
 export interface DepreciationResponse {
-  "@url"?: string;
+  "@url"?: string
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  FinancialYear?: number;
+  FinancialYear?: number
 }
 
 export interface ModeOfPaymentWrap {
-  ModeOfPayment: ModeOfPayment;
+  ModeOfPayment: ModeOfPayment
 }
 
 export interface SupplierInvoiceExternalURLConnection {
-  Url?: string;
+  Url?: string
   /** @format int32 */
-  Id?: number;
+  Id?: number
   /** @format int32 */
-  SupplierInvoiceNumber?: number;
-  ExternalUrlConnection?: string;
+  SupplierInvoiceNumber?: number
+  ExternalUrlConnection?: string
 }
 
 export interface AttendanceTransactionWrap {
-  AttendanceTransaction?: AttendanceTransaction;
+  AttendanceTransaction?: AttendanceTransaction
 }
 
 export interface VoucherVoucherRow {
@@ -1908,99 +1923,99 @@ export interface VoucherVoucherRow {
    * @min 1000
    * @max 9999
    */
-  Account: number;
-  CostCenter?: string;
+  Account: number
+  CostCenter?: string
   /** @format double */
-  Credit?: number;
-  Description?: string;
+  Credit?: number
+  Description?: string
   /** @format double */
-  Debit?: number;
-  Project?: string;
-  Removed?: boolean;
+  Debit?: number
+  Project?: string
+  Removed?: boolean
   /**
    * @minLength 0
    * @maxLength 100
    */
-  TransactionInformation?: string;
+  TransactionInformation?: string
   /** @format double */
-  Quantity?: number;
+  Quantity?: number
 }
 
 export interface VoucherListItemList {
-  Vouchers?: VoucherListItem[];
+  Vouchers?: VoucherListItem[]
 }
 
 export interface InvoiceEmailInformation {
-  EmailAddressFrom?: string;
-  EmailAddressTo?: string;
-  EmailAddressCC?: string;
-  EmailAddressBCC?: string;
+  EmailAddressFrom?: string
+  EmailAddressTo?: string
+  EmailAddressCC?: string
+  EmailAddressBCC?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  EmailSubject?: string;
+  EmailSubject?: string
   /**
    * @minLength 0
    * @maxLength 20000
    */
-  EmailBody?: string;
+  EmailBody?: string
 }
 
 export interface AccountSingleItemOpeningQuantities {
-  Project?: string;
+  Project?: string
   /** @format int32 */
-  Balance?: number;
+  Balance?: number
 }
 
 export interface PredefinedAccountList {
-  PreDefinedAccounts?: PredefinedAccount[];
+  PreDefinedAccounts?: PredefinedAccount[]
 }
 
 export interface PurchaseOrderMailSettings {
-  receiver: string;
-  receiverCopy?: string;
-  receiverSecretCopy?: string;
-  subject: string;
-  body: string;
-  bodyAsHtml?: string;
-  replyTo: string;
-  senderName?: string;
+  receiver: string
+  receiverCopy?: string
+  receiverSecretCopy?: string
+  subject: string
+  body: string
+  bodyAsHtml?: string
+  replyTo: string
+  senderName?: string
 }
 
 export interface InvoicePaymentWrap {
-  InvoicePayment?: InvoicePayment;
+  InvoicePayment?: InvoicePayment
 }
 
 export interface WayOfDelivery {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 50
    */
-  Code: string;
+  Code: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  Description?: string;
+  Description?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  DescriptionEnglish?: string;
+  DescriptionEnglish?: string
 }
 
 export interface InvoiceAccrualInvoiceAccrualRow {
   /** @format int32 */
-  Account?: number;
-  CostCenter?: string;
+  Account?: number
+  CostCenter?: string
   /** @format double */
-  Credit?: number;
+  Credit?: number
   /** @format double */
-  Debit?: number;
-  Project?: string;
-  TransactionInformation?: string;
+  Debit?: number
+  Project?: string
+  TransactionInformation?: string
 }
 
 export interface EmployeeDatedSchedule {
@@ -2008,108 +2023,108 @@ export interface EmployeeDatedSchedule {
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId: string;
+  EmployeeId: string
   /** @format date */
-  FirstDay: string;
-  ScheduleId?: string;
+  FirstDay: string
+  ScheduleId?: string
 }
 
 export interface EUVatLimitRegulationWrap {
-  EUVatLimitRegulation?: EUVatLimitRegulation;
+  EUVatLimitRegulation?: EUVatLimitRegulation
 }
 
 export interface SupplierInvoice {
-  "@url"?: string;
-  AdministrationFee?: string;
-  Balance?: string;
-  Booked?: boolean;
-  Cancelled?: boolean;
+  "@url"?: string
+  AdministrationFee?: string
+  Balance?: string
+  Booked?: boolean
+  Cancelled?: boolean
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  Comments?: string;
-  CostCenter?: string;
-  Credit?: boolean;
+  Comments?: string
+  CostCenter?: string
+  Credit?: boolean
   /** @format int32 */
-  CreditReference?: number;
-  Currency?: string;
-  CurrencyRate?: string;
+  CreditReference?: number
+  Currency?: string
+  CurrencyRate?: string
   /** @format double */
-  CurrencyUnit?: number;
-  DisablePaymentFile?: boolean;
+  CurrencyUnit?: number
+  DisablePaymentFile?: boolean
   /** @format date */
-  DueDate?: string;
-  ExternalInvoiceNumber?: string;
-  ExternalInvoiceSeries?: string;
-  Freight?: string;
-  GivenNumber?: string;
+  DueDate?: string
+  ExternalInvoiceNumber?: string
+  ExternalInvoiceSeries?: string
+  Freight?: string
+  GivenNumber?: string
   /** @format date */
-  InvoiceDate?: string;
+  InvoiceDate?: string
   /**
    * @minLength 0
    * @maxLength 64
    */
-  InvoiceNumber?: string;
-  OCR?: string;
+  InvoiceNumber?: string
+  OCR?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  OurReference?: string;
-  PaymentPending?: boolean;
-  Project?: string;
-  RoundOffValue?: string;
-  SupplierInvoiceRows?: SupplierInvoiceSupplierInvoiceRow[];
-  SupplierNumber: string;
-  SupplierName?: string;
-  Total?: string;
-  VAT?: string;
+  OurReference?: string
+  PaymentPending?: boolean
+  Project?: string
+  RoundOffValue?: string
+  SupplierInvoiceRows?: SupplierInvoiceSupplierInvoiceRow[]
+  SupplierNumber: string
+  SupplierName?: string
+  Total?: string
+  VAT?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  YourReference?: string;
+  YourReference?: string
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  VoucherYear?: number;
-  VATType?: "NORMAL" | "EUINTERNAL" | "REVERSE";
-  SalesType?: "STOCK" | "SERVICE";
-  AccountingMethod?: "ACCRUAL" | "CASH";
-  Vouchers?: SupplierInvoiceVoucher[];
+  VoucherYear?: number
+  VATType?: "NORMAL" | "EUINTERNAL" | "REVERSE"
+  SalesType?: "STOCK" | "SERVICE"
+  AccountingMethod?: "ACCRUAL" | "CASH"
+  Vouchers?: SupplierInvoiceVoucher[]
   /** @format date */
-  FinalPayDate?: string;
+  FinalPayDate?: string
 }
 
 export interface CustomerReferenceWrap {
-  CustomerReference?: CustomerReference;
+  CustomerReference?: CustomerReference
 }
 
 export interface OfferLabel {
   /** @format int32 */
-  Id?: number;
+  Id?: number
 }
 
 export interface ReportPaymentPayload {
-  ClientTakesFees: boolean;
-  BookkeepPaymentInFortnox: boolean;
-  ReportToFinance: boolean;
+  ClientTakesFees: boolean
+  BookkeepPaymentInFortnox: boolean
+  ReportToFinance: boolean
   /** @format float */
-  PaymentAmount: number;
-  PaymentMethodCode: string;
-  PaymentMethodAccount: string;
+  PaymentAmount: number
+  PaymentMethodCode: string
+  PaymentMethodAccount: string
 }
 
 export interface VoucherFileConnection {
-  "@url"?: string;
-  FileId: string;
-  VoucherDescription?: string;
-  VoucherNumber: string;
-  VoucherSeries: string;
+  "@url"?: string
+  FileId: string
+  VoucherDescription?: string
+  VoucherNumber: string
+  VoucherSeries: string
   /** @format int32 */
-  VoucherYear?: number;
+  VoucherYear?: number
 }
 
 export interface EmployeeDatedWage {
@@ -2117,83 +2132,83 @@ export interface EmployeeDatedWage {
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId: string;
+  EmployeeId: string
   /** @format date */
-  FirstDay: string;
-  MonthlySalary?: string;
-  HourlyPay?: string;
+  FirstDay: string
+  MonthlySalary?: string
+  HourlyPay?: string
 }
 
 export interface OfferWrap {
-  Offer?: Offer;
+  Offer?: Offer
 }
 
 export interface ArticleListItem {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  ArticleNumber?: string;
+  ArticleNumber?: string
   /**
    * @minLength 1
    * @maxLength 200
    */
-  Description: string;
-  DisposableQuantity?: string;
+  Description: string
+  DisposableQuantity?: string
   /**
    * @minLength 0
    * @maxLength 30
    */
-  EAN?: string;
-  Housework?: boolean;
-  PurchasePrice?: string;
-  SalesPrice?: string;
+  EAN?: string
+  Housework?: boolean
+  PurchasePrice?: string
+  SalesPrice?: string
   /** @format double */
-  QuantityInStock?: number;
-  ReservedQuantity?: string;
+  QuantityInStock?: number
+  ReservedQuantity?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  StockPlace?: string;
-  StockValue?: string;
-  Unit?: string;
-  VAT?: string;
-  WebshopArticle?: boolean;
+  StockPlace?: string
+  StockValue?: string
+  Unit?: string
+  VAT?: string
+  WebshopArticle?: boolean
 }
 
 export interface AccountPayload {
-  Active?: boolean;
+  Active?: boolean
   /** @format double */
-  BalanceBroughtForward?: number;
-  CostCenter?: string;
-  CostCenterSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
+  BalanceBroughtForward?: number
+  CostCenter?: string
+  CostCenterSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
   /**
    * @minLength 1
    * @maxLength 200
    */
-  Description: string;
+  Description: string
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  Number: number;
-  Project?: string;
-  ProjectSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
+  Number: number
+  Project?: string
+  ProjectSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
   /** @format int32 */
-  SRU?: number;
-  TransactionInformation?: string;
-  TransactionInformationSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
-  VATCode?: string;
-  OpeningQuantities?: AccountPayloadOpeningQuantities[];
+  SRU?: number
+  TransactionInformation?: string
+  TransactionInformationSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
+  VATCode?: string
+  OpeningQuantities?: AccountPayloadOpeningQuantities[]
 }
 
 export interface SupplierInvoiceExternalURLConnectionUpdate {
   /** @format int32 */
-  SupplierInvoiceNumber?: number;
-  ExternalURLConnection?: string;
+  SupplierInvoiceNumber?: number
+  ExternalURLConnection?: string
 }
 
 export interface InvoicePayloadInvoiceRow {
@@ -2202,20 +2217,20 @@ export interface InvoicePayloadInvoiceRow {
    * @min 1000
    * @max 9999
    */
-  AccountNumber?: number;
-  ArticleNumber?: string;
-  CostCenter?: string;
-  DeliveredQuantity?: string;
-  Description?: string;
+  AccountNumber?: number
+  ArticleNumber?: string
+  CostCenter?: string
+  DeliveredQuantity?: string
+  Description?: string
   /** @format double */
-  Discount?: number;
-  DiscountType?: "AMOUNT" | "PERCENT";
-  HouseWork?: boolean;
+  Discount?: number
+  DiscountType?: "AMOUNT" | "PERCENT"
+  HouseWork?: boolean
   /**
    * @format int32
    * @max 999
    */
-  HouseWorkHoursToReport?: number;
+  HouseWorkHoursToReport?: number
   HouseWorkType?:
     | "CONSTRUCTION"
     | "ELECTRICITY"
@@ -2240,36 +2255,36 @@ export interface InvoicePayloadInvoiceRow {
     | "HOMEMAINTENANCE"
     | "FURNISHING"
     | "TRANSPORTATIONSERVICES"
-    | "WASHINGANDCAREOFCLOTHING";
+    | "WASHINGANDCAREOFCLOTHING"
   /** @format double */
-  Price?: number;
-  Project?: string;
+  Price?: number
+  Project?: string
   /** @format int32 */
-  RowId?: number;
-  StockPointCode?: string;
-  Unit?: string;
+  RowId?: number
+  StockPointCode?: string
+  Unit?: string
   /** @format int32 */
-  VAT?: number;
+  VAT?: number
 }
 
 export interface InvoiceAccrual {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  AccrualAccount: number;
-  Description: string;
+  AccrualAccount: number
+  Description: string
   /** @format date */
-  EndDate: string;
+  EndDate: string
   /**
    * @maxItems 2147483647
    * @minItems 2
    */
-  InvoiceAccrualRows: InvoiceAccrualInvoiceAccrualRow[];
+  InvoiceAccrualRows: InvoiceAccrualInvoiceAccrualRow[]
   /** @format int32 */
-  InvoiceNumber: number;
+  InvoiceNumber: number
   Period?:
     | "MONTHLY"
     | "BIMONTHLY"
@@ -2280,330 +2295,330 @@ export interface InvoiceAccrual {
     | "2_MONTHS"
     | "3_MONTHS"
     | "6_MONTHS"
-    | "12_MONTHS";
+    | "12_MONTHS"
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  RevenueAccount: number;
+  RevenueAccount: number
   /** @format date */
-  StartDate: string;
+  StartDate: string
   /** @format int32 */
-  Times?: number;
+  Times?: number
   /** @format double */
-  Total: number;
-  VATIncluded?: boolean;
+  Total: number
+  VATIncluded?: boolean
 }
 
 export interface WriteDownWrap {
-  Asset?: WriteDown;
+  Asset?: WriteDown
 }
 
 export interface VoucherSeriesListItem {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 10
    */
-  Code: string;
+  Code: string
   /**
    * @minLength 0
    * @maxLength 200
    */
-  Description?: string;
-  Manual?: boolean;
+  Description?: string
+  Manual?: boolean
   /** @format int32 */
-  Year?: number;
-  Approver?: VoucherSeriesListItemApprover;
+  Year?: number
+  Approver?: VoucherSeriesListItemApprover
 }
 
 export interface SupplierListItem {
-  "@url"?: string;
-  Active?: boolean;
-  Address1?: string;
-  Address2?: string;
-  BankAccountNumber?: string;
-  BG?: string;
-  BIC?: string;
+  "@url"?: string
+  Active?: boolean
+  Address1?: string
+  Address2?: string
+  BankAccountNumber?: string
+  BG?: string
+  BIC?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  City?: string;
-  CostCenter?: string;
+  City?: string
+  CostCenter?: string
   /**
    * @minLength 0
    * @maxLength 2
    */
-  CountryCode?: string;
+  CountryCode?: string
   /**
    * @minLength 0
    * @maxLength 3
    */
-  Currency?: string;
-  DisablePaymentFile?: boolean;
-  Email?: string;
-  IBAN?: string;
+  Currency?: string
+  DisablePaymentFile?: boolean
+  Email?: string
+  IBAN?: string
   /**
    * @minLength 1
    * @maxLength 1024
    */
-  Name: string;
-  OrganisationNumber?: string;
-  PG?: string;
-  Phone?: string;
+  Name: string
+  OrganisationNumber?: string
+  PG?: string
+  Phone?: string
   /**
    * @minLength 4
    * @maxLength 4
    */
-  PreDefinedAccount?: string;
-  Project?: string;
-  SupplierNumber?: string;
-  TermsOfPayment?: string;
-  ZipCode?: string;
+  PreDefinedAccount?: string
+  Project?: string
+  SupplierNumber?: string
+  TermsOfPayment?: string
+  ZipCode?: string
 }
 
 export interface SupplierInvoiceVoucher {
   /** @format int32 */
-  Number?: number;
+  Number?: number
   /** @format int32 */
-  Year?: number;
-  Series?: string;
-  ReferenceType?: string;
+  Year?: number
+  Series?: string
+  ReferenceType?: string
 }
 
 export interface VacationDebtBasis {
   /** @format int32 */
-  Year: number;
+  Year: number
   /** @format int32 */
-  Month: number;
+  Month: number
   /** @format date */
-  LastDay?: string;
+  LastDay?: string
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  VoucherYear?: number;
-  Employees?: VacationDebtBasisEmployee[];
+  VoucherYear?: number
+  Employees?: VacationDebtBasisEmployee[]
 }
 
 export interface SupplierInvoiceListItemVoucher {
   /** @format int32 */
-  Number?: number;
+  Number?: number
   /** @format int32 */
-  Year?: number;
-  Series?: string;
-  ReferenceType?: string;
+  Year?: number
+  Series?: string
+  ReferenceType?: string
 }
 
 export interface OfferListItem {
-  "@url"?: string;
-  Cancelled?: boolean;
-  Currency?: string;
-  CustomerName?: string;
-  CustomerNumber: string;
-  DocumentNumber?: string;
+  "@url"?: string
+  Cancelled?: boolean
+  Currency?: string
+  CustomerName?: string
+  CustomerNumber: string
+  DocumentNumber?: string
   /** @format date */
-  OfferDate?: string;
-  Project?: string;
-  Sent?: boolean;
+  OfferDate?: string
+  Project?: string
+  Sent?: boolean
   /** @format double */
-  Total?: number;
+  Total?: number
 }
 
 export interface DepreciationWrap {
-  Asset?: Depreciation;
+  Asset?: Depreciation
 }
 
 export interface OrderWrap {
-  Order?: Order;
+  Order?: Order
 }
 
 export interface Invoice {
-  "@url"?: string;
-  "@urlTaxReductionList"?: string;
+  "@url"?: string
+  "@urlTaxReductionList"?: string
   /** @format double */
-  AdministrationFee?: number;
+  AdministrationFee?: number
   /** @format double */
-  AdministrationFeeVAT?: number;
-  Address1?: string;
-  Address2?: string;
+  AdministrationFeeVAT?: number
+  Address1?: string
+  Address2?: string
   /** @format double */
-  Balance?: number;
+  Balance?: number
   /** @format double */
-  BasisTaxReduction?: number;
-  Booked?: boolean;
-  Cancelled?: boolean;
+  BasisTaxReduction?: number
+  Booked?: boolean
+  Cancelled?: boolean
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  City?: string;
+  City?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Comments?: string;
+  Comments?: string
   /** @format int32 */
-  ContractReference?: number;
+  ContractReference?: number
   /** @format double */
-  ContributionPercent?: number;
+  ContributionPercent?: number
   /** @format double */
-  ContributionValue?: number;
-  Country?: string;
-  CostCenter?: string;
-  Credit?: string;
-  CreditInvoiceReference?: string;
-  Currency?: string;
+  ContributionValue?: number
+  Country?: string
+  CostCenter?: string
+  Credit?: string
+  CreditInvoiceReference?: string
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format int32 */
-  CurrencyUnit?: number;
-  CustomerName?: string;
-  CustomerNumber: string;
+  CurrencyUnit?: number
+  CustomerName?: string
+  CustomerNumber: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryAddress1?: string;
+  DeliveryAddress1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryAddress2?: string;
+  DeliveryAddress2?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryCity?: string;
-  DeliveryCountry?: string;
+  DeliveryCity?: string
+  DeliveryCountry?: string
   /** @format date */
-  DeliveryDate?: string;
+  DeliveryDate?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryName?: string;
+  DeliveryName?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryZipCode?: string;
-  DocumentNumber?: string;
+  DeliveryZipCode?: string
+  DocumentNumber?: string
   /** @format date */
-  DueDate?: string;
-  EDIInformation?: InvoiceEDIInformation;
-  EmailInformation?: InvoiceEmailInformation;
-  EUQuarterlyReport?: boolean;
+  DueDate?: string
+  EDIInformation?: InvoiceEDIInformation
+  EmailInformation?: InvoiceEmailInformation
+  EUQuarterlyReport?: boolean
   /**
    * @minLength 0
    * @maxLength 80
    */
-  ExternalInvoiceReference1?: string;
+  ExternalInvoiceReference1?: string
   /**
    * @minLength 0
    * @maxLength 80
    */
-  ExternalInvoiceReference2?: string;
+  ExternalInvoiceReference2?: string
   /** @format double */
-  Freight?: number;
+  Freight?: number
   /** @format double */
-  FreightVAT?: number;
+  FreightVAT?: number
   /** @format double */
-  Gross?: number;
-  HouseWork?: boolean;
+  Gross?: number
+  HouseWork?: boolean
   /** @format date */
-  InvoiceDate?: string;
+  InvoiceDate?: string
   /** @format date */
-  InvoicePeriodStart?: string;
+  InvoicePeriodStart?: string
   /** @format date */
-  InvoicePeriodEnd?: string;
-  InvoicePeriodReference?: string;
-  InvoiceRows?: InvoiceInvoiceRow[];
-  InvoiceType?: "INVOICE" | "AGREEMENTINVOICE" | "INTRESTINVOICE" | "SUMMARYINVOICE" | "CASHINVOICE";
-  Labels?: InvoiceLabel[];
-  Language?: "SV" | "EN";
+  InvoicePeriodEnd?: string
+  InvoicePeriodReference?: string
+  InvoiceRows?: InvoiceInvoiceRow[]
+  InvoiceType?: "INVOICE" | "AGREEMENTINVOICE" | "INTRESTINVOICE" | "SUMMARYINVOICE" | "CASHINVOICE"
+  Labels?: InvoiceLabel[]
+  Language?: "SV" | "EN"
   /** @format date */
-  LastRemindDate?: string;
+  LastRemindDate?: string
   /** @format double */
-  Net?: number;
-  NotCompleted?: boolean;
-  NoxFinans?: boolean;
-  OCR?: string;
-  OfferReference?: string;
-  OrderReference?: string;
-  OrganisationNumber?: string;
+  Net?: number
+  NotCompleted?: boolean
+  NoxFinans?: boolean
+  OCR?: string
+  OfferReference?: string
+  OrderReference?: string
+  OrganisationNumber?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  OurReference?: string;
-  PaymentWay?: "CASH" | "CARD" | "AG";
+  OurReference?: string
+  PaymentWay?: "CASH" | "CARD" | "AG"
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone1?: string;
+  Phone1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone2?: string;
-  PriceList?: string;
-  PrintTemplate?: string;
-  Project?: string;
-  WarehouseReady?: boolean;
+  Phone2?: string
+  PriceList?: string
+  PrintTemplate?: string
+  Project?: string
+  WarehouseReady?: boolean
   /** @format date */
-  OutboundDate?: string;
+  OutboundDate?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Remarks?: string;
+  Remarks?: string
   /** @format int32 */
-  Reminders?: number;
+  Reminders?: number
   /** @format double */
-  RoundOff?: number;
-  Sent?: boolean;
+  RoundOff?: number
+  Sent?: boolean
   /** @format int32 */
-  TaxReduction?: number;
-  TermsOfDelivery?: string;
-  TermsOfPayment?: string;
+  TaxReduction?: number
+  TermsOfDelivery?: string
+  TermsOfPayment?: string
   /** @format int32 */
-  TimeBasisReference?: number;
+  TimeBasisReference?: number
   /** @format double */
-  Total?: number;
+  Total?: number
   /** @format double */
-  TotalToPay?: number;
+  TotalToPay?: number
   /** @format double */
-  TotalVAT?: number;
-  VATIncluded?: boolean;
+  TotalVAT?: number
+  VATIncluded?: boolean
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  VoucherYear?: number;
-  WayOfDelivery?: string;
+  VoucherYear?: number
+  WayOfDelivery?: string
   /**
    * @minLength 0
    * @maxLength 75
    */
-  YourOrderNumber?: string;
+  YourOrderNumber?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  YourReference?: string;
+  YourReference?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  ZipCode?: string;
-  AccountingMethod?: "ACCRUAL" | "CASH";
-  TaxReductionType?: "none" | "rot" | "rut" | "green";
+  ZipCode?: string
+  AccountingMethod?: "ACCRUAL" | "CASH"
+  TaxReductionType?: "none" | "rot" | "rut" | "green"
   /** @format date */
-  FinalPayDate?: string;
+  FinalPayDate?: string
 }
 
 export interface RegistrationCode {
@@ -2611,32 +2626,32 @@ export interface RegistrationCode {
    * @minLength 3
    * @maxLength 3
    */
-  code: string;
-  name?: string;
+  code: string
+  name?: string
   /** @format float */
-  priceMultiplier?: number;
+  priceMultiplier?: number
   /** @format float */
-  costMultiplier?: number;
-  type: "WORK" | "ABSENCE";
-  active?: boolean;
-  id?: string;
+  costMultiplier?: number
+  type: "WORK" | "ABSENCE"
+  active?: boolean
+  id?: string
 }
 
 export interface OrderEmailInformation {
-  EmailAddressFrom?: string;
-  EmailAddressTo?: string;
-  EmailAddressCC?: string;
-  EmailAddressBCC?: string;
-  EmailSubject?: string;
-  EmailBody?: string;
+  EmailAddressFrom?: string
+  EmailAddressTo?: string
+  EmailAddressCC?: string
+  EmailAddressBCC?: string
+  EmailSubject?: string
+  EmailBody?: string
 }
 
 export interface AbsenceTransactionSingleItemWrap {
-  AbsenceTransaction?: AbsenceTransactionSingleItem;
+  AbsenceTransaction?: AbsenceTransactionSingleItem
 }
 
 export interface SupplierWrap {
-  Supplier?: Supplier;
+  Supplier?: Supplier
 }
 
 export interface CustomOutboundDocumentRow {
@@ -2644,40 +2659,40 @@ export interface CustomOutboundDocumentRow {
    * @format int64
    * @min 1
    */
-  rowId?: number;
+  rowId?: number
   /**
    * @minLength 1
    * @maxLength 50
    */
-  itemId: string;
-  reservedQuantity?: number;
-  deliveredQuantity?: number;
+  itemId: string
+  reservedQuantity?: number
+  deliveredQuantity?: number
   /** @format uuid */
-  stockPointId?: string;
+  stockPointId?: string
   /** @format uuid */
-  stockLocationId?: string;
+  stockLocationId?: string
   /**
    * @minLength 1
    * @maxLength 25
    */
-  costCenterCode?: string;
+  costCenterCode?: string
   /**
    * @minLength 1
    * @maxLength 25
    */
-  projectId?: string;
+  projectId?: string
   /**
    * @minLength 0
    * @maxLength 200
    */
-  itemDescription?: string;
+  itemDescription?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  itemUnit?: string;
-  forcedQuantity?: number;
-  quantity: number;
+  itemUnit?: string
+  forcedQuantity?: number
+  quantity: number
 }
 
 export interface ManualInboundDocumentPatch {
@@ -2685,262 +2700,262 @@ export interface ManualInboundDocumentPatch {
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
+  note?: string
 }
 
 export interface AccountPayloadWrap {
-  Account?: AccountPayload;
+  Account?: AccountPayload
 }
 
 export interface EUVatLimitRegulation {
   /** @format double */
-  TotalExclVat?: number;
-  IsOverLimit?: boolean;
+  TotalExclVat?: number
+  IsOverLimit?: boolean
   /** @format int32 */
-  Limit?: number;
-  Year?: string;
+  Limit?: number
+  Year?: string
 }
 
 export interface ContractListItem {
-  "@url"?: string;
-  Continuous?: boolean;
+  "@url"?: string
+  Continuous?: boolean
   /** @format int32 */
-  ContractLength?: number;
-  Currency?: string;
-  CustomerName?: string;
-  CustomerNumber: string;
-  DocumentNumber?: string;
+  ContractLength?: number
+  Currency?: string
+  CustomerName?: string
+  CustomerNumber: string
+  DocumentNumber?: string
   /** @format int32 */
-  Invoiceinterval?: number;
+  Invoiceinterval?: number
   /** @format int32 */
-  InvoicesRemaining?: number;
-  LastInvoiceDate?: string;
+  InvoicesRemaining?: number
+  LastInvoiceDate?: string
   /** @format date */
-  PeriodStart?: string;
+  PeriodStart?: string
   /** @format date */
-  PeriodEnd: string;
-  Status?: string;
+  PeriodEnd: string
+  Status?: string
   /** @format int32 */
-  TemplateNumber?: number;
+  TemplateNumber?: number
   /** @format double */
-  Total?: number;
+  Total?: number
 }
 
 export interface ArticleFileConnection {
-  "@url"?: string;
-  FileId: string;
-  ArticleNumber: string;
+  "@url"?: string
+  FileId: string
+  ArticleNumber: string
 }
 
 export interface FinancialYear {
-  "@url"?: string;
+  "@url"?: string
   /** @format int32 */
-  Id?: number;
+  Id?: number
   /** @format date */
-  FromDate: string;
+  FromDate: string
   /** @format date */
-  ToDate: string;
-  AccountingMethod?: "ACCRUAL" | "CASH";
-  accountCharts?: string;
+  ToDate: string
+  AccountingMethod?: "ACCRUAL" | "CASH"
+  accountCharts?: string
 }
 
 export interface AssetFileConnectionResponse {
-  AssetFileConnections?: AssetFileConnection[];
-  MetaInformation?: MetaInformation;
+  AssetFileConnections?: AssetFileConnection[]
+  MetaInformation?: MetaInformation
 }
 
 export interface Expense {
-  Code: string;
-  Text: string;
+  Code: string
+  Text: string
   /** @format int32 */
-  Account: number;
+  Account: number
 }
 
 export interface CustomerReferenceCustomerReferenceRow {
-  Reference?: string;
-  CustomerNumber?: string;
+  Reference?: string
+  CustomerNumber?: string
   /** @format int32 */
-  Id?: number;
+  Id?: number
 }
 
 export interface SupplierInvoiceAccrualWrap {
-  SupplierInvoiceAccrual: SupplierInvoiceAccrual;
+  SupplierInvoiceAccrual: SupplierInvoiceAccrual
 }
 
 export interface Asset {
-  "@url"?: string;
+  "@url"?: string
   /** @format int32 */
-  Id?: number;
-  Number?: string;
-  Description?: string;
-  Status?: string;
-  StatusId?: string;
-  CostCenter?: string;
-  Project?: string;
-  Type?: string;
+  Id?: number
+  Number?: string
+  Description?: string
+  Status?: string
+  StatusId?: string
+  CostCenter?: string
+  Project?: string
+  Type?: string
   /** @format int32 */
-  TypeId?: number;
+  TypeId?: number
   /** @format int32 */
-  DepreciationMethod?: number;
+  DepreciationMethod?: number
   /** @format int32 */
-  AcquisitionValue?: number;
+  AcquisitionValue?: number
   /** @format int32 */
-  DepreciateToResidualValue?: number;
-  AcquisitionDate?: string;
-  AcquisitionStart?: string;
-  DepreciationFinal?: string;
-  DepreciatedTo?: string;
+  DepreciateToResidualValue?: number
+  AcquisitionDate?: string
+  AcquisitionStart?: string
+  DepreciationFinal?: string
+  DepreciatedTo?: string
   /** @format int32 */
-  ManualOb?: number;
-  Notes?: string;
-  Reference?: string;
-  Brand?: string;
-  InsuredNumber?: string;
-  InsuredWith?: string;
-  Group?: string;
-  Room?: string;
-  Placement?: string;
-  Department?: string;
-  History?: History[];
+  ManualOb?: number
+  Notes?: string
+  Reference?: string
+  Brand?: string
+  InsuredNumber?: string
+  InsuredWith?: string
+  Group?: string
+  Room?: string
+  Placement?: string
+  Department?: string
+  History?: History[]
 }
 
 export interface UnitWrap {
-  Unit: Unit;
+  Unit: Unit
 }
 
 export interface CustomerDefaultDeliveryTypes {
-  Invoice?: "PRINT" | "EMAIL" | "PRINTSERVICE";
-  Order?: "PRINT" | "EMAIL" | "PRINTSERVICE";
-  Offer?: "PRINT" | "EMAIL" | "PRINTSERVICE";
+  Invoice?: "PRINT" | "EMAIL" | "PRINTSERVICE"
+  Order?: "PRINT" | "EMAIL" | "PRINTSERVICE"
+  Offer?: "PRINT" | "EMAIL" | "PRINTSERVICE"
 }
 
 export interface PriceListWrap {
-  PriceList: PriceList;
+  PriceList: PriceList
 }
 
 export interface ManualInboundDocumentRow {
   /** @format int64 */
-  rowId?: number;
+  rowId?: number
   /**
    * @minLength 1
    * @maxLength 50
    */
-  itemId: string;
-  itemDescription?: string;
-  itemUnit?: string;
+  itemId: string
+  itemDescription?: string
+  itemUnit?: string
   /**
    * @min 0.01
    * @exclusiveMin false
    */
-  quantity: number;
+  quantity: number
   /**
    * @min 0
    * @exclusiveMin false
    */
-  directCost?: number;
+  directCost?: number
   /**
    * @min 0
    * @exclusiveMin false
    */
-  freightCost?: number;
+  freightCost?: number
   /**
    * @min 0
    * @exclusiveMin false
    */
-  otherCost?: number;
+  otherCost?: number
   /**
    * @minLength 0
    * @maxLength 50
    */
-  batch?: string;
+  batch?: string
   /** @format uuid */
-  stockPointId?: string;
+  stockPointId?: string
   /** @format uuid */
-  stockLocationId?: string;
-  stockPointCode?: string;
-  stockPointName?: string;
-  stockLocationCode?: string;
-  stockLocationName?: string;
-  costCenterCode?: string;
-  projectId?: string;
+  stockLocationId?: string
+  stockPointCode?: string
+  stockPointName?: string
+  stockLocationCode?: string
+  stockLocationName?: string
+  costCenterCode?: string
+  projectId?: string
 }
 
 export interface ProductionOrder {
   /** @format int64 */
-  id?: number;
-  itemId?: string;
+  id?: number
+  itemId?: string
   /** @format date */
-  startDate: string;
+  startDate: string
   /** @format date */
-  productionDate?: string;
-  costCenterCode?: string;
-  projectId?: string;
+  productionDate?: string
+  costCenterCode?: string
+  projectId?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
+  note?: string
   /**
    * @min 0.01
    * @exclusiveMin false
    */
-  quantity: number;
-  batch?: string;
-  productionState: "registered" | "reserved" | "ongoing";
-  documentState?: "completed" | "voided";
-  itemDescription?: string;
-  itemUnit?: string;
+  quantity: number
+  batch?: string
+  productionState: "registered" | "reserved" | "ongoing"
+  documentState?: "completed" | "voided"
+  itemDescription?: string
+  itemUnit?: string
   /** @format uuid */
-  inboundStockPointId?: string;
+  inboundStockPointId?: string
   /** @format uuid */
-  inboundStockLocationId?: string;
+  inboundStockLocationId?: string
   /** @format uuid */
-  outboundStockPointId?: string;
-  packageItems?: PackageItem[];
+  outboundStockPointId?: string
+  packageItems?: PackageItem[]
 }
 
 export interface LabelList {
-  Labels?: Label[];
+  Labels?: Label[]
 }
 
 export interface AttendanceTransactionListItemList {
-  AttendanceTransactions?: AttendanceTransactionListItem[];
+  AttendanceTransactions?: AttendanceTransactionListItem[]
 }
 
 export interface ScheduleTimeWrap {
-  ScheduleTime?: ScheduleTime;
+  ScheduleTime?: ScheduleTime
 }
 
 export interface CompanySettingsWrap {
-  CompanySettings?: CompanySettings;
+  CompanySettings?: CompanySettings
 }
 
 export interface ExpenseWrap {
-  Expense?: Expense;
+  Expense?: Expense
 }
 
 export interface PredefinedAccount {
-  "@url"?: string;
-  Name?: string;
+  "@url"?: string
+  Name?: string
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  Account: number;
+  Account: number
 }
 
 export interface ScheduleTime {
-  EmployeeId?: string;
+  EmployeeId?: string
   /** @format date */
-  Date?: string;
-  ScheduleId?: string;
-  Hours?: string;
-  IWH1?: string;
-  IWH2?: string;
-  IWH3?: string;
-  IWH4?: string;
-  IWH5?: string;
+  Date?: string
+  ScheduleId?: string
+  Hours?: string
+  IWH1?: string
+  IWH2?: string
+  IWH3?: string
+  IWH4?: string
+  IWH5?: string
 }
 
 export interface AttendanceTransaction {
@@ -2948,7 +2963,7 @@ export interface AttendanceTransaction {
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId: string;
+  EmployeeId: string
   /**
    * @minLength 3
    * @maxLength 3
@@ -2979,19 +2994,19 @@ export interface AttendanceTransaction {
     | "OT4"
     | "OT5"
     | "RES"
-    | "TID";
+    | "TID"
   /** @format date */
-  Date: string;
-  Hours?: string;
-  CostCenter?: string;
-  Project?: string;
+  Date: string
+  Hours?: string
+  CostCenter?: string
+  Project?: string
 }
 
 export interface SupplierInvoiceAccrualListItem {
-  "@url"?: string;
-  Description?: string;
+  "@url"?: string
+  Description?: string
   /** @format int32 */
-  SupplierInvoiceNumber?: number;
+  SupplierInvoiceNumber?: number
   Period:
     | "MONTHLY"
     | "BIMONTHLY"
@@ -3002,122 +3017,122 @@ export interface SupplierInvoiceAccrualListItem {
     | "2_MONTHS"
     | "3_MONTHS"
     | "6_MONTHS"
-    | "12_MONTHS";
+    | "12_MONTHS"
 }
 
 export interface SupplierInvoiceWrap {
-  SupplierInvoice?: SupplierInvoice;
+  SupplierInvoice?: SupplierInvoice
 }
 
 export interface Contract {
-  "@url"?: string;
-  "@urlTaxReductionList"?: string;
-  Active?: boolean;
+  "@url"?: string
+  "@urlTaxReductionList"?: string
+  Active?: boolean
   /** @format double */
-  AdministrationFee?: number;
+  AdministrationFee?: number
   /** @format double */
-  BasisTaxReduction?: number;
+  BasisTaxReduction?: number
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Comments?: string;
-  Continuous?: boolean;
+  Comments?: string
+  Continuous?: boolean
   /** @format date */
-  ContractDate?: string;
+  ContractDate?: string
   /** @format int32 */
-  ContractLength?: number;
+  ContractLength?: number
   /** @format double */
-  ContributionPercent?: number;
+  ContributionPercent?: number
   /** @format double */
-  ContributionValue?: number;
-  CostCenter?: string;
-  Currency?: string;
-  CustomerName?: string;
-  CustomerNumber: string;
-  DocumentNumber?: string;
-  EmailInformation?: ContractEmailInformation;
-  ExternalInvoiceReference1?: string;
-  ExternalInvoiceReference2?: string;
+  ContributionValue?: number
+  CostCenter?: string
+  Currency?: string
+  CustomerName?: string
+  CustomerNumber: string
+  DocumentNumber?: string
+  EmailInformation?: ContractEmailInformation
+  ExternalInvoiceReference1?: string
+  ExternalInvoiceReference2?: string
   /** @format double */
-  Freight?: number;
+  Freight?: number
   /** @format double */
-  Gross?: number;
-  HouseWork?: boolean;
+  Gross?: number
+  HouseWork?: boolean
   /** @format double */
-  InvoiceDiscount?: number;
+  InvoiceDiscount?: number
   /** @format int32 */
-  InvoiceInterval?: number;
-  InvoicesRemaining?: string;
-  InvoiceRows: ContractInvoiceRow[];
-  Language?: "SV" | "EN";
-  LastInvoiceDate?: string;
+  InvoiceInterval?: number
+  InvoicesRemaining?: string
+  InvoiceRows: ContractInvoiceRow[]
+  Language?: "SV" | "EN"
+  LastInvoiceDate?: string
   /** @format double */
-  Net?: number;
+  Net?: number
   /**
    * @minLength 0
    * @maxLength 25
    */
-  OurReference?: string;
+  OurReference?: string
   /** @format date */
-  PeriodEnd: string;
+  PeriodEnd: string
   /** @format date */
-  PeriodStart?: string;
-  PriceList?: string;
-  PrintTemplate?: string;
-  Project?: string;
+  PeriodStart?: string
+  PriceList?: string
+  PrintTemplate?: string
+  Project?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Remarks?: string;
+  Remarks?: string
   /** @format double */
-  RoundOff?: number;
+  RoundOff?: number
   /** @format double */
-  TaxReduction?: number;
-  TemplateName?: string;
+  TaxReduction?: number
+  TemplateName?: string
   /** @format int32 */
-  TemplateNumber?: number;
-  TermsOfDelivery?: string;
-  TermsOfPayment?: string;
+  TemplateNumber?: number
+  TermsOfDelivery?: string
+  TermsOfPayment?: string
   /** @format double */
-  Total?: number;
+  Total?: number
   /** @format double */
-  TotalToPay?: number;
+  TotalToPay?: number
   /** @format double */
-  TotalVAT?: number;
-  VatIncluded?: boolean;
-  WayOfDelivery?: string;
+  TotalVAT?: number
+  VatIncluded?: boolean
+  WayOfDelivery?: string
   /**
    * @minLength 0
    * @maxLength 75
    */
-  YourOrderNumber?: string;
-  YourReference?: string;
-  TaxReductionType?: "none" | "rot" | "rut" | "green";
+  YourOrderNumber?: string
+  YourReference?: string
+  TaxReductionType?: "none" | "rot" | "rut" | "green"
 }
 
 export interface OfferListItemList {
-  Offers?: OfferListItem[];
+  Offers?: OfferListItem[]
 }
 
 export interface ManualDocument {
-  entityId?: string;
+  entityId?: string
   /** @format int64 */
-  deliveryId?: number;
+  deliveryId?: number
   /** @format date */
-  date?: string;
-  type?: "Inbound" | "Outbound" | "StockTransfer";
-  released?: boolean;
-  voided?: boolean;
-  note?: string;
+  date?: string
+  type?: "Inbound" | "Outbound" | "StockTransfer"
+  released?: boolean
+  voided?: boolean
+  note?: string
 }
 
 export interface InvoiceAccrualListItem {
-  "@url"?: string;
-  Description: string;
+  "@url"?: string
+  Description: string
   /** @format int32 */
-  InvoiceNumber: number;
+  InvoiceNumber: number
   Period?:
     | "MONTHLY"
     | "BIMONTHLY"
@@ -3128,89 +3143,89 @@ export interface InvoiceAccrualListItem {
     | "2_MONTHS"
     | "3_MONTHS"
     | "6_MONTHS"
-    | "12_MONTHS";
+    | "12_MONTHS"
 }
 
 export interface SalaryTransactionWrap {
-  SalaryTransaction: SalaryTransaction;
+  SalaryTransaction: SalaryTransaction
 }
 
 export interface UnitList {
-  Units?: Unit[];
+  Units?: Unit[]
 }
 
 export interface SupplierInvoicePaymentWrap {
-  SupplierInvoicePayment?: SupplierInvoicePayment;
+  SupplierInvoicePayment?: SupplierInvoicePayment
 }
 
 export interface ModeOfPayment {
-  "@url"?: string;
-  Code?: string;
-  Description?: string;
+  "@url"?: string
+  Code?: string
+  Description?: string
   /**
    * @minLength 4
    * @maxLength 4
    */
-  AccountNumber: string;
+  AccountNumber: string
 }
 
 export interface Article {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  ArticleNumber?: string;
-  Bulky?: boolean;
+  ArticleNumber?: string
+  Bulky?: boolean
   /**
    * @format int32
    * @min 1000
    * @max 99999
    */
-  ConstructionAccount?: number;
+  ConstructionAccount?: number
   /**
    * @format int32
    * @min 0
    * @max 999999999
    */
-  Depth?: number;
+  Depth?: number
   /**
    * @minLength 1
    * @maxLength 200
    */
-  Description: string;
+  Description: string
   /** @format double */
-  DisposableQuantity?: number;
+  DisposableQuantity?: number
   /**
    * @minLength 0
    * @maxLength 30
    */
-  EAN?: string;
+  EAN?: string
   /**
    * @format int32
    * @min 1000
    * @max 99999
    */
-  EUAccount?: number;
+  EUAccount?: number
   /**
    * @format int32
    * @min 1000
    * @max 99999
    */
-  EUVATAccount?: number;
+  EUVATAccount?: number
   /**
    * @format int32
    * @min 1000
    * @max 99999
    */
-  ExportAccount?: number;
+  ExportAccount?: number
   /**
    * @format int32
    * @min 0
    * @max 999999999
    */
-  Height?: number;
-  Housework?: boolean;
+  Height?: number
+  Housework?: boolean
   HouseworkType?:
     | "CONSTRUCTION"
     | "ELECTRICITY"
@@ -3227,187 +3242,187 @@ export interface Article {
     | "BABYSITTING"
     | "OTHERCARE"
     | "TUTORING"
-    | "OTHERCOSTS";
-  Active?: boolean;
+    | "OTHERCOSTS"
+  Active?: boolean
   /**
    * @minLength 0
    * @maxLength 50
    */
-  Manufacturer?: string;
+  Manufacturer?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  ManufacturerArticleNumber?: string;
+  ManufacturerArticleNumber?: string
   /**
    * @minLength 0
    * @maxLength 10000
    */
-  Note?: string;
+  Note?: string
   /**
    * @format int32
    * @min 1000
    * @max 99999
    */
-  PurchaseAccount?: number;
+  PurchaseAccount?: number
   /** @format double */
-  PurchasePrice?: number;
+  PurchasePrice?: number
   /** @format double */
-  QuantityInStock?: number;
+  QuantityInStock?: number
   /** @format double */
-  ReservedQuantity?: number;
+  ReservedQuantity?: number
   /**
    * @format int32
    * @min 1000
    * @max 99999
    */
-  SalesAccount?: number;
-  StockGoods?: boolean;
+  SalesAccount?: number
+  StockGoods?: boolean
   /**
    * @minLength 0
    * @maxLength 100
    */
-  StockPlace?: string;
+  StockPlace?: string
   /** @format double */
-  StockValue?: number;
+  StockValue?: number
   /** @format double */
-  StockWarning?: number;
-  SupplierName?: string;
-  SupplierNumber?: string;
-  Type?: "STOCK" | "SERVICE";
-  Unit?: string;
+  StockWarning?: number
+  SupplierName?: string
+  SupplierNumber?: string
+  Type?: "STOCK" | "SERVICE"
+  Unit?: string
   /** @format double */
-  VAT?: number;
-  WebshopArticle?: boolean;
+  VAT?: number
+  WebshopArticle?: boolean
   /**
    * @format int32
    * @min 0
    * @max 999999999
    */
-  Weight?: number;
+  Weight?: number
   /**
    * @format int32
    * @min 0
    * @max 999999999
    */
-  Width?: number;
-  Expired?: boolean;
+  Width?: number
+  Expired?: boolean
   /** @format double */
-  SalesPrice?: number;
-  CostCalculationMethod?: string;
+  SalesPrice?: number
+  CostCalculationMethod?: string
   /** @format int32 */
-  StockAccount?: number;
+  StockAccount?: number
   /** @format int32 */
-  StockChangeAccount?: number;
+  StockChangeAccount?: number
   /** @format double */
-  DirectCost?: number;
+  DirectCost?: number
   /** @format double */
-  FreightCost?: number;
+  FreightCost?: number
   /** @format double */
-  OtherCost?: number;
-  DefaultStockPoint?: string;
-  DefaultStockLocation?: string;
+  OtherCost?: number
+  DefaultStockPoint?: string
+  DefaultStockLocation?: string
 }
 
 export interface TaxReduction {
-  "@url"?: string;
+  "@url"?: string
   /** @format double */
-  ApprovedAmount?: number;
+  ApprovedAmount?: number
   /**
    * @format double
    * @min 1
    */
-  AskedAmount: number;
+  AskedAmount: number
   /** @format double */
-  BilledAmount?: number;
+  BilledAmount?: number
   /**
    * @minLength 1
    * @maxLength 2147483647
    */
-  CustomerName: string;
+  CustomerName: string
   /** @format int32 */
-  Id?: number;
-  PropertyDesignation?: string;
-  ReferenceDocumentType: "OFFER" | "ORDER" | "INVOICE";
-  ReferenceNumber: string;
-  RequestSent?: boolean;
-  ResidenceAssociationOrganisationNumber?: string;
+  Id?: number
+  PropertyDesignation?: string
+  ReferenceDocumentType: "OFFER" | "ORDER" | "INVOICE"
+  ReferenceNumber: string
+  RequestSent?: boolean
+  ResidenceAssociationOrganisationNumber?: string
   /**
    * @minLength 10
    * @maxLength 13
    */
-  SocialSecurityNumber: string;
+  SocialSecurityNumber: string
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  VoucherYear?: number;
-  TaxReductionAmounts?: TaxReductionTaxReductionAmount[];
+  VoucherYear?: number
+  TaxReductionAmounts?: TaxReductionTaxReductionAmount[]
 }
 
 export interface FolderFileRowWrap {
-  File?: FolderFileRow;
+  File?: FolderFileRow
 }
 
 export interface IncomingGoodsListRow {
   /** @format int64 */
-  id?: number;
-  hasDeliveryNote?: boolean;
-  deliveryNoteId?: string;
-  supplierNumber?: string;
+  id?: number
+  hasDeliveryNote?: boolean
+  deliveryNoteId?: string
+  supplierNumber?: string
   /** @format date */
-  date?: string;
-  note?: string;
-  voided?: boolean;
-  completed?: boolean;
-  released?: boolean;
+  date?: string
+  note?: string
+  voided?: boolean
+  completed?: boolean
+  released?: boolean
   /** @format uuid */
-  stockPointId?: string;
-  supplierName?: string;
-  unmatchedValue?: number;
+  stockPointId?: string
+  supplierName?: string
+  unmatchedValue?: number
 }
 
 export interface InvoiceLabel {
   /** @format int32 */
-  Id?: number;
+  Id?: number
 }
 
 export interface SupplierInvoicePayment {
-  "@url"?: string;
+  "@url"?: string
   /** @format double */
-  Amount?: number;
+  Amount?: number
   /** @format double */
-  AmountCurrency?: number;
-  Booked?: boolean;
+  AmountCurrency?: number
+  Booked?: boolean
   /**
    * @minLength 3
    * @maxLength 3
    */
-  Currency?: string;
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format double */
-  CurrencyUnit?: number;
-  Information?: string;
-  InvoiceNumber: string;
+  CurrencyUnit?: number
+  Information?: string
+  InvoiceNumber: string
   /** @format date */
-  InvoiceDueDate?: string;
-  InvoiceOCR?: string;
-  InvoiceSupplierName?: string;
-  InvoiceSupplierNumber?: string;
-  InvoiceTotal?: string;
-  ModeOfPayment?: string;
+  InvoiceDueDate?: string
+  InvoiceOCR?: string
+  InvoiceSupplierName?: string
+  InvoiceSupplierNumber?: string
+  InvoiceTotal?: string
+  ModeOfPayment?: string
   /** @format int32 */
-  Number?: number;
+  Number?: number
   /** @format date */
-  PaymentDate?: string;
-  Source?: "manual" | "direct";
+  PaymentDate?: string
+  Source?: "manual" | "direct"
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  VoucherYear?: number;
-  WriteOffs?: SupplierInvoicePaymentWriteOff[];
+  VoucherYear?: number
+  WriteOffs?: SupplierInvoicePaymentWriteOff[]
 }
 
 export interface TRItem {
@@ -3415,27 +3430,27 @@ export interface TRItem {
    * @minLength 0
    * @maxLength 40
    */
-  id?: string;
+  id?: string
   /**
    * @minLength 0
    * @maxLength 255
    */
-  description?: string;
-  active?: boolean;
-  purchasePrice?: number;
-  salesPrices?: TRItemPrice[];
-  type?: "SERVICE" | "STOCK";
-  unit?: string;
-  isStock?: boolean;
+  description?: string
+  active?: boolean
+  purchasePrice?: number
+  salesPrices?: TRItemPrice[]
+  type?: "SERVICE" | "STOCK"
+  unit?: string
+  isStock?: boolean
 }
 
 export interface Folder {
-  "@url"?: string;
-  Email?: string;
-  Files?: FolderFileRow[];
-  Folders?: FolderFolderRow[];
-  Id?: string;
-  Name?: string;
+  "@url"?: string
+  Email?: string
+  Files?: FolderFileRow[]
+  Folders?: FolderFolderRow[]
+  Id?: string
+  Name?: string
 }
 
 export interface ManualOutboundDocumentRow {
@@ -3443,43 +3458,43 @@ export interface ManualOutboundDocumentRow {
    * @minLength 1
    * @maxLength 50
    */
-  itemId: string;
-  itemDescription?: string;
-  itemUnit?: string;
+  itemId: string
+  itemDescription?: string
+  itemUnit?: string
   /**
    * @min 0.01
    * @exclusiveMin false
    */
-  quantity: number;
-  deliveredQuantity?: number;
+  quantity: number
+  deliveredQuantity?: number
   /** @format uuid */
-  stockPointId?: string;
-  stockPointCode?: string;
-  stockPointName?: string;
+  stockPointId?: string
+  stockPointCode?: string
+  stockPointName?: string
   /** @format uuid */
-  stockLocationId?: string;
-  stockLocationCode?: string;
-  stockLocationName?: string;
-  costCenterCode?: string;
-  projectId?: string;
-  forcedQuantity?: number;
+  stockLocationId?: string
+  stockLocationCode?: string
+  stockLocationName?: string
+  costCenterCode?: string
+  projectId?: string
+  forcedQuantity?: number
 }
 
 export interface OrderOrderRow {
   /** @format int32 */
-  AccountNumber?: number;
-  ArticleNumber?: string;
-  ContributionPercent?: string;
-  ContributionValue?: string;
-  CostCenter?: string;
-  DeliveredQuantity?: string;
-  Description?: string;
+  AccountNumber?: number
+  ArticleNumber?: string
+  ContributionPercent?: string
+  ContributionValue?: string
+  CostCenter?: string
+  DeliveredQuantity?: string
+  Description?: string
   /** @format double */
-  Discount?: number;
-  DiscountType?: "AMOUNT" | "PERCENT";
-  HouseWork?: boolean;
+  Discount?: number
+  DiscountType?: "AMOUNT" | "PERCENT"
+  HouseWork?: boolean
   /** @format int32 */
-  HouseWorkHoursToReport?: number;
+  HouseWorkHoursToReport?: number
   HouseWorkType?:
     | "CONSTRUCTION"
     | "ELECTRICITY"
@@ -3495,138 +3510,138 @@ export interface OrderOrderRow {
     | "GARDENING"
     | "BABYSITTING"
     | "OTHERCARE"
-    | "OTHERCOSTS";
-  OrderedQuantity?: string;
+    | "OTHERCOSTS"
+  OrderedQuantity?: string
   /** @format double */
-  Price?: number;
-  Project?: string;
-  ReservedQuantity?: string;
+  Price?: number
+  Project?: string
+  ReservedQuantity?: string
   /** @format int32 */
-  RowId?: number;
-  StockPointCode?: string;
-  StockPointId?: string;
+  RowId?: number
+  StockPointCode?: string
+  StockPointId?: string
   /** @format double */
-  Total?: number;
-  Unit?: string;
+  Total?: number
+  Unit?: string
   /** @format double */
-  VAT?: number;
+  VAT?: number
 }
 
 export interface TermsOfDeliveryList {
-  TermsOfDeliveries?: TermsOfDelivery[];
+  TermsOfDeliveries?: TermsOfDelivery[]
 }
 
 export interface VoucherSeriesListItemList {
-  VoucherSeriesCollection?: VoucherSeriesListItem[];
+  VoucherSeriesCollection?: VoucherSeriesListItem[]
 }
 
 export interface WayOfDeliveryWrap {
-  WayOfDelivery?: WayOfDelivery;
+  WayOfDelivery?: WayOfDelivery
 }
 
 export interface Sell {
   /** @format int32 */
-  Percentage?: number;
+  Percentage?: number
   /** @format int32 */
-  Price?: number;
-  Comment?: string;
-  Date?: string;
+  Price?: number
+  Comment?: string
+  Date?: string
 }
 
 export interface CompanyInfoWrap {
-  CompanyInformation?: CompanyInfo;
+  CompanyInformation?: CompanyInfo
 }
 
 export interface Supplier {
-  "@url"?: string;
-  Active?: boolean;
-  Address1?: string;
-  Address2?: string;
-  Bank?: string;
-  BankAccountNumber?: string;
-  BG?: string;
-  BIC?: string;
-  BranchCode?: string;
+  "@url"?: string
+  Active?: boolean
+  Address1?: string
+  Address2?: string
+  Bank?: string
+  BankAccountNumber?: string
+  BG?: string
+  BIC?: string
+  BranchCode?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  City?: string;
-  ClearingNumber?: string;
+  City?: string
+  ClearingNumber?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Comments?: string;
-  CostCenter?: string;
-  Country?: string;
+  Comments?: string
+  CostCenter?: string
+  Country?: string
   /**
    * @minLength 0
    * @maxLength 2
    */
-  CountryCode?: string;
+  CountryCode?: string
   /**
    * @minLength 0
    * @maxLength 3
    */
-  Currency?: string;
-  DisablePaymentFile?: boolean;
-  Email?: string;
-  Fax?: string;
-  IBAN?: string;
+  Currency?: string
+  DisablePaymentFile?: boolean
+  Email?: string
+  Fax?: string
+  IBAN?: string
   /**
    * @minLength 1
    * @maxLength 1024
    */
-  Name: string;
-  OrganisationNumber?: string;
-  OurReference?: string;
-  OurCustomerNumber?: string;
-  PG?: string;
+  Name: string
+  OrganisationNumber?: string
+  OurReference?: string
+  OurCustomerNumber?: string
+  PG?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone1?: string;
+  Phone1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone2?: string;
+  Phone2?: string
   /**
    * @minLength 4
    * @maxLength 4
    */
-  PreDefinedAccount?: string;
-  Project?: string;
-  SupplierNumber?: string;
-  TermsOfPayment?: string;
-  VATNumber?: string;
-  VATType?: string;
-  VisitingAddress?: string;
-  VisitingCity?: string;
-  VisitingCountry?: string;
-  VisitingCountryCode?: string;
-  VisitingZipCode?: string;
-  WorkPlace?: string;
-  WWW?: string;
-  YourReference?: string;
-  ZipCode?: string;
+  PreDefinedAccount?: string
+  Project?: string
+  SupplierNumber?: string
+  TermsOfPayment?: string
+  VATNumber?: string
+  VATType?: string
+  VisitingAddress?: string
+  VisitingCity?: string
+  VisitingCountry?: string
+  VisitingCountryCode?: string
+  VisitingZipCode?: string
+  WorkPlace?: string
+  WWW?: string
+  YourReference?: string
+  ZipCode?: string
 }
 
 export interface AssetSingle {
-  Assets?: Asset;
+  Assets?: Asset
 }
 
 export interface AbsenceTransactionListItem {
-  "@url"?: string;
+  "@url"?: string
   /** @format uuid */
-  id?: string;
+  id?: string
   /**
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId: string;
+  EmployeeId: string
   /**
    * @minLength 3
    * @maxLength 3
@@ -3653,24 +3668,24 @@ export interface AbsenceTransactionListItem {
     | "SVE"
     | "TJL"
     | "UTB"
-    | "VAB";
+    | "VAB"
   /** @format date */
-  Date: string;
+  Date: string
   /** @format float */
-  Extent?: number;
+  Extent?: number
   /** @format float */
-  Hours?: number;
-  HolidayEntitling?: boolean;
-  CostCenter?: string;
-  Project?: string;
+  Hours?: number
+  HolidayEntitling?: boolean
+  CostCenter?: string
+  Project?: string
 }
 
 export interface ExpenseListItemWrap {
-  Expenses?: ExpenseListItem[];
+  Expenses?: ExpenseListItem[]
 }
 
 export interface ContractTemplateWrap {
-  ContractTemplate?: ContractTemplate;
+  ContractTemplate?: ContractTemplate
 }
 
 export interface StockTransferRow {
@@ -3678,109 +3693,109 @@ export interface StockTransferRow {
    * @minLength 1
    * @maxLength 50
    */
-  itemId: string;
-  itemDescription?: string;
-  itemUnit?: string;
-  quantity?: number;
+  itemId: string
+  itemDescription?: string
+  itemUnit?: string
+  quantity?: number
   /**
    * @min 0.01
    * @exclusiveMin false
    */
-  requestedQuantity: number;
+  requestedQuantity: number
   /** @format uuid */
-  fromStockPointId: string;
-  fromStockPointCode?: string;
-  fromStockPointName?: string;
+  fromStockPointId: string
+  fromStockPointCode?: string
+  fromStockPointName?: string
   /** @format uuid */
-  fromStockLocationId?: string;
-  fromStockLocationCode?: string;
-  fromStockLocationName?: string;
+  fromStockLocationId?: string
+  fromStockLocationCode?: string
+  fromStockLocationName?: string
   /** @format uuid */
-  toStockPointId: string;
-  toStockPointCode?: string;
-  toStockPointName?: string;
+  toStockPointId: string
+  toStockPointCode?: string
+  toStockPointName?: string
   /** @format uuid */
-  toStockLocationId?: string;
-  toStockLocationCode?: string;
-  toStockLocationName?: string;
+  toStockLocationId?: string
+  toStockLocationCode?: string
+  toStockLocationName?: string
   /** @format int64 */
-  rowNum?: number;
+  rowNum?: number
 }
 
 export interface CreateAsset {
-  Number?: string;
-  Description?: string;
-  Notes?: string;
+  Number?: string
+  Description?: string
+  Notes?: string
   /** @format int32 */
-  Type?: number;
+  Type?: number
   /** @format int32 */
-  AccountAssetId?: number;
+  AccountAssetId?: number
   /** @format int32 */
-  AccountDepreciationId?: number;
+  AccountDepreciationId?: number
   /** @format int32 */
-  AccountValueLossId?: number;
+  AccountValueLossId?: number
 }
 
 export interface PredefinedVoucherSeriesList {
-  PreDefinedVoucherSeriesCollection?: PredefinedVoucherSeries[];
+  PreDefinedVoucherSeriesCollection?: PredefinedVoucherSeries[]
 }
 
 export interface PurchaseOrderRow {
   /** @format uuid */
-  id?: string;
+  id?: string
   /** @format int64 */
-  purchaseOrderId?: number;
+  purchaseOrderId?: number
   /**
    * @minLength 1
    * @maxLength 50
    */
-  itemId: string;
+  itemId: string
   /**
    * @min 0
    * @exclusiveMin false
    */
-  orderedQuantity: number;
-  itemDescription?: string;
-  itemUnit?: string;
+  orderedQuantity: number
+  itemDescription?: string
+  itemUnit?: string
   /** @format int64 */
-  rowNum?: number;
+  rowNum?: number
   /**
    * @minLength 0
    * @maxLength 25
    */
-  projectId?: string;
+  projectId?: string
   /**
    * @minLength 0
    * @maxLength 25
    */
-  costCenterCode?: string;
+  costCenterCode?: string
   /**
    * @min 0
    * @exclusiveMin false
    */
-  remainingOrderedQuantity: number;
+  remainingOrderedQuantity: number
   /**
    * @minLength 3
    * @maxLength 3
    */
-  currencyCode: string;
+  currencyCode: string
   /**
    * @min 0
    * @exclusiveMin false
    */
-  price?: number;
-  receivedQuantity?: number;
-  backOrderQuantity?: number;
+  price?: number
+  receivedQuantity?: number
+  backOrderQuantity?: number
   /** @format uuid */
-  stockPointId?: string;
+  stockPointId?: string
   /** @format uuid */
-  stockLocationId?: string;
-  stockPointCode?: string;
-  stockPointName?: string;
-  stockLocationCode?: string;
-  stockLocationName?: string;
-  isStockItem?: boolean;
-  notes?: PurchaseOrderRowNote[];
+  stockLocationId?: string
+  stockPointCode?: string
+  stockPointName?: string
+  stockLocationCode?: string
+  stockLocationName?: string
+  isStockItem?: boolean
+  notes?: PurchaseOrderRowNote[]
 }
 
 export interface InvoiceEDIInformation {
@@ -3788,21 +3803,21 @@ export interface InvoiceEDIInformation {
    * @minLength 0
    * @maxLength 13
    */
-  EDIGlobalLocationNumber?: string;
+  EDIGlobalLocationNumber?: string
   /**
    * @minLength 0
    * @maxLength 13
    */
-  EDIGlobalLocationNumberDelivery?: string;
-  EDIInvoiceExtra1?: string;
-  EDIInvoiceExtra2?: string;
-  EDIOurElectronicReference?: string;
-  EDIYourElectronicReference?: string;
-  EDIStatus?: string;
+  EDIGlobalLocationNumberDelivery?: string
+  EDIInvoiceExtra1?: string
+  EDIInvoiceExtra2?: string
+  EDIOurElectronicReference?: string
+  EDIYourElectronicReference?: string
+  EDIStatus?: string
 }
 
 export interface InvoiceAccrualListItemList {
-  InvoiceAccruals?: InvoiceAccrualListItem[];
+  InvoiceAccruals?: InvoiceAccrualListItem[]
 }
 
 export interface IncomingGoodsRow {
@@ -3810,239 +3825,239 @@ export interface IncomingGoodsRow {
    * @minLength 1
    * @maxLength 50
    */
-  itemId: string;
+  itemId: string
   /**
    * @min 0
    * @exclusiveMin false
    */
-  receivedQuantity: number;
+  receivedQuantity: number
   /**
    * @min 0
    * @exclusiveMin false
    */
-  backOrderQuantity: number;
+  backOrderQuantity: number
   /** @format uuid */
-  id?: string;
-  itemDescription?: string;
+  id?: string
+  itemDescription?: string
   /** @format uuid */
-  stockPointId?: string;
-  stockPointCode?: string;
-  stockPointName?: string;
+  stockPointId?: string
+  stockPointCode?: string
+  stockPointName?: string
   /** @format uuid */
-  stockLocationId?: string;
-  stockLocationCode?: string;
-  stockLocationName?: string;
+  stockLocationId?: string
+  stockLocationCode?: string
+  stockLocationName?: string
   /**
    * @min 0
    * @exclusiveMin false
    */
-  takenQuantity: number;
-  costCenterCode?: string;
-  projectId?: string;
+  takenQuantity: number
+  costCenterCode?: string
+  projectId?: string
   /**
    * @min 0
    * @exclusiveMin false
    */
-  invoicedQuantity: number;
-  itemUnit?: string;
+  invoicedQuantity: number
+  itemUnit?: string
   /** @format int64 */
-  purchaseOrderId?: number;
+  purchaseOrderId?: number
   /**
    * @min 0
    * @exclusiveMin false
    */
-  orderedQuantity: number;
+  orderedQuantity: number
   /** @format uuid */
-  purchaseOrderRowId?: string;
+  purchaseOrderRowId?: string
   /** @format int32 */
-  rowOrder?: number;
+  rowOrder?: number
   /**
    * @minLength 0
    * @maxLength 50
    */
-  batch?: string;
-  isStockItem?: boolean;
-  remainingOrderedQuantity?: number;
-  directCost?: number;
+  batch?: string
+  isStockItem?: boolean
+  remainingOrderedQuantity?: number
+  directCost?: number
 }
 
 export interface ContractTemplateListItem {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @format int32
    * @min 1
    * @max 9999
    */
-  ContractLength?: number;
+  ContractLength?: number
   /** @format int32 */
-  ContractTemplate?: number;
-  ContractTemplateName?: string;
+  ContractTemplate?: number
+  ContractTemplateName?: string
   /**
    * @format int32
    * @min 1
    * @max 9999
    */
-  InvoiceInterval?: number;
+  InvoiceInterval?: number
 }
 
 export interface Scrap {
   /** @format int32 */
-  Percentage?: number;
-  Comment?: string;
-  Date?: string;
+  Percentage?: number
+  Comment?: string
+  Date?: string
 }
 
 export interface VoucherSeriesApprover {
   /** @format int32 */
-  Id?: number;
-  Name?: string;
+  Id?: number
+  Name?: string
 }
 
 export interface DepreciationResponseWrap {
-  AssetsDepreciation?: DepreciationResponse[];
+  AssetsDepreciation?: DepreciationResponse[]
 }
 
 export interface ContractAccrualListItem {
-  "@url"?: string;
-  Description: string;
+  "@url"?: string
+  Description: string
   /** @format int32 */
-  DocumentNumber: number;
-  Period?: "MONTHLY" | "BIMONTHLY" | "QUARTERLY" | "SEMIANNUALLY" | "ANNUALLY";
+  DocumentNumber: number
+  Period?: "MONTHLY" | "BIMONTHLY" | "QUARTERLY" | "SEMIANNUALLY" | "ANNUALLY"
 }
 
 export interface PurchaseOrder {
   /** @format date */
-  deliveryDate?: string;
+  deliveryDate?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
+  note?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  internalReference?: string;
+  internalReference?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierName?: string;
+  supplierName?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  messageToSupplier?: string;
+  messageToSupplier?: string
   /** @format int64 */
-  id?: number;
+  id?: number
   /** @format date */
-  orderDate: string;
+  orderDate: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierNumber: string;
-  rows?: PurchaseOrderRow[];
+  supplierNumber: string
+  rows?: PurchaseOrderRow[]
   /** @format uuid */
-  stockPointId?: string;
+  stockPointId?: string
   /**
    * @minLength 1
    * @maxLength 50
    */
-  deliveryName: string;
+  deliveryName: string
   /**
    * @minLength 1
    * @maxLength 1024
    */
-  deliveryAddress: string;
+  deliveryAddress: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  deliveryAddress2?: string;
+  deliveryAddress2?: string
   /**
    * @minLength 1
    * @maxLength 10
    */
-  deliveryZipCode: string;
+  deliveryZipCode: string
   /**
    * @minLength 1
    * @maxLength 50
    */
-  deliveryCity: string;
+  deliveryCity: string
   /**
    * @minLength 0
    * @maxLength 3
    */
-  deliveryCountryCode?: string;
+  deliveryCountryCode?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierAddress?: string;
+  supplierAddress?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierAddress2?: string;
+  supplierAddress2?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierPostCode?: string;
+  supplierPostCode?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierCity?: string;
+  supplierCity?: string
   /**
    * @minLength 0
    * @maxLength 3
    */
-  supplierCountryCode?: string;
+  supplierCountryCode?: string
   /**
    * @minLength 0
    * @maxLength 20
    */
-  paymentTermsCode: string;
+  paymentTermsCode: string
   /**
    * @minLength 0
    * @maxLength 3
    */
-  languageCode?: string;
+  languageCode?: string
   /**
    * @minLength 0
    * @maxLength 3
    */
-  currencyCode: string;
+  currencyCode: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  ourReference?: string;
+  ourReference?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  yourReference?: string;
+  yourReference?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  confirmationEmail?: string;
+  confirmationEmail?: string
   /**
    * @minLength 0
    * @maxLength 25
    */
-  projectId?: string;
+  projectId?: string
   /**
    * @minLength 0
    * @maxLength 25
    */
-  costCenterCode?: string;
-  stockPointCode?: string;
-  totalReceivedQuantity?: number;
-  voided?: boolean;
+  costCenterCode?: string
+  stockPointCode?: string
+  totalReceivedQuantity?: number
+  voided?: boolean
   responseState?:
     | "NOT_SENT"
     | "SENT"
@@ -4050,7 +4065,7 @@ export interface PurchaseOrder {
     | "ACCEPTED_WITH_CHANGED_DLV_DATE"
     | "PARTLY_ACCEPTED_WITH_REQ_DLV_DATE"
     | "PARTLY_ACCEPTED_WITH_CHANGED_DLV_DATE"
-    | "REJECTED";
+    | "REJECTED"
   purchaseOrderState?:
     | "NOT_SENT"
     | "SENT"
@@ -4059,46 +4074,46 @@ export interface PurchaseOrder {
     | "RECEIVED"
     | "VOIDED"
     | "CURRENT"
-    | "ALL";
+    | "ALL"
   /**
    * @minLength 0
    * @maxLength 100
    */
-  supplierEmail?: string;
-  currencyRate: number;
+  supplierEmail?: string
+  currencyRate: number
   /**
    * @format int32
    * @min 1
    */
-  currencyUnit?: number;
-  orderValue?: number;
-  manuallyCompleted?: boolean;
-  purchaseType?: "WAREHOUSE" | "DROPSHIP";
+  currencyUnit?: number
+  orderValue?: number
+  manuallyCompleted?: boolean
+  purchaseType?: "WAREHOUSE" | "DROPSHIP"
   /**
    * @minLength 0
    * @maxLength 25
    */
-  customerId?: string;
+  customerId?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  customerNumber?: string;
+  customerNumber?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  customerName?: string;
-  orderValueInSEK?: number;
-  supplier?: string;
-  translatedResponseState?: string;
-  outboundDocumentReference?: DocumentReference;
-  dropship?: boolean;
+  customerName?: string
+  orderValueInSEK?: number
+  supplier?: string
+  translatedResponseState?: string
+  outboundDocumentReference?: DocumentReference
+  dropship?: boolean
 }
 
 export interface LockedPeriod {
   /** @format date */
-  EndDate?: string;
+  EndDate?: string
 }
 
 export interface TaxReductionTaxReductionAmount {
@@ -4106,64 +4121,64 @@ export interface TaxReductionTaxReductionAmount {
    * @format double
    * @min 1
    */
-  askedAmount: number;
-  workType: "SOLARCELLS" | "STORAGESELFPRODUCEDELECTRICITY" | "CHARGINGSTATIONELECTRICVEHICLE";
+  askedAmount: number
+  workType: "SOLARCELLS" | "STORAGESELFPRODUCEDELECTRICITY" | "CHARGINGSTATIONELECTRICVEHICLE"
 }
 
 export interface ContractTemplateListItemList {
-  ContractTemplates?: ContractTemplateListItem[];
+  ContractTemplates?: ContractTemplateListItem[]
 }
 
 export interface CustomerReferenceCustomerReferenceRowWrap {
-  CustomerReferenceRow?: CustomerReferenceCustomerReferenceRow;
+  CustomerReferenceRow?: CustomerReferenceCustomerReferenceRow
 }
 
 export interface EmployeeListItemWrap {
-  Employees?: EmployeeListItem[];
+  Employees?: EmployeeListItem[]
 }
 
 export interface ProjectListItemList {
-  Projects?: ProjectListItem[];
+  Projects?: ProjectListItem[]
 }
 
 export interface ContractAccrual {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  AccrualAccount: number;
+  AccrualAccount: number
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  CostAccount: number;
-  Description: string;
+  CostAccount: number
+  Description: string
   /**
    * @maxItems 2147483647
    * @minItems 2
    */
-  AccrualRows: ContractAccrualAccrualRow[];
+  AccrualRows: ContractAccrualAccrualRow[]
   /** @format int32 */
-  DocumentNumber: number;
-  Period?: "MONTHLY" | "BIMONTHLY" | "QUARTERLY" | "SEMIANNUALLY" | "ANNUALLY";
+  DocumentNumber: number
+  Period?: "MONTHLY" | "BIMONTHLY" | "QUARTERLY" | "SEMIANNUALLY" | "ANNUALLY"
   /** @format int32 */
-  Times?: number;
+  Times?: number
   /** @format double */
-  Total: number;
-  VATIncluded?: boolean;
+  Total: number
+  VATIncluded?: boolean
 }
 
 export interface PredefinedVoucherSeriesWrap {
-  PreDefinedVoucherSeries?: PredefinedVoucherSeries;
+  PreDefinedVoucherSeries?: PredefinedVoucherSeries
 }
 
 export interface TrustedEmailSenderRejectedSender {
   /** @format int32 */
-  Id?: number;
-  Email: string;
+  Id?: number
+  Email: string
 }
 
 export interface StockTransferDocument {
@@ -4171,171 +4186,171 @@ export interface StockTransferDocument {
    * @format int64
    * @min 1
    */
-  id?: number;
+  id?: number
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
-  rows?: StockTransferRow[];
-  released?: boolean;
-  voided?: boolean;
+  note?: string
+  rows?: StockTransferRow[]
+  released?: boolean
+  voided?: boolean
   /** @format int64 */
-  version?: number;
+  version?: number
   /** @format date */
-  transferDate?: string;
+  transferDate?: string
 }
 
 export interface ProjectListItem {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 50
    */
-  Description: string;
+  Description: string
   /** @format date */
-  EndDate?: string;
+  EndDate?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  ProjectLeader?: string;
+  ProjectLeader?: string
   /**
    * @minLength 0
    * @maxLength 20
    */
-  ProjectNumber?: string;
-  Status?: "NOTSTARTED" | "ONGOING" | "COMPLETED";
+  ProjectNumber?: string
+  Status?: "NOTSTARTED" | "ONGOING" | "COMPLETED"
   /** @format date */
-  StartDate?: string;
+  StartDate?: string
 }
 
 export interface Unit {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 20
    */
-  Code: string;
+  Code: string
   /**
    * @minLength 1
    * @maxLength 100
    */
-  Description: string;
+  Description: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  CodeEnglish?: string;
+  CodeEnglish?: string
 }
 
 export interface AccountSingleItemWrap {
-  Account?: AccountSingleItem;
+  Account?: AccountSingleItem
 }
 
 export interface EmployeeWrap {
-  Employee?: Employee;
+  Employee?: Employee
 }
 
 export interface InvoicePayloadEmailInformation {
-  EmailAddressFrom?: string;
-  EmailAddressTo?: string;
-  EmailAddressCC?: string;
-  EmailAddressBCC?: string;
+  EmailAddressFrom?: string
+  EmailAddressTo?: string
+  EmailAddressCC?: string
+  EmailAddressBCC?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  EmailSubject?: string;
+  EmailSubject?: string
   /**
    * @minLength 0
    * @maxLength 20000
    */
-  EmailBody?: string;
+  EmailBody?: string
 }
 
 export interface TermsOfPaymentList {
-  TermsOfPayments?: TermsOfPayment[];
+  TermsOfPayments?: TermsOfPayment[]
 }
 
 export interface OfferEmailInformation {
-  EmailAddressFrom?: string;
-  EmailAddressTo?: string;
-  EmailAddressCC?: string;
-  EmailAddressBCC?: string;
+  EmailAddressFrom?: string
+  EmailAddressTo?: string
+  EmailAddressCC?: string
+  EmailAddressBCC?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  EmailSubject?: string;
+  EmailSubject?: string
   /**
    * @minLength 0
    * @maxLength 20000
    */
-  EmailBody?: string;
+  EmailBody?: string
 }
 
 export interface TermsOfPayment {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 25
    */
-  Code: string;
-  Description: string;
+  Code: string
+  Description: string
 }
 
 export interface StockPoint {
   /** @format uuid */
-  id?: string;
+  id?: string
   /**
    * @minLength 1
    * @maxLength 10
    */
-  code: string;
+  code: string
   /**
    * @minLength 1
    * @maxLength 25
    */
-  name: string;
-  stockLocations?: StockLocation[];
-  usingCompanyAddress?: boolean;
+  name: string
+  stockLocations?: StockLocation[]
+  usingCompanyAddress?: boolean
   /**
    * @minLength 0
    * @maxLength 50
    */
-  deliveryName?: string;
+  deliveryName?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  deliveryAddress?: string;
+  deliveryAddress?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  deliveryAddress2?: string;
+  deliveryAddress2?: string
   /**
    * @minLength 0
    * @maxLength 10
    */
-  deliveryZipCode?: string;
+  deliveryZipCode?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  deliveryCity?: string;
+  deliveryCity?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  deliveryPhone?: string;
+  deliveryPhone?: string
   /**
    * @minLength 0
    * @maxLength 3
    */
-  deliveryCountryCode?: string;
-  active?: boolean;
+  deliveryCountryCode?: string
+  active?: boolean
 }
 
 export interface CustomDocumentType {
@@ -4344,16 +4359,16 @@ export interface CustomDocumentType {
    * @maxLength 25
    * @pattern [a-zA-Z0-9_-]+
    */
-  referenceType: string;
-  category: "INBOUND" | "OUTBOUND";
+  referenceType: string
+  category: "INBOUND" | "OUTBOUND"
 }
 
 export interface SupplierInvoiceFileConnectionList {
-  SupplierInvoiceFileConnections?: SupplierInvoiceFileConnection[];
+  SupplierInvoiceFileConnections?: SupplierInvoiceFileConnection[]
 }
 
 export interface SupplierInvoiceExternalURLConnectionSingle {
-  SupplierInvoiceExternalURLConnection?: SupplierInvoiceExternalURLConnection;
+  SupplierInvoiceExternalURLConnection?: SupplierInvoiceExternalURLConnection
 }
 
 export interface CustomInboundDocument {
@@ -4362,164 +4377,164 @@ export interface CustomInboundDocument {
    * @maxLength 25
    * @pattern ^[0-9]+
    */
-  id?: string;
+  id?: string
   /**
    * @minLength 1
    * @maxLength 25
    * @pattern [a-zA-Z0-9_-]+
    */
-  type?: string;
+  type?: string
   /** @format date */
-  date: string;
-  currency?: Currency;
+  date: string
+  currency?: Currency
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
-  warehouseReady?: boolean;
-  voided?: boolean;
-  rows: CustomInboundDocumentRow[];
+  note?: string
+  warehouseReady?: boolean
+  voided?: boolean
+  rows: CustomInboundDocumentRow[]
 }
 
 export interface InvoicePayload {
   /** @format double */
-  AdministrationFee?: number;
-  Address1?: string;
-  Address2?: string;
+  AdministrationFee?: number
+  Address1?: string
+  Address2?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  City?: string;
+  City?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Comments?: string;
-  Country?: string;
-  CostCenter?: string;
-  CreditInvoiceReference?: string;
-  Currency?: string;
+  Comments?: string
+  Country?: string
+  CostCenter?: string
+  CreditInvoiceReference?: string
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format int32 */
-  CurrencyUnit?: number;
-  CustomerName?: string;
-  CustomerNumber: string;
+  CurrencyUnit?: number
+  CustomerName?: string
+  CustomerNumber: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryAddress1?: string;
+  DeliveryAddress1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryAddress2?: string;
+  DeliveryAddress2?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryCity?: string;
-  DeliveryCountry?: string;
+  DeliveryCity?: string
+  DeliveryCountry?: string
   /** @format date */
-  DeliveryDate?: string;
+  DeliveryDate?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryName?: string;
+  DeliveryName?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  DeliveryZipCode?: string;
-  DocumentNumber?: string;
+  DeliveryZipCode?: string
+  DocumentNumber?: string
   /** @format date */
-  DueDate?: string;
-  EDIInformation?: InvoicePayloadEDIInformation;
-  EmailInformation?: InvoicePayloadEmailInformation;
-  EUQuarterlyReport?: boolean;
+  DueDate?: string
+  EDIInformation?: InvoicePayloadEDIInformation
+  EmailInformation?: InvoicePayloadEmailInformation
+  EUQuarterlyReport?: boolean
   /**
    * @minLength 0
    * @maxLength 80
    */
-  ExternalInvoiceReference1?: string;
+  ExternalInvoiceReference1?: string
   /**
    * @minLength 0
    * @maxLength 80
    */
-  ExternalInvoiceReference2?: string;
+  ExternalInvoiceReference2?: string
   /** @format double */
-  Freight?: number;
+  Freight?: number
   /** @format date */
-  InvoiceDate?: string;
-  InvoiceRows?: InvoicePayloadInvoiceRow[];
-  InvoiceType?: "INVOICE" | "AGREEMENTINVOICE" | "INTRESTINVOICE" | "SUMMARYINVOICE" | "CASHINVOICE";
-  Labels?: InvoicePayloadLabel[];
-  Language?: "SV" | "EN";
-  NotCompleted?: boolean;
-  OCR?: string;
+  InvoiceDate?: string
+  InvoiceRows?: InvoicePayloadInvoiceRow[]
+  InvoiceType?: "INVOICE" | "AGREEMENTINVOICE" | "INTRESTINVOICE" | "SUMMARYINVOICE" | "CASHINVOICE"
+  Labels?: InvoicePayloadLabel[]
+  Language?: "SV" | "EN"
+  NotCompleted?: boolean
+  OCR?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  OurReference?: string;
-  PaymentWay?: string;
+  OurReference?: string
+  PaymentWay?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone1?: string;
+  Phone1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone2?: string;
-  PriceList?: string;
-  PrintTemplate?: string;
-  Project?: string;
+  Phone2?: string
+  PriceList?: string
+  PrintTemplate?: string
+  Project?: string
   /** @format date */
-  OutboundDate?: string;
+  OutboundDate?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Remarks?: string;
-  TermsOfDelivery?: string;
-  TermsOfPayment?: string;
-  VATIncluded?: boolean;
-  WayOfDelivery?: string;
+  Remarks?: string
+  TermsOfDelivery?: string
+  TermsOfPayment?: string
+  VATIncluded?: boolean
+  WayOfDelivery?: string
   /**
    * @minLength 0
    * @maxLength 75
    */
-  YourOrderNumber?: string;
+  YourOrderNumber?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  YourReference?: string;
+  YourReference?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  ZipCode?: string;
-  TaxReductionType?: "none" | "rot" | "rut" | "green";
+  ZipCode?: string
+  TaxReductionType?: "none" | "rot" | "rut" | "green"
 }
 
 export interface AbsenceTransactionPayloadWrap {
-  AbsenceTransaction?: AbsenceTransactionPayload;
+  AbsenceTransaction?: AbsenceTransactionPayload
 }
 
 export interface ContractEmailInformation {
-  EmailAddressFrom?: string;
-  EmailAddressTo?: string;
-  EmailAddressCC?: string;
-  EmailAddressBCC?: string;
-  EmailSubject?: string;
-  EmailBody?: string;
+  EmailAddressFrom?: string
+  EmailAddressTo?: string
+  EmailAddressCC?: string
+  EmailAddressBCC?: string
+  EmailSubject?: string
+  EmailBody?: string
 }
 
 export interface CustomInboundDocumentRow {
@@ -4527,194 +4542,194 @@ export interface CustomInboundDocumentRow {
    * @format int64
    * @min 1
    */
-  rowId?: number;
+  rowId?: number
   /**
    * @minLength 1
    * @maxLength 50
    */
-  itemId: string;
-  quantity: number;
-  directCost?: number;
-  freightCost?: number;
-  otherCost?: number;
+  itemId: string
+  quantity: number
+  directCost?: number
+  freightCost?: number
+  otherCost?: number
   /**
    * @minLength 0
    * @maxLength 50
    */
-  batch?: string;
+  batch?: string
   /** @format uuid */
-  stockPointId?: string;
+  stockPointId?: string
   /** @format uuid */
-  stockLocationId?: string;
+  stockLocationId?: string
   /**
    * @minLength 1
    * @maxLength 25
    */
-  costCenterCode?: string;
+  costCenterCode?: string
   /**
    * @minLength 1
    * @maxLength 25
    */
-  projectId?: string;
+  projectId?: string
   /**
    * @minLength 0
    * @maxLength 200
    */
-  itemDescription?: string;
+  itemDescription?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  itemUnit?: string;
-  stockPointCode?: string;
-  stockLocationCode?: string;
+  itemUnit?: string
+  stockPointCode?: string
+  stockLocationCode?: string
 }
 
 export interface ArticleFileConnectionListItem {
-  "@url"?: string;
-  FileId: string;
-  ArticleNumber: string;
+  "@url"?: string
+  FileId: string
+  ArticleNumber: string
 }
 
 export interface Order {
-  "@url"?: string;
-  "@urlTaxReductionList"?: string;
+  "@url"?: string
+  "@urlTaxReductionList"?: string
   /** @format double */
-  AdministrationFee?: number;
+  AdministrationFee?: number
   /** @format double */
-  AdministrationFeeVAT?: number;
-  Address1?: string;
-  Address2?: string;
+  AdministrationFeeVAT?: number
+  Address1?: string
+  Address2?: string
   /** @format double */
-  BasisTaxReduction?: number;
-  Cancelled?: boolean;
-  City?: string;
-  Comments?: string;
+  BasisTaxReduction?: number
+  Cancelled?: boolean
+  City?: string
+  Comments?: string
   /** @format double */
-  ContributionPercent?: number;
+  ContributionPercent?: number
   /** @format double */
-  ContributionValue?: number;
-  CopyRemarks?: boolean;
-  Country?: string;
-  CostCenter?: string;
+  ContributionValue?: number
+  CopyRemarks?: boolean
+  Country?: string
+  CostCenter?: string
   /**
    * @minLength 0
    * @maxLength 3
    */
-  Currency?: string;
+  Currency?: string
   /** @format double */
-  CurrencyRate?: number;
+  CurrencyRate?: number
   /** @format double */
-  CurrencyUnit?: number;
-  CustomerName?: string;
-  CustomerNumber: string;
-  DeliveryState?: "registration" | "reservation" | "delivery";
-  DeliveryAddress1?: string;
-  DeliveryAddress2?: string;
-  DeliveryCity?: string;
-  DeliveryCountry?: string;
+  CurrencyUnit?: number
+  CustomerName?: string
+  CustomerNumber: string
+  DeliveryState?: "registration" | "reservation" | "delivery"
+  DeliveryAddress1?: string
+  DeliveryAddress2?: string
+  DeliveryCity?: string
+  DeliveryCountry?: string
   /** @format date */
-  DeliveryDate?: string;
-  DeliveryName?: string;
-  DeliveryZipCode?: string;
-  DocumentNumber?: string;
-  EmailInformation?: OrderEmailInformation;
-  ExternalInvoiceReference1?: string;
-  ExternalInvoiceReference2?: string;
+  DeliveryDate?: string
+  DeliveryName?: string
+  DeliveryZipCode?: string
+  DocumentNumber?: string
+  EmailInformation?: OrderEmailInformation
+  ExternalInvoiceReference1?: string
+  ExternalInvoiceReference2?: string
   /** @format double */
-  Freight?: number;
+  Freight?: number
   /** @format double */
-  FreightVAT?: number;
+  FreightVAT?: number
   /** @format double */
-  Gross?: number;
-  HouseWork?: boolean;
-  InvoiceReference?: string;
-  Labels?: OrderLabel[];
-  Language?: string;
+  Gross?: number
+  HouseWork?: boolean
+  InvoiceReference?: string
+  Labels?: OrderLabel[]
+  Language?: string
   /** @format double */
-  Net?: number;
-  NotCompleted?: boolean;
-  OfferReference?: string;
+  Net?: number
+  NotCompleted?: boolean
+  OfferReference?: string
   /** @format date */
-  OrderDate?: string;
-  OrderRows?: OrderOrderRow[];
-  OrderType?: string;
-  OrganisationNumber?: string;
+  OrderDate?: string
+  OrderRows?: OrderOrderRow[]
+  OrderType?: string
+  OrganisationNumber?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  OurReference?: string;
-  Phone1?: string;
-  Phone2?: string;
-  PriceList?: string;
-  PrintTemplate?: string;
-  Project?: string;
-  WarehouseReady?: boolean;
+  OurReference?: string
+  Phone1?: string
+  Phone2?: string
+  PriceList?: string
+  PrintTemplate?: string
+  Project?: string
+  WarehouseReady?: boolean
   /** @format date */
-  OutboundDate?: string;
+  OutboundDate?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Remarks?: string;
+  Remarks?: string
   /** @format double */
-  RoundOff?: number;
-  Sent?: boolean;
+  RoundOff?: number
+  Sent?: boolean
   /** @format double */
-  TaxReduction?: number;
-  TermsOfDelivery?: string;
-  TermsOfPayment?: string;
+  TaxReduction?: number
+  TermsOfDelivery?: string
+  TermsOfPayment?: string
   /** @format int32 */
-  TimeBasisReference?: number;
+  TimeBasisReference?: number
   /** @format double */
-  Total?: number;
+  Total?: number
   /** @format double */
-  TotalToPay?: number;
+  TotalToPay?: number
   /** @format double */
-  TotalVAT?: number;
-  VATIncluded?: boolean;
-  WayOfDelivery?: string;
+  TotalVAT?: number
+  VATIncluded?: boolean
+  WayOfDelivery?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  YourReference?: string;
+  YourReference?: string
   /**
    * @minLength 0
    * @maxLength 75
    */
-  YourOrderNumber?: string;
-  ZipCode?: string;
-  StockPointCode?: string;
-  StockPointId?: string;
-  TaxReductionType?: "none" | "rot" | "rut" | "green";
+  YourOrderNumber?: string
+  ZipCode?: string
+  StockPointCode?: string
+  StockPointId?: string
+  TaxReductionType?: "none" | "rot" | "rut" | "green"
 }
 
 export interface SupplierInvoiceFileConnection {
-  "@url"?: string;
-  FileId?: string;
-  Name?: string;
-  SupplierInvoiceNumber?: string;
-  SupplierName?: string;
+  "@url"?: string
+  FileId?: string
+  Name?: string
+  SupplierInvoiceNumber?: string
+  SupplierName?: string
 }
 
 export interface StockBalance {
-  itemId?: string;
-  availableStock?: number;
-  inStock?: number;
-  stockPointCode?: string;
+  itemId?: string
+  availableStock?: number
+  inStock?: number
+  stockPointCode?: string
 }
 
 export interface TrustedEmailSenderTrustedSenderWrap {
-  TrustedSender?: TrustedEmailSenderTrustedSender;
+  TrustedSender?: TrustedEmailSenderTrustedSender
 }
 
 export interface VoucherListItem {
-  "@url"?: string;
-  Comments?: string;
-  Description?: string;
-  ReferenceNumber?: string;
+  "@url"?: string
+  Comments?: string
+  Description?: string
+  ReferenceNumber?: string
   ReferenceType?:
     | "INVOICE"
     | "SUPPLIERINVOICE"
@@ -4722,275 +4737,275 @@ export interface VoucherListItem {
     | "SUPPLIERPAYMENT"
     | "MANUAL"
     | "CASHINVOICE"
-    | "ACCRUAL";
+    | "ACCRUAL"
   /** @format date */
-  TransactionDate?: string;
+  TransactionDate?: string
   /** @format int32 */
-  VoucherNumber?: number;
-  VoucherSeries?: string;
+  VoucherNumber?: number
+  VoucherSeries?: string
   /** @format int32 */
-  Year?: number;
+  Year?: number
   /** @format int32 */
-  ApprovalState?: number;
+  ApprovalState?: number
 }
 
 export interface CurrencyList {
-  MetaInformation?: MetaInformation;
-  Currencies?: Currency[];
+  MetaInformation?: MetaInformation
+  Currencies?: Currency[]
 }
 
 export interface PrintTemplate {
-  Template: string;
+  Template: string
   /**
    * @minLength 1
    * @maxLength 25
    */
-  Name?: string;
+  Name?: string
 }
 
 export interface InvoicePaymentListItemList {
-  InvoicePayments?: InvoicePaymentListItem[];
+  InvoicePayments?: InvoicePaymentListItem[]
 }
 
 export interface VoucherFileConnectionList {
-  VoucherFileConnections?: VoucherFileConnection[];
+  VoucherFileConnections?: VoucherFileConnection[]
 }
 
 export interface TrustedEmailSenderWrap {
-  EmailSenders?: TrustedEmailSender;
+  EmailSenders?: TrustedEmailSender
 }
 
 export interface Price {
-  "@url"?: string;
-  ArticleNumber: string;
+  "@url"?: string
+  ArticleNumber: string
   /** @format date-time */
-  Date?: string;
+  Date?: string
   /** @format double */
-  FromQuantity?: number;
+  FromQuantity?: number
   /** @format double */
-  Percent?: number;
+  Percent?: number
   /** @format double */
-  Price?: number;
-  PriceList: string;
+  Price?: number
+  PriceList: string
 }
 
 export interface ManualOutboundDocument {
   /** @format date */
-  date: string;
+  date: string
   /**
    * @maxItems 2147483647
    * @minItems 0
    */
-  rows: ManualOutboundDocumentRow[];
+  rows: ManualOutboundDocumentRow[]
   /** @format int64 */
-  id?: number;
-  voided?: boolean;
-  released?: boolean;
+  id?: number
+  voided?: boolean
+  released?: boolean
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
+  note?: string
   /** @format uuid */
-  stockPointId?: string;
-  stockPointCode?: string;
-  stockPointName?: string;
+  stockPointId?: string
+  stockPointCode?: string
+  stockPointName?: string
 }
 
 export interface CustomerListItem {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Address1?: string;
+  Address1?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Address2?: string;
+  Address2?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  City?: string;
+  City?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  CustomerNumber?: string;
+  CustomerNumber?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Email?: string;
+  Email?: string
   /**
    * @minLength 1
    * @maxLength 1024
    */
-  Name: string;
+  Name: string
   /**
    * @minLength 0
    * @maxLength 30
    */
-  OrganisationNumber?: string;
+  OrganisationNumber?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Phone?: string;
+  Phone?: string
   /**
    * @minLength 0
    * @maxLength 10
    */
-  ZipCode?: string;
+  ZipCode?: string
 }
 
 export interface Me {
-  Id?: string;
-  Name?: string;
-  Email?: string;
-  SysAdmin?: boolean;
-  Locale?: string;
+  Id?: string
+  Name?: string
+  Email?: string
+  SysAdmin?: boolean
+  Locale?: string
 }
 
 export interface DetailedRegistration {
   /** @format uuid */
-  id?: string;
-  costCenter?: TRCostCenter;
-  customer?: TRCustomer;
-  project?: TRProject;
-  service?: TRItem;
-  registrationCode: RegistrationCode;
+  id?: string
+  costCenter?: TRCostCenter
+  customer?: TRCustomer
+  project?: TRProject
+  service?: TRItem
+  registrationCode: RegistrationCode
   /** @format date */
-  workedDate: string;
+  workedDate: string
   /** @format float */
-  workedHours?: number;
+  workedHours?: number
   /** @format float */
-  chargeHours?: number;
+  chargeHours?: number
   /** @format date-time */
-  startTime?: string;
+  startTime?: string
   /** @format date-time */
-  stopTime?: string;
+  stopTime?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  invoiceText?: string;
+  invoiceText?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
-  userId?: string;
-  createdBy?: string;
-  updatedBy?: string;
+  note?: string
+  userId?: string
+  createdBy?: string
+  updatedBy?: string
   /** @format int64 */
-  invoiceBasisId?: number;
-  nonInvoiceable?: boolean;
+  invoiceBasisId?: number
+  nonInvoiceable?: boolean
   /** @format uuid */
-  childId?: string;
+  childId?: string
   /** @format date-time */
-  createdTime?: string;
-  unitCost?: number;
-  unitPrice?: number;
+  createdTime?: string
+  unitCost?: number
+  unitPrice?: number
   /** @format int64 */
-  documentId?: number;
-  documentType?: "order" | "invoice";
+  documentId?: number
+  documentType?: "order" | "invoice"
 }
 
 export interface VoucherSeriesWrap {
-  VoucherSeries: VoucherSeries;
+  VoucherSeries: VoucherSeries
 }
 
 export interface CompanyInfo {
-  Address?: string;
-  City?: string;
-  CountryCode?: string;
+  Address?: string
+  City?: string
+  CountryCode?: string
   /** @format int32 */
-  DatabaseNumber?: number;
-  CompanyName?: string;
-  OrganizationNumber?: string;
-  VisitAddress?: string;
-  VisitCity?: string;
-  VisitCountryCode?: string;
-  VisitZipCode?: string;
-  ZipCode?: string;
+  DatabaseNumber?: number
+  CompanyName?: string
+  OrganizationNumber?: string
+  VisitAddress?: string
+  VisitCity?: string
+  VisitCountryCode?: string
+  VisitZipCode?: string
+  ZipCode?: string
 }
 
 export interface SalaryTransactionListItem {
-  "@url"?: string;
-  EmployeeId: string;
-  SalaryCode: string;
+  "@url"?: string
+  EmployeeId: string
+  SalaryCode: string
   /** @format int32 */
-  SalaryRow?: number;
+  SalaryRow?: number
   /** @format date */
-  Date: string;
-  Number?: string;
-  Amount?: string;
-  Total?: string;
+  Date: string
+  Number?: string
+  Amount?: string
+  Total?: string
   /**
    * @minLength 0
    * @maxLength 6
    */
-  Expense?: string;
-  VAT?: string;
+  Expense?: string
+  VAT?: string
   /**
    * @minLength 0
    * @maxLength 40
    */
-  TextRow?: string;
-  CostCenter?: string;
-  Project?: string;
+  TextRow?: string
+  CostCenter?: string
+  Project?: string
 }
 
 export interface AccountSingleItem {
-  "@url"?: string;
-  Active?: boolean;
+  "@url"?: string
+  Active?: boolean
   /** @format double */
-  BalanceBroughtForward?: number;
-  CostCenter?: string;
-  CostCenterSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
+  BalanceBroughtForward?: number
+  CostCenter?: string
+  CostCenterSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
   /**
    * @minLength 1
    * @maxLength 200
    */
-  Description: string;
+  Description: string
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  Number: number;
-  Project?: string;
-  ProjectSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
+  Number: number
+  Project?: string
+  ProjectSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
   /** @format int32 */
-  SRU?: number;
+  SRU?: number
   /** @format int32 */
-  Year?: number;
-  VATCode?: string;
+  Year?: number
+  VATCode?: string
   /** @format double */
-  BalanceCarriedForward?: number;
-  TransactionInformation?: string;
-  TransactionInformationSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
-  QuantitySettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED";
-  QuantityUnit?: string;
-  OpeningQuantities?: AccountSingleItemOpeningQuantities[];
+  BalanceCarriedForward?: number
+  TransactionInformation?: string
+  TransactionInformationSettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
+  QuantitySettings?: "ALLOWED" | "MANDATORY" | "NOTALLOWED"
+  QuantityUnit?: string
+  OpeningQuantities?: AccountSingleItemOpeningQuantities[]
 }
 
 export interface SellWrap {
-  Asset?: Sell;
+  Asset?: Sell
 }
 
 export interface AbsenceTransactionSingleItem {
-  "@url"?: string;
+  "@url"?: string
   /** @format uuid */
-  id?: string;
+  id?: string
   /**
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId: string;
+  EmployeeId: string
   /**
    * @minLength 3
    * @maxLength 3
@@ -5017,24 +5032,24 @@ export interface AbsenceTransactionSingleItem {
     | "SVE"
     | "TJL"
     | "UTB"
-    | "VAB";
+    | "VAB"
   /** @format date */
-  Date: string;
+  Date: string
   /** @format float */
-  Extent?: number;
+  Extent?: number
   /** @format float */
-  Hours?: number;
-  HolidayEntitling?: boolean;
-  CostCenter?: string;
-  Project?: string;
+  Hours?: number
+  HolidayEntitling?: boolean
+  CostCenter?: string
+  Project?: string
 }
 
 export interface ArticleFileConnectionWrap {
-  ArticleFileConnection: ArticleFileConnection;
+  ArticleFileConnection: ArticleFileConnection
 }
 
 export interface InvoicePayloadWrap {
-  Invoice?: InvoicePayload;
+  Invoice?: InvoicePayload
 }
 
 export interface ContractInvoiceRow {
@@ -5043,61 +5058,61 @@ export interface ContractInvoiceRow {
    * @min 1000
    * @max 9999
    */
-  AccountNumber?: number;
-  ArticleNumber: string;
-  ContributionPercent?: string;
-  ContributionValue?: string;
-  CostCenter?: string;
-  DeliveredQuantity: string;
-  Description?: string;
+  AccountNumber?: number
+  ArticleNumber: string
+  ContributionPercent?: string
+  ContributionValue?: string
+  CostCenter?: string
+  DeliveredQuantity: string
+  Description?: string
   /** @format double */
-  Discount?: number;
-  DiscountType?: "AMOUNT" | "PERCENT";
-  HouseWork?: boolean;
+  Discount?: number
+  DiscountType?: "AMOUNT" | "PERCENT"
+  HouseWork?: boolean
   /** @format int32 */
-  HouseWorkHoursToReport?: number;
-  HouseWorkType?: string;
+  HouseWorkHoursToReport?: number
+  HouseWorkType?: string
   /** @format double */
-  Price?: number;
+  Price?: number
   /** @format double */
-  PriceExcludingVAT?: number;
-  Project?: string;
+  PriceExcludingVAT?: number
+  Project?: string
   /** @format int32 */
-  RowId?: number;
+  RowId?: number
   /** @format double */
-  Total?: number;
+  Total?: number
   /** @format double */
-  TotalExcludingVAT?: number;
-  Unit?: string;
+  TotalExcludingVAT?: number
+  Unit?: string
   /** @format double */
-  VAT?: number;
+  VAT?: number
 }
 
 export interface CustomerWrap {
-  Customer?: Customer;
+  Customer?: Customer
 }
 
 export interface CostCenterList {
-  CostCenters?: CostCenter[];
+  CostCenters?: CostCenter[]
 }
 
 export interface TenantInfo {
   /** @format int64 */
-  tenantId?: number;
-  activated?: boolean;
+  tenantId?: number
+  activated?: boolean
 }
 
 export interface InvoiceWrap {
-  Invoice?: Invoice;
+  Invoice?: Invoice
 }
 
 export interface PackageItem {
-  itemId: string;
-  itemDescription?: string;
-  itemUnit?: string;
-  quantityRequired: number;
-  quantityReserved?: number;
-  totalQuantityRequired?: number;
+  itemId: string
+  itemDescription?: string
+  itemUnit?: string
+  quantityRequired: number
+  quantityReserved?: number
+  totalQuantityRequired?: number
 }
 
 export interface InvoicePayloadEDIInformation {
@@ -5105,97 +5120,97 @@ export interface InvoicePayloadEDIInformation {
    * @minLength 0
    * @maxLength 13
    */
-  EDIGlobalLocationNumber?: string;
+  EDIGlobalLocationNumber?: string
   /**
    * @minLength 0
    * @maxLength 13
    */
-  EDIGlobalLocationNumberDelivery?: string;
-  EDIInvoiceExtra1?: string;
-  EDIInvoiceExtra2?: string;
-  EDIOurElectronicReference?: string;
-  EDIYourElectronicReference?: string;
+  EDIGlobalLocationNumberDelivery?: string
+  EDIInvoiceExtra1?: string
+  EDIInvoiceExtra2?: string
+  EDIOurElectronicReference?: string
+  EDIYourElectronicReference?: string
 }
 
 export interface PriceListList {
-  PriceLists?: PriceList[];
+  PriceLists?: PriceList[]
 }
 
 export interface SupplierInvoiceAccrualSupplierInvoiceAccrualRows {
   /** @format int32 */
-  Account?: number;
-  CostCenter?: string;
+  Account?: number
+  CostCenter?: string
   /** @format double */
-  Credit?: number;
+  Credit?: number
   /** @format double */
-  Debit?: number;
-  Project?: string;
-  TransactionInformation?: string;
+  Debit?: number
+  Project?: string
+  TransactionInformation?: string
 }
 
 export interface CostCenter {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 6
    */
-  Code: string;
+  Code: string
   /**
    * @minLength 1
    * @maxLength 2147483647
    */
-  Description: string;
-  Note?: string;
-  Active?: boolean;
+  Description: string
+  Note?: string
+  Active?: boolean
 }
 
 export interface TrustedEmailSenderTrustedSender {
   /** @format int32 */
-  Id?: number;
-  Email: string;
+  Id?: number
+  Email: string
 }
 
 export interface SalaryTransaction {
-  EmployeeId: string;
-  SalaryCode: string;
+  EmployeeId: string
+  SalaryCode: string
   /** @format int32 */
-  SalaryRow?: number;
+  SalaryRow?: number
   /** @format date */
-  Date: string;
-  Number?: string;
-  Amount?: string;
-  Total?: string;
+  Date: string
+  Number?: string
+  Amount?: string
+  Total?: string
   /**
    * @minLength 0
    * @maxLength 6
    */
-  Expense?: string;
-  VAT?: string;
+  Expense?: string
+  VAT?: string
   /**
    * @minLength 0
    * @maxLength 40
    */
-  TextRow?: string;
-  CostCenter?: string;
-  Project?: string;
+  TextRow?: string
+  CostCenter?: string
+  Project?: string
 }
 
 export interface NumberOfAttachments {
   /** @format int64 */
-  entityId: number;
+  entityId: number
   /** @format int64 */
-  numberOfAttachments?: number;
+  numberOfAttachments?: number
 }
 
 export interface AttendanceTransactionListItem {
-  "@url"?: string;
+  "@url"?: string
   /** @format uuid */
-  id?: string;
+  id?: string
   /**
    * @minLength 1
    * @maxLength 15
    */
-  EmployeeId: string;
+  EmployeeId: string
   /**
    * @minLength 3
    * @maxLength 3
@@ -5226,106 +5241,106 @@ export interface AttendanceTransactionListItem {
     | "OT4"
     | "OT5"
     | "RES"
-    | "TID";
+    | "TID"
   /** @format date */
-  Date: string;
-  Hours?: string;
-  CostCenter?: string;
-  Project?: string;
+  Date: string
+  Hours?: string
+  CostCenter?: string
+  Project?: string
 }
 
 export interface ArticleRegistration {
   /** @format uuid */
-  id?: string;
-  totalQuantity?: number;
-  unitCost?: number;
-  unitPrice?: number;
+  id?: string
+  totalQuantity?: number
+  unitCost?: number
+  unitPrice?: number
   /** @format int32 */
-  orderIndex?: number;
-  item?: TRItem;
+  orderIndex?: number
+  item?: TRItem
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  invoiceText?: string;
+  invoiceText?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
-  timeLocked?: boolean;
+  note?: string
+  timeLocked?: boolean
   /** @format int64 */
-  invoiceBasisId?: number;
-  nonInvoiceable?: boolean;
+  invoiceBasisId?: number
+  nonInvoiceable?: boolean
   /** @format int64 */
-  documentId?: number;
-  documentType?: "order" | "invoice";
-  ownerId?: string;
-  createdBy?: string;
+  documentId?: number
+  documentType?: "order" | "invoice"
+  ownerId?: string
+  createdBy?: string
   /** @format date-time */
-  createdTime?: string;
+  createdTime?: string
 }
 
 export interface ContractAccrualListItemList {
-  ContractAccruals?: ContractAccrualListItem[];
+  ContractAccruals?: ContractAccrualListItem[]
 }
 
 export interface PriceList {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 1
    * @maxLength 100
    */
-  Code: string;
+  Code: string
   /**
    * @minLength 1
    * @maxLength 50
    */
-  Description: string;
-  Comments?: string;
-  PreSelected?: boolean;
+  Description: string
+  Comments?: string
+  PreSelected?: boolean
 }
 
 export interface ManualInboundDocument {
   /** @format date */
-  date: string;
+  date: string
   /**
    * @maxItems 2147483647
    * @minItems 1
    */
-  rows: ManualInboundDocumentRow[];
+  rows: ManualInboundDocumentRow[]
   /** @format int64 */
-  id?: number;
+  id?: number
   /**
    * @minLength 3
    * @maxLength 3
    */
-  currency: string;
+  currency: string
   /**
    * @min 0.000001
    * @exclusiveMin false
    */
-  currencyRate: number;
+  currencyRate: number
   /**
    * @format int32
    * @min 1
    */
-  currencyUnit?: number;
-  released?: boolean;
-  voided?: boolean;
+  currencyUnit?: number
+  released?: boolean
+  voided?: boolean
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
+  note?: string
   /** @format uuid */
-  stockPointId?: string;
-  stockPointCode?: string;
-  stockPointName?: string;
+  stockPointId?: string
+  stockPointCode?: string
+  stockPointName?: string
 }
 
 export interface AbsenceTransactionListItemWrap {
-  AbsenceTransactions?: AbsenceTransactionListItem[];
+  AbsenceTransactions?: AbsenceTransactionListItem[]
 }
 
 export interface TRProject {
@@ -5333,48 +5348,48 @@ export interface TRProject {
    * @minLength 0
    * @maxLength 40
    */
-  id?: string;
+  id?: string
   /**
    * @minLength 0
    * @maxLength 50
    */
-  description?: string;
-  projectLeader?: string;
+  description?: string
+  projectLeader?: string
   /** @format date */
-  startDate?: string;
+  startDate?: string
   /** @format date */
-  endDate?: string;
+  endDate?: string
   /** @format int32 */
-  status?: number;
+  status?: number
   /** @format double */
-  orderTime?: number;
+  orderTime?: number
   /** @format double */
-  orderAmount?: number;
+  orderAmount?: number
   /** @format double */
-  invoicedAmount?: number;
+  invoicedAmount?: number
   /** @format double */
-  totalAmountInInvoices?: number;
+  totalAmountInInvoices?: number
 }
 
 export interface SupplierInvoiceAccrual {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  AccrualAccount: number;
+  AccrualAccount: number
   /**
    * @format int32
    * @min 1000
    * @max 9999
    */
-  CostAccount: number;
-  Description?: string;
+  CostAccount: number
+  Description?: string
   /** @format date */
-  EndDate: string;
+  EndDate: string
   /** @format int32 */
-  SupplierInvoiceNumber: number;
+  SupplierInvoiceNumber: number
   Period:
     | "MONTHLY"
     | "BIMONTHLY"
@@ -5385,67 +5400,67 @@ export interface SupplierInvoiceAccrual {
     | "2_MONTHS"
     | "3_MONTHS"
     | "6_MONTHS"
-    | "12_MONTHS";
+    | "12_MONTHS"
   /** @format date */
-  StartDate: string;
+  StartDate: string
   /** @format int32 */
-  Times: number;
+  Times: number
   /** @format double */
-  Total: number;
-  VATIncluded?: boolean;
+  Total: number
+  VATIncluded?: boolean
   /**
    * @maxItems 2147483647
    * @minItems 2
    */
-  SupplierInvoiceAccrualRows: SupplierInvoiceAccrualSupplierInvoiceAccrualRows[];
+  SupplierInvoiceAccrualRows: SupplierInvoiceAccrualSupplierInvoiceAccrualRows[]
 }
 
 export interface FolderFileRow {
-  "@url"?: string;
-  Comments?: string;
-  Id?: string;
-  Name?: string;
-  Path?: string;
+  "@url"?: string
+  Comments?: string
+  Id?: string
+  Name?: string
+  Path?: string
   /** @format int32 */
-  Size?: number;
-  ArchiveFileId?: string;
+  Size?: number
+  ArchiveFileId?: string
 }
 
 export interface WriteUpWrap {
-  Asset?: WriteUp;
+  Asset?: WriteUp
 }
 
 export interface CreatePayloadWrap {
-  NoxFinansInvoice?: CreatePayload;
+  NoxFinansInvoice?: CreatePayload
 }
 
 export interface PausePayloadWrap {
-  NoxFinansInvoice?: PausePayload;
+  NoxFinansInvoice?: PausePayload
 }
 
 export interface CreateAssetWrap {
-  AssetType?: CreateAsset;
+  AssetType?: CreateAsset
 }
 
 export interface LockedPeriodWrap {
-  LockedPeriod?: LockedPeriod;
+  LockedPeriod?: LockedPeriod
 }
 
 export interface Voucher {
-  "@url"?: string;
+  "@url"?: string
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  Comments?: string;
-  CostCenter?: string;
+  Comments?: string
+  CostCenter?: string
   /**
    * @minLength 1
    * @maxLength 200
    */
-  Description: string;
-  Project?: string;
-  ReferenceNumber?: string;
+  Description: string
+  Project?: string
+  ReferenceNumber?: string
   ReferenceType?:
     | "INVOICE"
     | "SUPPLIERINVOICE"
@@ -5453,220 +5468,222 @@ export interface Voucher {
     | "SUPPLIERPAYMENT"
     | "MANUAL"
     | "CASHINVOICE"
-    | "ACCRUAL";
+    | "ACCRUAL"
   /** @format date */
-  TransactionDate: string;
+  TransactionDate: string
   /** @format int32 */
-  VoucherNumber?: number;
+  VoucherNumber?: number
   /**
    * @maxItems 2147483647
    * @minItems 2
    */
-  VoucherRows?: VoucherVoucherRow[];
-  VoucherSeries: string;
+  VoucherRows?: VoucherVoucherRow[]
+  VoucherSeries: string
   /** @format int32 */
-  Year: number;
+  Year: number
   /** @format int32 */
-  ApprovalState?: number;
+  ApprovalState?: number
 }
 
 export interface ContractTemplate {
-  "@url"?: string;
+  "@url"?: string
   /** @format double */
-  AdministrationFee?: number;
+  AdministrationFee?: number
   /**
    * @format int32
    * @min 1
    * @max 9999
    */
-  ContractLength?: number;
+  ContractLength?: number
   /** @format double */
-  Freight?: number;
+  Freight?: number
   /**
    * @format int32
    * @min 1
    * @max 9999
    */
-  InvoiceInterval?: number;
-  InvoiceRows?: ContractTemplateInvoiceRow[];
-  Continuous?: boolean;
+  InvoiceInterval?: number
+  InvoiceRows?: ContractTemplateInvoiceRow[]
+  Continuous?: boolean
   /**
    * @minLength 0
    * @maxLength 25
    */
-  OurReference?: string;
-  PrintTemplate?: string;
+  OurReference?: string
+  PrintTemplate?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  Remarks?: string;
+  Remarks?: string
   /**
    * @minLength 1
    * @maxLength 1024
    */
-  TemplateName: string;
+  TemplateName: string
   /** @format int32 */
-  TemplateNumber?: number;
-  TermsOfDelivery?: string;
-  TermsOfPayment?: string;
-  WayOfDelivery?: string;
+  TemplateNumber?: number
+  TermsOfDelivery?: string
+  TermsOfPayment?: string
+  WayOfDelivery?: string
 }
 
 export interface AssetType {
-  "@url"?: string;
+  "@url"?: string
   /** @format int32 */
-  Id?: number;
-  Number?: string;
-  Description?: string;
-  Notes?: string;
+  Id?: number
+  Number?: string
+  Description?: string
+  Notes?: string
   /** @format int32 */
-  Type?: number;
-  InUse?: boolean;
+  Type?: number
+  InUse?: boolean
   /** @format int32 */
-  AccountAssetId?: number;
+  AccountAssetId?: number
   /** @format int32 */
-  AccountValueLossId?: number;
+  AccountValueLossId?: number
   /** @format int32 */
-  AccountSaleLossId?: number;
+  AccountSaleLossId?: number
   /** @format int32 */
-  AccountSaleWinId?: number;
+  AccountSaleWinId?: number
   /** @format int32 */
-  AccountRevaluationId?: number;
+  AccountRevaluationId?: number
   /** @format int32 */
-  AccountWriteDownAckId?: number;
+  AccountWriteDownAckId?: number
   /** @format int32 */
-  AccountWriteDownId?: number;
+  AccountWriteDownId?: number
   /** @format int32 */
-  AccountDepreciationId?: number;
+  AccountDepreciationId?: number
   /** @format int32 */
-  AccountAsset?: number;
+  AccountAsset?: number
   /** @format int32 */
-  AccountValueLoss?: number;
+  AccountValueLoss?: number
   /** @format int32 */
-  AccountSaleLoss?: number;
+  AccountSaleLoss?: number
   /** @format int32 */
-  AccountSaleWin?: number;
+  AccountSaleWin?: number
   /** @format int32 */
-  AccountRevaluation?: number;
+  AccountRevaluation?: number
   /** @format int32 */
-  AccountWriteDownAck?: number;
+  AccountWriteDownAck?: number
   /** @format int32 */
-  AccountWriteDown?: number;
+  AccountWriteDown?: number
   /** @format int32 */
-  AccountDepreciation?: number;
+  AccountDepreciation?: number
 }
 
 export interface WayOfDeliveryList {
-  WayOfDeliveries?: WayOfDelivery[];
+  WayOfDeliveries?: WayOfDelivery[]
 }
 
 export interface IncomingGoods {
   /** @format int64 */
-  id?: number;
-  hasDeliveryNote?: boolean;
+  id?: number
+  hasDeliveryNote?: boolean
   /**
    * @minLength 1
    * @maxLength 50
    */
-  deliveryNoteId: string;
+  deliveryNoteId: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierNumber?: string;
-  rows?: IncomingGoodsRow[];
+  supplierNumber?: string
+  rows?: IncomingGoodsRow[]
   /** @format date */
-  date?: string;
-  released?: boolean;
+  date?: string
+  released?: boolean
   /**
    * @minLength 0
    * @maxLength 1000
    */
-  note?: string;
-  completed?: boolean;
+  note?: string
+  completed?: boolean
   /** @format uuid */
-  stockPointId?: string;
-  stockPointCode?: string;
-  stockPointName?: string;
-  voided?: boolean;
-  projectId?: string;
-  costCenterCode?: string;
+  stockPointId?: string
+  stockPointCode?: string
+  stockPointName?: string
+  voided?: boolean
+  projectId?: string
+  costCenterCode?: string
   /**
    * @minLength 0
    * @maxLength 1024
    */
-  supplierName?: string;
+  supplierName?: string
 }
 
 export interface InvoiceListItemWrap {
-  Invoices?: InvoiceListItem[];
+  Invoices?: InvoiceListItem[]
 }
 
 export interface ExpenseListItem {
-  Code: string;
-  Text: string;
+  Code: string
+  Text: string
   /** @format int32 */
-  Account: number;
-  "@url"?: string;
+  Account: number
+  "@url"?: string
 }
 
 export interface ContractAccrualAccrualRow {
   /** @format int32 */
-  Account: number;
-  CostCenter?: string;
+  Account: number
+  CostCenter?: string
   /** @format double */
-  Credit: number;
+  Credit: number
   /** @format double */
-  Debit: number;
-  Project?: string;
+  Debit: number
+  Project?: string
   /**
    * @minLength 0
    * @maxLength 100
    */
-  TransactionInformation?: string;
+  TransactionInformation?: string
 }
 
 export interface InvoicePayloadLabel {
   /** @format int32 */
-  Id?: number;
+  Id?: number
 }
 
 export interface VoucherFileConnectionWrap {
-  VoucherFileConnection: VoucherFileConnection;
+  VoucherFileConnection: VoucherFileConnection
 }
 
 export interface AssetTypeWrapSingle {
-  Type?: AssetType;
+  Type?: AssetType
 }
 
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, HeadersDefaults, ResponseType } from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, HeadersDefaults, ResponseType } from "axios"
 
-export type QueryParamsType = Record<string | number, any>;
+export type QueryParamsType = Record<string | number, any>
 
-export interface FullRequestParams extends Omit<AxiosRequestConfig, "data" | "params" | "url" | "responseType"> {
+export interface FullRequestParams
+  extends Omit<AxiosRequestConfig, "data" | "params" | "url" | "responseType"> {
   /** set parameter to `true` for call `securityWorker` for this request */
-  secure?: boolean;
+  secure?: boolean
   /** request path */
-  path: string;
+  path: string
   /** content type of request body */
-  type?: ContentType;
+  type?: ContentType
   /** query params */
-  query?: QueryParamsType;
+  query?: QueryParamsType
   /** format of response (i.e. response.json() -> format: "json") */
-  format?: ResponseType;
+  format?: ResponseType
   /** request body */
-  body?: unknown;
+  body?: unknown
 }
 
-export type RequestParams = Omit<FullRequestParams, "body" | "method" | "query" | "path">;
+export type RequestParams = Omit<FullRequestParams, "body" | "method" | "query" | "path">
 
-export interface ApiConfig<SecurityDataType = unknown> extends Omit<AxiosRequestConfig, "data" | "cancelToken"> {
+export interface ApiConfig<SecurityDataType = unknown>
+  extends Omit<AxiosRequestConfig, "data" | "cancelToken"> {
   securityWorker?: (
-    securityData: SecurityDataType | null,
-  ) => Promise<AxiosRequestConfig | void> | AxiosRequestConfig | void;
-  secure?: boolean;
-  format?: ResponseType;
+    securityData: SecurityDataType | null
+  ) => Promise<AxiosRequestConfig | void> | AxiosRequestConfig | void
+  secure?: boolean
+  format?: ResponseType
 }
 
 export enum ContentType {
@@ -5677,25 +5694,28 @@ export enum ContentType {
 }
 
 export class HttpClient<SecurityDataType = unknown> {
-  public instance: AxiosInstance;
-  private securityData: SecurityDataType | null = null;
-  private securityWorker?: ApiConfig<SecurityDataType>["securityWorker"];
-  private secure?: boolean;
-  private format?: ResponseType;
+  public instance: AxiosInstance
+  private securityData: SecurityDataType | null = null
+  private securityWorker?: ApiConfig<SecurityDataType>["securityWorker"]
+  private secure?: boolean
+  private format?: ResponseType
 
   constructor({ securityWorker, secure, format, ...axiosConfig }: ApiConfig<SecurityDataType> = {}) {
-    this.instance = axios.create({ ...axiosConfig, baseURL: axiosConfig.baseURL || "https://api.fortnox.se" });
-    this.secure = secure;
-    this.format = format;
-    this.securityWorker = securityWorker;
+    this.instance = axios.create({ ...axiosConfig, baseURL: axiosConfig.baseURL || "https://api.fortnox.se" })
+    this.secure = secure
+    this.format = format
+    this.securityWorker = securityWorker
   }
 
   public setSecurityData = (data: SecurityDataType | null) => {
-    this.securityData = data;
-  };
+    this.securityData = data
+  }
 
-  protected mergeRequestParams(params1: AxiosRequestConfig, params2?: AxiosRequestConfig): AxiosRequestConfig {
-    const method = params1.method || (params2 && params2.method);
+  protected mergeRequestParams(
+    params1: AxiosRequestConfig,
+    params2?: AxiosRequestConfig
+  ): AxiosRequestConfig {
+    const method = params1.method || (params2 && params2.method)
 
     return {
       ...this.instance.defaults,
@@ -5706,29 +5726,29 @@ export class HttpClient<SecurityDataType = unknown> {
         ...(params1.headers || {}),
         ...((params2 && params2.headers) || {}),
       },
-    };
+    }
   }
 
   protected stringifyFormItem(formItem: unknown) {
     if (typeof formItem === "object" && formItem !== null) {
-      return JSON.stringify(formItem);
+      return JSON.stringify(formItem)
     } else {
-      return `${formItem}`;
+      return `${formItem}`
     }
   }
 
   protected createFormData(input: Record<string, unknown>): FormData {
     return Object.keys(input || {}).reduce((formData, key) => {
-      const property = input[key];
-      const propertyContent: any[] = property instanceof Array ? property : [property];
+      const property = input[key]
+      const propertyContent: any[] = property instanceof Array ? property : [property]
 
       for (const formItem of propertyContent) {
-        const isFileType = formItem instanceof Blob || formItem instanceof File;
-        formData.append(key, isFileType ? formItem : this.stringifyFormItem(formItem));
+        const isFileType = formItem instanceof Blob || formItem instanceof File
+        formData.append(key, isFileType ? formItem : this.stringifyFormItem(formItem))
       }
 
-      return formData;
-    }, new FormData());
+      return formData
+    }, new FormData())
   }
 
   public request = async <T = any, _E = any>({
@@ -5744,16 +5764,16 @@ export class HttpClient<SecurityDataType = unknown> {
       ((typeof secure === "boolean" ? secure : this.secure) &&
         this.securityWorker &&
         (await this.securityWorker(this.securityData))) ||
-      {};
-    const requestParams = this.mergeRequestParams(params, secureParams);
-    const responseFormat = format || this.format || undefined;
+      {}
+    const requestParams = this.mergeRequestParams(params, secureParams)
+    const responseFormat = format || this.format || undefined
 
     if (type === ContentType.FormData && body && body !== null && typeof body === "object") {
-      body = this.createFormData(body as Record<string, unknown>);
+      body = this.createFormData(body as Record<string, unknown>)
     }
 
     if (type === ContentType.Text && body && body !== null && typeof body !== "string") {
-      body = JSON.stringify(body);
+      body = JSON.stringify(body)
     }
 
     return this.instance.request({
@@ -5766,8 +5786,8 @@ export class HttpClient<SecurityDataType = unknown> {
       responseType: responseFormat,
       data: body,
       url: path,
-    });
-  };
+    })
+  }
 }
 
 /**
@@ -5819,11 +5839,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getAll: (
       query?: {
         /** filters on stock point code or name. */
-        q?: string;
+        q?: string
         /** filter on stock point state */
-        state?: "ALL" | "ACTIVE" | "INACTIVE";
+        state?: "ALL" | "ACTIVE" | "INACTIVE"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<StockPoint, any>({
         path: `/api/warehouse/stockpoints-v1`,
@@ -5865,11 +5885,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getMany: (
       query?: {
         /** stock point ids (comma separated list of UUIDs) */
-        ids?: string[];
+        ids?: string[]
         /** filter on <code>StockPointState</code>, default is to include ALL stock points. */
-        state?: "ALL" | "ACTIVE" | "INACTIVE";
+        state?: "ALL" | "ACTIVE" | "INACTIVE"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<StockPoint, any>({
         path: `/api/warehouse/stockpoints-v1/multi`,
@@ -5893,9 +5913,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       id: string,
       query?: {
         /** filters on stock location code or name. */
-        q?: string;
+        q?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<StockLocation, any>({
         path: `/api/warehouse/stockpoints-v1/${id}/stocklocations`,
@@ -6099,13 +6119,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getAllManualDocumentResource: (
       query?: {
         /** Include only documents with given state. */
-        state?: "all" | "unreleased" | "released" | "voided";
+        state?: "all" | "unreleased" | "released" | "voided"
         /** Include only documents with given type. */
-        type?: "all" | "inbound" | "outbound" | "stocktransfer";
+        type?: "all" | "inbound" | "outbound" | "stocktransfer"
         /** Include only documents containing the given item. */
-        itemId?: string;
+        itemId?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ManualDocument, any>({
         path: `/api/warehouse/deliveries-v1`,
@@ -6124,7 +6144,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request POST:/api/warehouse/deliveries-v1/inbounddeliveries
      * @response `200` `ManualInboundDocument` the <code>ManualInboundDocument</code> document.
      */
-    createManualInboundDocumentResource: (manualInboundDocument: ManualInboundDocument, params: RequestParams = {}) =>
+    createManualInboundDocumentResource: (
+      manualInboundDocument: ManualInboundDocument,
+      params: RequestParams = {}
+    ) =>
       this.request<ManualInboundDocument, any>({
         path: `/api/warehouse/deliveries-v1/inbounddeliveries`,
         method: "POST",
@@ -6164,7 +6187,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateManualInboundDocumentResource: (
       id: number,
       manualInboundDocument: ManualInboundDocument,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ManualInboundDocument, any>({
         path: `/api/warehouse/deliveries-v1/inbounddeliveries/${id}`,
@@ -6184,7 +6207,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PATCH:/api/warehouse/deliveries-v1/inbounddeliveries/{id}
      * @response `default` `void` Nothing.
      */
-    updateNote: (id: number, manualInboundDocumentPatch: ManualInboundDocumentPatch, params: RequestParams = {}) =>
+    updateNote: (
+      id: number,
+      manualInboundDocumentPatch: ManualInboundDocumentPatch,
+      params: RequestParams = {}
+    ) =>
       this.request<any, void>({
         path: `/api/warehouse/deliveries-v1/inbounddeliveries/${id}`,
         method: "PATCH",
@@ -6223,14 +6250,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       id: number,
       query?: {
         /** true if we should force void, defaults to false */
-        force?: boolean;
+        force?: boolean
         /**
          * date the void operation should be bookkeept on
          * @format date
          */
-        customVoidDate?: string;
+        customVoidDate?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/api/warehouse/deliveries-v1/inbounddeliveries/${id}/void`,
@@ -6251,7 +6278,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createManualOutboundDocumentResource: (
       manualOutboundDocument: ManualOutboundDocument,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ManualOutboundDocument, any>({
         path: `/api/warehouse/deliveries-v1/outbounddeliveries`,
@@ -6292,7 +6319,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateManualOutboundDocumentResource: (
       id: number,
       manualOutboundDocument: ManualOutboundDocument,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ManualOutboundDocument, any>({
         path: `/api/warehouse/deliveries-v1/outbounddeliveries/${id}`,
@@ -6315,7 +6342,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateNoteManualOutboundDocumentResource: (
       id: number,
       manualOutboundDocumentPatch: ManualOutboundDocumentPatch,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/api/warehouse/deliveries-v1/outbounddeliveries/${id}`,
@@ -6341,9 +6368,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * if provided this date will be used as the voided date instead of the document date
          * @format date
          */
-        customVoidDate?: string;
+        customVoidDate?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/api/warehouse/deliveries-v1/outbounddeliveries/${id}/void`,
@@ -6493,9 +6520,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       id: string,
       query?: {
         /** true if the document should be voided even if the document has connected outbounds, defaults to false. */
-        force?: boolean;
+        force?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/api/warehouse/documentdeliveries/custom/inbound-v1/${type}/${id}/void`,
@@ -6536,7 +6563,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       type: string,
       id: string,
       document: CustomOutboundDocument,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<CustomOutboundDocument, any>({
         path: `/api/warehouse/documentdeliveries/custom/outbound-v1/${type}/${id}`,
@@ -6578,9 +6605,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       id: string,
       query?: {
         /** true if the document should be voided even if the document has connected outbounds, defaults to false. */
-        force?: boolean;
+        force?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/api/warehouse/documentdeliveries/custom/outbound-v1/${type}/${id}/void`,
@@ -6606,11 +6633,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          *               Allowed states: all, incomplete, delayed, completed, voided.
          *               (Default is incomplete)
          */
-        state?: "all" | "incomplete" | "delayed" | "completed" | "voided";
+        state?: "all" | "incomplete" | "delayed" | "completed" | "voided"
         /** Include only production orders with the given production item. */
-        itemId?: string;
+        itemId?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ProductionOrder, any>({
         path: `/api/warehouse/productionorders-v1`,
@@ -6665,7 +6692,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/api/warehouse/productionorders-v1/{id}
      * @response `200` `ProductionOrder` the <code>ProductionOrder</code> document.
      */
-    updateProductionOrderResource: (id: number, productionOrder: ProductionOrder, params: RequestParams = {}) =>
+    updateProductionOrderResource: (
+      id: number,
+      productionOrder: ProductionOrder,
+      params: RequestParams = {}
+    ) =>
       this.request<ProductionOrder, any>({
         path: `/api/warehouse/productionorders-v1/${id}`,
         method: "PUT",
@@ -6687,7 +6718,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateNoteProductionOrderResource: (
       id: number,
       productionOrderPatch: ProductionOrderPatch,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ProductionOrder, any>({
         path: `/api/warehouse/productionorders-v1/${id}`,
@@ -6711,9 +6742,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       id: number,
       query?: {
         /** true to force void a released document, default false */
-        force?: boolean;
+        force?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/api/warehouse/productionorders-v1/void/${id}`,
@@ -6755,11 +6786,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * the id of the production order (optional)
          * @format int64
          */
-        id?: number;
+        id?: number
         /** the quantity of the production order (assumed 1 if left empty) */
-        quantity?: string;
+        quantity?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PackageItem, any>({
         path: `/api/warehouse/productionorders-v1/billofmaterials/{itemId:.*}`,
@@ -6785,9 +6816,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * This Supplier Invoice id will be excluded when calculating the takenQuantity.
          * @format int64
          */
-        ignoreSupplierInvoiceId?: number;
+        ignoreSupplierInvoiceId?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<IncomingGoods, any>({
         path: `/api/warehouse/incominggoods-v1/${id}`,
@@ -6849,29 +6880,29 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * `true` to include only released documents.
          *  `false` to include only non-released documents.
          */
-        released?: boolean;
+        released?: boolean
         /**
          * `true` to include only completed documents.
          *  `false` to include only non-completed documents.
          */
-        completed?: boolean;
+        completed?: boolean
         /**
          * `true` to include only voided documents.
          *  `false` to include only non-voided documents.
          */
-        voided?: boolean;
+        voided?: boolean
         /** Include only documents with the given `supplierNumber`. */
-        supplierNumber?: string;
+        supplierNumber?: string
         /** Include only documents with the given `itemId`. */
-        itemId?: string;
+        itemId?: string
         /** Include only documents where `note`-field contains the given text (case-insensitive). */
-        note?: string;
+        note?: string
         /** Include only documents where `deliveryNote`-field contains the given text (case-insensitive). */
-        deliveryNote?: string;
+        deliveryNote?: string
         /** Include only documents where `id` or `deliveryNote`-field contains the given text (case-insensitive). */
-        q?: string;
+        q?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<IncomingGoodsListRow[], any>({
         path: `/api/warehouse/incominggoods-v1/`,
@@ -6961,21 +6992,29 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getAllPurchaseOrderResource: (
       query?: {
         /** Include only documents where `id` or `internalReference`-field contains the given text (case-insensitive). */
-        q?: string;
+        q?: string
         /** Include only documents with the given `supplierNumber`. */
-        supplierNumber?: string;
+        supplierNumber?: string
         /** Include only documents with the given `purchaseOrderState`. */
-        state?: "NOT_SENT" | "SENT" | "SENT_NOT_REJECTED" | "DELAYED" | "RECEIVED" | "VOIDED" | "CURRENT" | "ALL";
+        state?:
+          | "NOT_SENT"
+          | "SENT"
+          | "SENT_NOT_REJECTED"
+          | "DELAYED"
+          | "RECEIVED"
+          | "VOIDED"
+          | "CURRENT"
+          | "ALL"
         /** Include only documents with the given `itemId`. */
-        itemId?: string;
+        itemId?: string
         /** Include only documents with the given `purchaseType` */
-        purchaseType?: "WAREHOUSE" | "DROPSHIP";
+        purchaseType?: "WAREHOUSE" | "DROPSHIP"
         /** Include only documents where `internalReference' contains the given text (case-insensitive). */
-        internalReference?: string;
+        internalReference?: string
         /** Include only documents where `note`-field contains the given text (case-insensitive). */
-        note?: string;
+        note?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PurchaseOrder, any>({
         path: `/api/warehouse/purchaseorders-v1`,
@@ -7016,23 +7055,31 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getCsvReport: (
       query?: {
         /** Include only documents where `id` or `internalReference`-field contains the given text (case-insensitive). */
-        q?: string;
+        q?: string
         /** Include only documents with the given `supplierNumber`. */
-        supplierNumber?: string;
+        supplierNumber?: string
         /** Include only documents with the given `purchaseOrderState`. */
-        state?: "NOT_SENT" | "SENT" | "SENT_NOT_REJECTED" | "DELAYED" | "RECEIVED" | "VOIDED" | "CURRENT" | "ALL";
+        state?:
+          | "NOT_SENT"
+          | "SENT"
+          | "SENT_NOT_REJECTED"
+          | "DELAYED"
+          | "RECEIVED"
+          | "VOIDED"
+          | "CURRENT"
+          | "ALL"
         /** Include only documents with the given `itemId`. */
-        itemId?: string;
+        itemId?: string
         /** Include only documents with the given `purchaseType` */
-        purchaseType?: "WAREHOUSE" | "DROPSHIP";
+        purchaseType?: "WAREHOUSE" | "DROPSHIP"
         /** Include only documents where `internalReference' contains the given text (case-insensitive). */
-        internalReference?: string;
+        internalReference?: string
         /** Include only documents where `note`-field contains the given text (case-insensitive). */
-        note?: string;
+        note?: string
         /** True to include the purchase type column, default is false. */
-        showPurchaseTypeColumn?: boolean;
+        showPurchaseTypeColumn?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<string, any>({
         path: `/api/warehouse/purchaseorders-v1/csv`,
@@ -7105,9 +7152,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       responseStateChange: ResponseStateChange,
       query?: {
         /** List of purchase order ids. */
-        ids?: number[];
+        ids?: number[]
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PurchaseOrder, any>({
         path: `/api/warehouse/purchaseorders-v1/response`,
@@ -7134,9 +7181,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * used for calculating the remaining ordered quantity. null will take the received quantity from all incoming goods
          * @format int64
          */
-        ignoreIncomingGoodsId?: number;
+        ignoreIncomingGoodsId?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PurchaseOrder, any>({
         path: `/api/warehouse/purchaseorders-v1/${id}`,
@@ -7282,11 +7329,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getStockBalance: (
       query?: {
         /** Optional filter on itemIds (comma-separated) */
-        itemIds?: string[];
+        itemIds?: string[]
         /** Optional filter on stock point codes (comma-separated). */
-        stockPointCodes?: string[];
+        stockPointCodes?: string[]
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<StockBalance, any>({
         path: `/api/warehouse/status-v1/stockbalance`,
@@ -7308,11 +7355,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getAllStockTakingResource: (
       query?: {
         /** Include only stock takings with the given state. */
-        state?: "all" | "planning" | "started" | "completed" | "voided";
+        state?: "all" | "planning" | "started" | "completed" | "voided"
         /** Include only stock takings with the given item. */
-        itemId?: string;
+        itemId?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<StockTaking, any>({
         path: `/api/warehouse/stocktaking-v1`,
@@ -7435,19 +7482,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getCandidateRows: (
       id: number,
       query?: {
-        itemIds?: string[];
-        supplierNumbers?: string[];
-        stockPointIds?: string[];
-        stockLocationIds?: string[];
+        itemIds?: string[]
+        supplierNumbers?: string[]
+        stockPointIds?: string[]
+        stockLocationIds?: string[]
         /** @format date */
-        transactionDate?: string;
-        itemIdSearch?: string;
-        itemDescriptionSearch?: string;
-        excludeZeroBalanceItems?: boolean;
+        transactionDate?: string
+        itemIdSearch?: string
+        itemDescriptionSearch?: string
+        excludeZeroBalanceItems?: boolean
         /** Include items that do not exist on inbound deliveries. */
-        includeNonInboundItems?: boolean;
+        includeNonInboundItems?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<StockTakingRow, any>({
         path: `/api/warehouse/stocktaking-v1/${id}/candidates`,
@@ -7469,29 +7516,29 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getRows: (
       id: number,
       query?: {
-        itemIds?: string[];
-        supplierNumbers?: string[];
-        stockPointIds?: string[];
-        stockLocationIds?: string[];
+        itemIds?: string[]
+        supplierNumbers?: string[]
+        stockPointIds?: string[]
+        stockLocationIds?: string[]
         /** @format date */
-        transactionDate?: string;
-        itemIdSearch?: string;
-        itemDescriptionSearch?: string;
-        excludeZeroBalanceItems?: boolean;
+        transactionDate?: string
+        itemIdSearch?: string
+        itemDescriptionSearch?: string
+        excludeZeroBalanceItems?: boolean
         /** Secondary sorting column */
-        secondarysortby?: string;
+        secondarysortby?: string
         /** Secondary sorting order */
-        secondaryorder?: string;
-        stateFilter?: "all" | "notStockTaken" | "stockTakenNoDeviation" | "stockTakenWithDeviation";
+        secondaryorder?: string
+        stateFilter?: "all" | "notStockTaken" | "stockTakenNoDeviation" | "stockTakenWithDeviation"
         /**
          * the row number to start the search from, used with startingItemId to jump to specific rows, can be empty
          * @format int32
          */
-        startingRowNo?: number;
+        startingRowNo?: number
         /** the itemId that should be on top of the rows list (used to jump to specific row), can be empty */
-        startingItemId?: string;
+        startingItemId?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<StockTakingRow, any>({
         path: `/api/warehouse/stocktaking-v1/${id}/rows`,
@@ -7531,17 +7578,17 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     deleteStockTakingRowByFilter: (
       id: number,
       query?: {
-        itemIds?: string[];
-        supplierNumbers?: string[];
-        stockPointIds?: string[];
-        stockLocationIds?: string[];
+        itemIds?: string[]
+        supplierNumbers?: string[]
+        stockPointIds?: string[]
+        stockLocationIds?: string[]
         /** @format date */
-        transactionDate?: string;
-        itemIdSearch?: string;
-        itemDescriptionSearch?: string;
-        excludeZeroBalanceItems?: boolean;
+        transactionDate?: string
+        itemIdSearch?: string
+        itemDescriptionSearch?: string
+        excludeZeroBalanceItems?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<number, any>({
         path: `/api/warehouse/stocktaking-v1/${id}/rows`,
@@ -7563,18 +7610,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     addStockTakingRowsByFilter: (
       id: number,
       query?: {
-        itemIds?: string[];
-        supplierNumbers?: string[];
-        stockPointIds?: string[];
-        stockLocationIds?: string[];
+        itemIds?: string[]
+        supplierNumbers?: string[]
+        stockPointIds?: string[]
+        stockLocationIds?: string[]
         /** @format date */
-        transactionDate?: string;
-        itemIdSearch?: string;
-        itemDescriptionSearch?: string;
-        excludeZeroBalanceItems?: boolean;
-        excludeNonInboundItems?: boolean;
+        transactionDate?: string
+        itemIdSearch?: string
+        itemDescriptionSearch?: string
+        excludeZeroBalanceItems?: boolean
+        excludeNonInboundItems?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<number, any>({
         path: `/api/warehouse/stocktaking-v1/${id}/addrows`,
@@ -7600,7 +7647,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   time = {
     /**
      * @description <p> <b>Response property descriptions:</b><br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>id</i></b> - The unique id of a basic common combination of article registrations. (The basic common combination means "user/purchase date/customer/project/cost center", which leads to a dialog with several article registrations.)<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>purchaseDate</i></b> - The date on which the article is purchased or registered for charging.<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>ownerId</i></b> - The user ID who creates the basic common combination.<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>version</i></b> - The version of the basic common combination (article dialog) being updated, which is used for handling the concurrency issue.<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b><i>registrationType</i></b> - It is always "ARTICLE" for article list endpoint.<br/> &nbsp;&nbsp;&nbsp;&nbsp;    <b>Sub-Class - ArticleRegistration:</b><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>id</i></b> - The unique id of an article registration.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>registrationId</i></b> - The id of the basic common combination.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>orderIndex</i></b> - the order index for the article registration in regard of the common combination.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>ownerId</i></b> - The user ID who owns the article registration.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>totalQuantity</i></b> - The quantity of the article.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>unitPrice</i></b> - The unit price connected to the article registration, which might be locked on an invoice/order basis or for non-invoiceable.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>unitCost</i></b> - The unit cost connected to the article registration, which might be locked on an invoice/order basis.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>invoiceBasisId</i></b> - The ID of invoice/order basis which is used for creating an invoice/order.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>nonInvoiceable</i></b> - If the article registration would be ignored for charging or not.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>note</i></b> - The note on the article registration.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>documentId</i></b> - The document ID which includes the article registration and is created in Invoicing application.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <b><i>documentType</i></b> - The document type which could be "invoice" or "order". </p>
@@ -7618,52 +7665,52 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          *  Example: 2022-11-01
          * @format date
          */
-        fromDate?: string;
+        fromDate?: string
         /**
          * The end date of the search span, the max of which should be 1 year back to the start date ("fromDate").
          *  Example: 2022-11-30
          * @format date
          */
-        toDate?: string;
+        toDate?: string
         /**
          * An array of customer IDs which are being used in database and in one-to-one relation with customer numbers.
          *  Example: 100,101,102
          */
-        customerIds?: string[];
+        customerIds?: string[]
         /**
          * An array of project IDs.
          *  Example: p1,p2,p3
          */
-        projectIds?: string[];
+        projectIds?: string[]
         /** If the article registration without project is included, or not. */
-        includeRegistrationsWithoutProject?: boolean;
+        includeRegistrationsWithoutProject?: boolean
         /**
          * An array of article IDs.
          *  Example: s1,s2,s3
          */
-        itemIds?: string[];
+        itemIds?: string[]
         /**
          * An array of cost center IDs.
          *  Example: cc1,cc2,cc3
          */
-        costCenterIds?: string[];
+        costCenterIds?: string[]
         /**
          * An array of user ids who own the article registrations.
          *  Example: 1,2,3
          */
-        ownerIds?: string[];
+        ownerIds?: string[]
         /** If a document is created with the article registration, or not. */
-        invoiced?: boolean;
+        invoiced?: boolean
         /** If the article registration is locked on an invoice basis, or not. */
-        inInvoiceBasis?: boolean;
+        inInvoiceBasis?: boolean
         /** If the article registration is internal, which is registered on an internal customer, or not. */
-        internalArticles?: boolean;
+        internalArticles?: boolean
         /** If the article registration has been moved to non-invoiceable, or not. */
-        nonInvoiceable?: boolean;
+        nonInvoiceable?: boolean
         /** If the price of the non-invoiceable article registration is included, or not. */
-        includeNonInvoiceablePrice?: boolean;
+        includeNonInvoiceablePrice?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<BaseArticleRegistration[], any>({
         path: `/api/time/articles-v1`,
@@ -7689,57 +7736,57 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          *  Example: 2022-11-01
          * @format date
          */
-        fromDate?: string;
+        fromDate?: string
         /**
          * The end date of the search span, the max of which should be 1 year back to the start date ("fromDate").
          *  Example: 2022-11-30
          * @format date
          */
-        toDate?: string;
+        toDate?: string
         /**
          * An array of customer IDs which are being used in database and in one-to-one relation with customer numbers.
          *  Example: 100,101,102
          */
-        customerIds?: string[];
+        customerIds?: string[]
         /**
          * An array of project IDs.
          *  Example: p1,p2,p3
          */
-        projectIds?: string[];
+        projectIds?: string[]
         /**
          * An array of service IDs.
          *  Example: s1,s2,s3
          */
-        serviceIds?: string[];
+        serviceIds?: string[]
         /**
          * An array of cost center IDs.
          *  Example: cc1,cc2,cc3
          */
-        costCenterIds?: string[];
+        costCenterIds?: string[]
         /**
          * An array of registration codes.
          *  Example: TID,SEM,FPE
          */
-        regCodes?: string[];
+        regCodes?: string[]
         /**
          * An array of user IDs that time/absence registrations belong to.
          *  Example: 1,2,3
          */
-        userIds?: string[];
+        userIds?: string[]
         /** If the time/absence registration without project is included, or not. */
-        includeRegistrationsWithoutProject?: boolean;
+        includeRegistrationsWithoutProject?: boolean
         /** If a document is created with the time/absence registration, or not. */
-        invoiced?: boolean;
+        invoiced?: boolean
         /** If the time/absence registration is locked on an invoice basis, or not. */
-        inInvoiceBasis?: boolean;
+        inInvoiceBasis?: boolean
         /** If the time/absence registration is internal, which is registered on an internal customer, or not. */
-        internalTime?: boolean;
+        internalTime?: boolean
         /** If the time/absence registration has been moved to non-invoiceable, or not. */
-        nonInvoiceable?: boolean;
+        nonInvoiceable?: boolean
         /** If the price of the non-invoiceable time/absence registration is included, or not. */
-        includeNonInvoiceableChargeHours?: boolean;
+        includeNonInvoiceableChargeHours?: boolean
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<DetailedRegistration[], any>({
         path: `/api/time/registrations-v2`,
@@ -7748,7 +7795,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   absencetransactions = {
     /**
      * @description Supports query-string parameters <strong>employeeid</strong> and <strong>date</strong> for filtering the result.
@@ -7762,11 +7809,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listAbsenceTransactionsResource: (
       query?: {
         /** filter by employee id */
-        employeeid?: string;
+        employeeid?: string
         /** filter by date */
-        date?: string;
+        date?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AbsenceTransactionListItemWrap, any>({
         path: `/3/absencetransactions`,
@@ -7787,7 +7834,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createAbsenceTransactionsResource: (
       absenceTransactionsPayload: AbsenceTransactionPayloadWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AbsenceTransactionSingleItemWrap, any>({
         path: `/3/absencetransactions`,
@@ -7827,7 +7874,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateAbsenceTransactionsResource: (
       id: string,
       absenceTransactionsPayload: AbsenceTransactionPayloadWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AbsenceTransactionSingleItemWrap, any>({
         path: `/3/absencetransactions/${id}`,
@@ -7890,7 +7937,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         | "TJL"
         | "UTB"
         | "VAB",
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AbsenceTransactionListItemWrap, any>({
         path: `/3/absencetransactions/${employeeId}/${date}/${code}`,
@@ -7898,7 +7945,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   accountcharts = {
     /**
      * @description Retrieves a list of all the available account charts.
@@ -7916,7 +7963,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   accounts = {
     /**
      * @description Retrieves the details of an account. You need to supply the unique account number that was returned when the account was created or retrieved from the list of accounts.
@@ -7952,9 +7999,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * financial year to update account against
          * @format int32
          */
-        financialyear?: number;
+        financialyear?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AccountSingleItemWrap, any>({
         path: `/3/accounts/${number}`,
@@ -7977,13 +8024,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     listAccountsResource: (
       query?: {
-        lastmodified?: string;
+        lastmodified?: string
         /** @format int32 */
-        sru?: number;
+        sru?: number
         /** field to sort returned list on */
-        sortby?: "number";
+        sortby?: "number"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AccountListItemWrap, any>({
         path: `/3/accounts/`,
@@ -8009,9 +8056,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * financial year to create account against
          * @format int32
          */
-        financialyear?: number;
+        financialyear?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AccountSingleItemWrap, any>({
         path: `/3/accounts/`,
@@ -8022,7 +8069,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   archive = {
     /**
      * @description If no path is provided the root will be returned. Providing fileId will return given file from fileattachments.
@@ -8036,11 +8083,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getFolder: (
       query?: {
         /** name of folder */
-        path?: string;
+        path?: string
         /** fileId from fileattachments */
-        fileid?: string;
+        fileid?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<FolderWrap, any>({
         path: `/3/archive/`,
@@ -8062,15 +8109,15 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     uploadFile: (
       data: {
         /** file to uplad */
-        file?: object;
+        file?: object
       },
       query?: {
         /** name of folder */
-        path?: string;
+        path?: string
         /** id of folder */
-        folderid?: string;
+        folderid?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<FolderFileRowWrap, any>({
         path: `/3/archive/`,
@@ -8094,9 +8141,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     removeByPath: (
       query?: {
         /** identifies file/folder to remove */
-        path?: string;
+        path?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/3/archive/`,
@@ -8118,9 +8165,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       id: string,
       query?: {
         /** fileId from fileattachments */
-        fileid?: string;
+        fileid?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<string, any>({
         path: `/3/archive/${id}`,
@@ -8144,7 +8191,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   articlefileconnections = {
     /**
      * @description The article file connections register can return a list of records or a single record. By specifying a FileId in the URL, a single record will be returned. Not specifying a FileId will return a list of records.
@@ -8174,7 +8221,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createArticleFileConnectionsResource: (
       articleFileConnection: ArticleFileConnectionWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ArticleFileConnectionWrap, any>({
         path: `/3/articlefileconnections/`,
@@ -8217,7 +8264,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   articles = {
     /**
      * @description Retrieves the details of an article. You need to supply the unique article number that was returned when the article was created or retrieved from the list of articles.
@@ -8245,7 +8292,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/3/articles/{ArticleNumber}
      * @response `200` `ArticleWrap` the updated article
      */
-    updateArticlesResourceArticles: (articleNumber: number, article: ArticleWrap, params: RequestParams = {}) =>
+    updateArticlesResourceArticles: (
+      articleNumber: number,
+      article: ArticleWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<ArticleWrap, any>({
         path: `/3/articles/${articleNumber}`,
         method: "PUT",
@@ -8283,27 +8334,27 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listArticlesResourceArticles: (
       query?: {
         /** possibility to filter supplier invoices */
-        filter?: "active" | "inactive";
+        filter?: "active" | "inactive"
         /** filter by article number */
-        articlenumber?: string;
+        articlenumber?: string
         /** filter by description */
-        description?: string;
+        description?: string
         /** filter by ean */
-        ean?: string;
+        ean?: string
         /** filter by supplier number */
-        suppliernumber?: string;
+        suppliernumber?: string
         /** filter by manufacturer */
-        manufacturer?: string;
+        manufacturer?: string
         /** filter by manufacturerarticlenumber */
-        manufacturerarticlenumber?: string;
+        manufacturerarticlenumber?: string
         /** filter by web shop */
-        webshop?: string;
+        webshop?: string
         /** filter by lastmodified */
-        lastmodified?: string;
+        lastmodified?: string
         /** field to sort returned list */
-        sortby?: "articlenumber" | "quantityinstock" | "reservedquantity" | "stockvalue";
+        sortby?: "articlenumber" | "quantityinstock" | "reservedquantity" | "stockvalue"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ArticleListItemList, any>({
         path: `/3/articles`,
@@ -8331,7 +8382,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   assetfileconnections = {
     /**
      * @description The asset register can return a list of assets or a single asset. By specifying a FileId in the URL, a single asset will be returned. Not specifying a FileId will return a list of records.
@@ -8359,7 +8410,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request POST:/3/assetfileconnections
      * @response `200` `AssetFileConnection` asset file connection
      */
-    createAssetFileConnectionResource: (assetFileConnection: CreateAssetFileConnection, params: RequestParams = {}) =>
+    createAssetFileConnectionResource: (
+      assetFileConnection: CreateAssetFileConnection,
+      params: RequestParams = {}
+    ) =>
       this.request<AssetFileConnection, any>({
         path: `/3/assetfileconnections`,
         method: "POST",
@@ -8384,7 +8438,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   assets = {
     /**
      * No description
@@ -8675,7 +8729,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   attendancetransactions = {
     /**
      * @description Supports query-string parameters <strong>employeeid</strong> and <strong>date</strong> for filtering the result.
@@ -8689,11 +8743,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listAttendanceTransactionsResource: (
       query?: {
         /** filter by employee id */
-        employeeid?: string;
+        employeeid?: string
         /** filter by date */
-        date?: string;
+        date?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AttendanceTransactionListItemList, any>({
         path: `/3/attendancetransactions`,
@@ -8714,7 +8768,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createAttendanceTransactionsResource: (
       attendanceTransaction: AttendanceTransactionWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AttendanceTransactionWrap, any>({
         path: `/3/attendancetransactions`,
@@ -8754,7 +8808,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateAttendanceTransactionsResource: (
       id: string,
       attendanceTransaction: AttendanceTransactionWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<AttendanceTransactionWrap, any>({
         path: `/3/attendancetransactions/${id}`,
@@ -8764,7 +8818,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   companyinformation = {
     /**
      * No description
@@ -8782,7 +8836,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   settings = {
     /**
      * No description
@@ -8817,7 +8871,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   contractaccruals = {
     /**
      * @description The contract accruals register can return a list of records or a single record. By specifying a DocumentNumber in the URL, a single record will be returned. Not specifying a DocumentNumber will return a list of records.
@@ -8884,7 +8938,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateContractAccrualsResource: (
       documentNumber: number,
       contractAccrual: ContractAccrualWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ContractAccrualWrap, any>({
         path: `/3/contractaccruals/${documentNumber}`,
@@ -8910,7 +8964,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   contracts = {
     /**
      * No description
@@ -8960,9 +9014,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listContractsResource: (
       query?: {
         /** possibility to filter contracts */
-        filter?: "active" | "inactive" | "finished";
+        filter?: "active" | "inactive" | "finished"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ContractListItemList, any>({
         path: `/3/contracts/`,
@@ -9041,7 +9095,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   contracttemplates = {
     /**
      * @description The contract template resource can return a list of records or a single record. By specifying a TemplateNumber in the URL, a single record will be returned. Not specifying a TemplateNumber will return a list of records.
@@ -9108,7 +9162,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateContractTemplatesResource: (
       templateNumber: number,
       contractTemplate: ContractTemplateWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ContractTemplateWrap, any>({
         path: `/3/contracttemplates/${templateNumber}`,
@@ -9118,7 +9172,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   costcenters = {
     /**
      * @description The cost centers register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
@@ -9207,7 +9261,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   currencies = {
     /**
      * @description The currency register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
@@ -9296,7 +9350,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   customerreferences = {
     /**
      * @description </p>
@@ -9310,9 +9364,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listCustomerReferencesResource: (
       query?: {
         /** possibility to filter by customer number */
-        customer?: string;
+        customer?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<CustomerReferenceWrap, any>({
         path: `/3/customerreferences/`,
@@ -9333,7 +9387,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createCustomerReferencesResource: (
       customerReferenceRow: CustomerReferenceCustomerReferenceRowWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<CustomerReferenceWrap, any>({
         path: `/3/customerreferences/`,
@@ -9373,7 +9427,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateCustomerReferencesResource: (
       customerReferenceRowId: string,
       customerReferenceRow: CustomerReferenceCustomerReferenceRowWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<CustomerWrap, any>({
         path: `/3/customerreferences/${customerReferenceRowId}`,
@@ -9399,7 +9453,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   customers = {
     /**
      * @description The customers are returned sorted by customer number with the lowest number appearing first.
@@ -9413,31 +9467,31 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listCustomersResource: (
       query?: {
         /** possibility to filter customers */
-        filter?: "active" | "inactive";
+        filter?: "active" | "inactive"
         /** filter by customer number */
-        customernumber?: string;
+        customernumber?: string
         /** filter by name */
-        name?: string;
+        name?: string
         /** filter by zip code */
-        zipcode?: string;
+        zipcode?: string
         /** filter by city */
-        city?: string;
+        city?: string
         /** filter by email */
-        email?: string;
+        email?: string
         /** filter by phone */
-        phone?: string;
+        phone?: string
         /** filter by organisation number */
-        organisationnumber?: string;
+        organisationnumber?: string
         /** filter by gln */
-        gln?: string;
+        gln?: string
         /** filter by gln delivery */
-        glndelivery?: string;
+        glndelivery?: string
         /** filter by last modified */
-        lastmodified?: string;
+        lastmodified?: string
         /** field to sort returned list */
-        sortby?: "customernumber" | "name";
+        sortby?: "customernumber" | "name"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<CustomerListItemList, any>({
         path: `/3/customers/`,
@@ -9517,7 +9571,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   employees = {
     /**
      * @description ScheduleId, MonthlySalary and HourlyPay reflect current values, all ScheduleIds are returned in DatedSchedules and all MonthlySalary and HourlyPay pairs are returned in DatedWages.
@@ -9590,7 +9644,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   euvatlimitregulation = {
     /**
      * No description
@@ -9607,9 +9661,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * eu vat limit regulation for year, if not provided than this will be set to current year
          * @format int32
          */
-        year?: number;
+        year?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<EUVatLimitRegulationWrap, any>({
         path: `/3/euvatlimitregulation/`,
@@ -9618,7 +9672,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   expenses = {
     /**
      * @description Retrieve expense codes.
@@ -9672,7 +9726,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   noxfinansinvoices = {
     /**
      * @description <p> When sending an invoice with Fortnox Finans you will get the invoice status returned if everything succeeded, if there were any problems, an error will be returned. <p> Please note that it can take 1 min to several hours before you will get back status, OCR number and link to PDF document, meanwhile the invoice will have status UNKNOWN or NOT_AUTHORIZED. <p> Fortnox Finans is currently only accepting invoices in SEK <p> <i>Parameters in the body:</i> <ul> <li><b>InvoiceNumber</b>: the invoice number for the invoice which should be sent with Fortnox Finans</li> <li><b>SendMethod</b>: how to send the invoice; EMAIL, LETTER, EINVOICE or NONE</li> <li><b>Service</b>: which service to use; LEDGERBASE or REMINDER</li> </ul> <p>
@@ -9798,7 +9852,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   financialyears = {
     /**
      * @description Add the query param to filter on specific date.
@@ -9815,9 +9869,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * date to filter on, for example 2020-06-30
          * @format date
          */
-        Date?: string;
+        Date?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<FinancialYearWrapList, any>({
         path: `/3/financialyears`,
@@ -9862,7 +9916,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   inbox = {
     /**
      * No description
@@ -9893,15 +9947,15 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     upload: (
       data: {
         /** file */
-        file?: object;
+        file?: object
       },
       query?: {
         /** folder id */
-        folderId?: string;
+        folderId?: string
         /** path */
-        path?: string;
+        path?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<FolderFileRowWrap, any>({
         path: `/3/inbox/`,
@@ -9944,7 +9998,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   invoiceaccruals = {
     /**
      * @description The invoice accruals register can return a list of records or a single record. By specifying a InvoiceNumber in the URL, a single record will be returned. Not specifying a InvoiceNumber will return a list of records.
@@ -10011,7 +10065,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateInvoiceAccrualsResource: (
       invoiceNumber: number,
       invoiceAccrual: InvoiceAccrualWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<InvoiceAccrualWrap, any>({
         path: `/3/invoiceaccruals/${invoiceNumber}`,
@@ -10037,7 +10091,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   invoicepayments = {
     /**
      * No description
@@ -10054,13 +10108,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * filter by invoice number
          * @format int32
          */
-        invoicenumber?: number;
+        invoicenumber?: number
         /** filter by last modified */
-        lastmodified?: string;
+        lastmodified?: string
         /** field to sort returned list on */
-        sortby?: "paymentdate";
+        sortby?: "paymentdate"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<InvoicePaymentListItemList, any>({
         path: `/3/invoicepayments/`,
@@ -10115,7 +10169,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/3/invoicepayments/{Number}
      * @response `200` `InvoicePaymentWrap` the updated invoice payment
      */
-    updateInvoicePaymentsResource: (number: string, invoicePayment: InvoicePaymentWrap, params: RequestParams = {}) =>
+    updateInvoicePaymentsResource: (
+      number: string,
+      invoicePayment: InvoicePaymentWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<InvoicePaymentWrap, any>({
         path: `/3/invoicepayments/${number}`,
         method: "PUT",
@@ -10157,7 +10215,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   invoices = {
     /**
      * No description
@@ -10185,7 +10243,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/3/invoices/{DocumentNumber}
      * @response `200` `InvoiceWrap` the updated invoice
      */
-    updateInvoicesResource: (documentNumber: string, invoicePayload: InvoicePayloadWrap, params: RequestParams = {}) =>
+    updateInvoicesResource: (
+      documentNumber: string,
+      invoicePayload: InvoicePayloadWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<InvoiceWrap, any>({
         path: `/3/invoices/${documentNumber}`,
         method: "PUT",
@@ -10206,37 +10268,37 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listInvoicesResource: (
       query?: {
         /** possibility to filter invoices */
-        filter?: "cancelled" | "fullypaid" | "unpaid" | "unpaidoverdue" | "unbooked";
-        costcenter?: string;
-        customername?: string;
-        customernumber?: string;
-        label?: string;
-        documentnumber?: string;
-        fromdate?: string;
-        todate?: string;
-        fromfinalpaydate?: string;
-        tofinalpaydate?: string;
-        lastmodified?: string;
-        notcompleted?: string;
-        ocr?: string;
-        ourreference?: string;
-        project?: string;
-        sent?: string;
-        externalinvoicereference1?: string;
-        externalinvoicereference2?: string;
-        yourreference?: string;
-        invoicetype?: string;
-        articlenumber?: string;
-        articledescription?: string;
-        currency?: string;
-        accountnumberfrom?: string;
-        accountnumberto?: string;
-        yourordernumber?: string;
-        credit?: string;
+        filter?: "cancelled" | "fullypaid" | "unpaid" | "unpaidoverdue" | "unbooked"
+        costcenter?: string
+        customername?: string
+        customernumber?: string
+        label?: string
+        documentnumber?: string
+        fromdate?: string
+        todate?: string
+        fromfinalpaydate?: string
+        tofinalpaydate?: string
+        lastmodified?: string
+        notcompleted?: string
+        ocr?: string
+        ourreference?: string
+        project?: string
+        sent?: string
+        externalinvoicereference1?: string
+        externalinvoicereference2?: string
+        yourreference?: string
+        invoicetype?: string
+        articlenumber?: string
+        articledescription?: string
+        currency?: string
+        accountnumberfrom?: string
+        accountnumberto?: string
+        yourordernumber?: string
+        credit?: string
         /** field to sort returned list on */
-        sortby?: "customername" | "customernumber" | "documentnumber" | "invoicedate" | "ocr" | "total";
+        sortby?: "customername" | "customernumber" | "documentnumber" | "invoicedate" | "ocr" | "total"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<InvoiceListItemWrap, any>({
         path: `/3/invoices`,
@@ -10447,7 +10509,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   labels = {
     /**
      * No description
@@ -10519,7 +10581,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   me = {
     /**
  * No description
@@ -10538,7 +10600,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   modesofpayments = {
     /**
      * @description The modes of payments register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
@@ -10611,7 +10673,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   offers = {
     /**
      * No description
@@ -10625,37 +10687,37 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listOffersResource: (
       query?: {
         /** possibility to filter offers */
-        filter?: "cancelled" | "expired" | "completed" | "notcompleted" | "ordercreated" | "ordernotcreated";
+        filter?: "cancelled" | "expired" | "completed" | "notcompleted" | "ordercreated" | "ordernotcreated"
         /** filter by customer name */
-        customername?: string;
+        customername?: string
         /** filter by customer number */
-        customernumber?: string;
+        customernumber?: string
         /** filter by document number */
-        documentnumber?: string;
+        documentnumber?: string
         /** filter by cost center */
-        costcenter?: string;
+        costcenter?: string
         /** filter by label */
-        label?: string;
+        label?: string
         /** filter by from date */
-        fromdate?: string;
+        fromdate?: string
         /** filter by to date */
-        todate?: string;
+        todate?: string
         /** filter by project */
-        project?: string;
+        project?: string
         /** filter by sent */
-        sent?: boolean;
+        sent?: boolean
         /** filter by not completed */
-        notcompleted?: boolean;
+        notcompleted?: boolean
         /** filter by our reference */
-        ourreference?: string;
+        ourreference?: string
         /** filter by your reference */
-        yourreference?: string;
+        yourreference?: string
         /** filter by last modified */
-        lastmodified?: string;
+        lastmodified?: string
         /** sort returned list of offers */
-        sortby?: "customerName" | "id" | "transactionDate" | "total";
+        sortby?: "customerName" | "id" | "transactionDate" | "total"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<OfferListItemList, any>({
         path: `/3/offers/`,
@@ -10836,7 +10898,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   orders = {
     /**
      * No description
@@ -10850,43 +10912,43 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listOrdersResource: (
       query?: {
         /** possibility to filter orders */
-        filter?: "cancelled" | "expired" | "invoicecreated" | "invoicenotcreated";
+        filter?: "cancelled" | "expired" | "invoicecreated" | "invoicenotcreated"
         /** filter by customer name */
-        customername?: string;
+        customername?: string
         /** filter by customer number */
-        customernumber?: string;
+        customernumber?: string
         /** filter by label */
-        label?: string;
+        label?: string
         /** filter by document number */
-        documentnumber?: string;
+        documentnumber?: string
         /** filter by external invoice reference 1 */
-        externalinvoicereference1?: string;
+        externalinvoicereference1?: string
         /** filter by external invoice reference 2 */
-        externalinvoicereference2?: string;
+        externalinvoicereference2?: string
         /** filter by from date */
-        fromdate?: string;
+        fromdate?: string
         /** filter by to date */
-        todate?: string;
+        todate?: string
         /** filter by cost center */
-        costcenter?: string;
+        costcenter?: string
         /** filter by project */
-        project?: string;
+        project?: string
         /** filter by sent */
-        sent?: boolean;
+        sent?: boolean
         /** filter by not completed */
-        notcompleted?: boolean;
+        notcompleted?: boolean
         /** filter by ourreference */
-        ourreference?: string;
+        ourreference?: string
         /** filter by your reference */
-        yourreference?: string;
+        yourreference?: string
         /** filter by lastmodified */
-        lastmodified?: string;
+        lastmodified?: string
         /** filter by order type */
-        ordertype?: string;
+        ordertype?: string
         /** field to sort returned list */
-        sortby?: "customername" | "customernumber" | "orderdate" | "documentnumber" | "total";
+        sortby?: "customername" | "customernumber" | "orderdate" | "documentnumber" | "total"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<OrderListItemList, any>({
         path: `/3/orders/`,
@@ -11050,7 +11112,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   predefinedaccounts = {
     /**
      * No description
@@ -11098,7 +11160,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updatePredefinedAccountsResource: (
       name: string,
       predefinedAccount: PredefinedAccountWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PredefinedAccountWrap, any>({
         path: `/3/predefinedaccounts/${name}`,
@@ -11108,7 +11170,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   predefinedvoucherseries = {
     /**
      * No description
@@ -11156,7 +11218,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updatePredefinedVoucherSeriesResource: (
       name: string,
       predefinedVoucherSeries: PredefinedVoucherSeriesWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PredefinedVoucherSeriesWrap, any>({
         path: `/3/predefinedvoucherseries/${name}`,
@@ -11166,7 +11228,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   pricelists = {
     /**
      * @description The price lists register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
@@ -11239,7 +11301,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   prices = {
     /**
      * No description
@@ -11250,7 +11312,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/3/prices/{PriceList}/{ArticleNumber}/{FromQuantity}
      * @response `200` `PriceWrap` the price for a specified article
      */
-    getPricesResource: (priceList: string, articleNumber: string, fromQuantity: number, params: RequestParams = {}) =>
+    getPricesResource: (
+      priceList: string,
+      articleNumber: string,
+      fromQuantity: number,
+      params: RequestParams = {}
+    ) =>
       this.request<PriceWrap, any>({
         path: `/3/prices/${priceList}/${articleNumber}/${fromQuantity}`,
         method: "GET",
@@ -11272,7 +11339,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       articleNumber: string,
       fromQuantity: number,
       price: PriceWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<PriceWrap, any>({
         path: `/3/prices/${priceList}/${articleNumber}/${fromQuantity}`,
@@ -11295,7 +11362,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       priceList: string,
       articleNumber: string,
       fromQuantity: number,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/3/prices/${priceList}/${articleNumber}/${fromQuantity}`,
@@ -11346,7 +11413,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/3/prices/{PriceList}/{ArticleNumber}
      * @response `200` `PriceWrap` the updated price
      */
-    updatePricesResource1: (priceList: string, articleNumber: string, price: PriceWrap, params: RequestParams = {}) =>
+    updatePricesResource1: (
+      priceList: string,
+      articleNumber: string,
+      price: PriceWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<PriceWrap, any>({
         path: `/3/prices/${priceList}/${articleNumber}`,
         method: "PUT",
@@ -11373,7 +11445,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   printtemplates = {
     /**
      * No description
@@ -11391,7 +11463,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   projects = {
     /**
      * No description
@@ -11480,7 +11552,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   salarytransactions = {
     /**
      * @description Supports query-string parameters <b>employeeid</b> and <b>date</b> for filtering the result.
@@ -11494,14 +11566,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listSalaryTransactionsResource: (
       query?: {
         /** filter on employeeId */
-        employeeId?: string;
+        employeeId?: string
         /**
          * filter on date
          * @format date
          */
-        date?: string;
+        date?: string
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SalaryTransactionListItemList, any>({
         path: `/3/salarytransactions`,
@@ -11520,7 +11592,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request POST:/3/salarytransactions
      * @response `200` `SalaryTransactionWrap` the created salary transaction
      */
-    createSalaryTransactionsResource: (salaryTransaction: SalaryTransactionWrap, params: RequestParams = {}) =>
+    createSalaryTransactionsResource: (
+      salaryTransaction: SalaryTransactionWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<SalaryTransactionWrap, any>({
         path: `/3/salarytransactions`,
         method: "POST",
@@ -11559,7 +11634,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateSalaryTransactionsResource: (
       salaryRow: number,
       salaryTransaction: SalaryTransactionWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SalaryTransactionWrap, any>({
         path: `/3/salarytransactions/${salaryRow}`,
@@ -11586,7 +11661,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   scheduletimes = {
     /**
      * No description
@@ -11618,7 +11693,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       employeeId: string,
       date: string,
       scheduleTime: ScheduleTimeWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<ScheduleTimeWrap, any>({
         path: `/3/scheduletimes/${employeeId}/${date}`,
@@ -11645,7 +11720,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   sie = {
     /**
      * @description Retrieves a SIE file as streamed content
@@ -11663,9 +11738,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * financialYear
          * @format int32
          */
-        financialYear?: number;
+        financialYear?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<any, void>({
         path: `/3/sie/${type}`,
@@ -11673,7 +11748,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         query: query,
         ...params,
       }),
-  };
+  }
   supplierinvoiceaccruals = {
     /**
      * @description The supplier invoice accruals register can return a list of records or a single record. By specifying a SupplierInvoiceNumber in the URL, a single record will be returned. Not specifying a SupplierInvoiceNumber will return a list of records.
@@ -11703,7 +11778,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createSupplierInvoiceAccrualsResource: (
       supplierInvoiceAccrual: SupplierInvoiceAccrualWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoiceAccrualWrap, any>({
         path: `/3/supplierinvoiceaccruals/`,
@@ -11743,7 +11818,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateSupplierInvoiceAccrualsResource: (
       supplierInvoiceNumber: number,
       supplierInvoiceAccrual: SupplierInvoiceAccrualWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoiceAccrualWrap, any>({
         path: `/3/supplierinvoiceaccruals/${supplierInvoiceNumber}`,
@@ -11769,7 +11844,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   supplierinvoiceexternalurlconnections = {
     /**
      * No description
@@ -11800,7 +11875,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateSupplierInvoiceExternalUrlConnectionsResource: (
       id: number,
       request: SupplierInvoiceExternalURLConnectionUpdate,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoiceExternalURLConnectionSingle, any>({
         path: `/3/supplierinvoiceexternalurlconnections/${id}`,
@@ -11837,7 +11912,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createSupplierInvoiceExternalUrlConnectionsResource: (
       request: SupplierInvoiceExternalURLConnectionUpdate,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoiceExternalURLConnectionSingle, any>({
         path: `/3/supplierinvoiceexternalurlconnections`,
@@ -11846,7 +11921,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   supplierinvoicefileconnections = {
     /**
      * @description The supplier invoice file connections register can return a list of records or a single record. By specifying a FileId in the URL, a single record will be returned. Not specifying a FileId will return a list of records.
@@ -11876,7 +11951,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createSupplierInvoiceFileConnectionsResource: (
       fileConnection: SupplierInvoiceFileConnectionWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoiceFileConnectionWrap, any>({
         path: `/3/supplierinvoicefileconnections/`,
@@ -11919,7 +11994,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   supplierinvoicepayments = {
     /**
      * No description
@@ -11949,7 +12024,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createSupplierInvoicePaymentsResource: (
       supplierInvoicePayment: SupplierInvoicePaymentWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoicePaymentWrap, any>({
         path: `/3/supplierinvoicepayments/`,
@@ -11989,7 +12064,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateSupplierInvoicePaymentsResource: (
       number: number,
       supplierInvoicePayment: SupplierInvoicePaymentWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoicePaymentWrap, any>({
         path: `/3/supplierinvoicepayments/${number}`,
@@ -12032,7 +12107,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   supplierinvoices = {
     /**
      * No description
@@ -12053,9 +12128,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
           | "unpaidoverdue"
           | "unbooked"
           | "pendingpayment"
-          | "authorizepending";
+          | "authorizepending"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoiceListItemWrap, any>({
         path: `/3/supplierinvoices/`,
@@ -12113,7 +12188,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     updateSupplierInvoicesResource: (
       givenNumber: number,
       supplierInvoice: SupplierInvoiceWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SupplierInvoiceWrap, any>({
         path: `/3/supplierinvoices/${givenNumber}`,
@@ -12208,7 +12283,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   suppliers = {
     /**
      * @description The supplier register can return a list of records or a single record. By specifying a SupplierNumber in the URL, a single record will be returned. Not specifying a SupplierNumber will return a list of records.
@@ -12281,7 +12356,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   taxreductions = {
     /**
      * No description
@@ -12295,9 +12370,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     listTaxReductionsResource: (
       query?: {
         /** possibility to filter tax reductions */
-        filter?: "invoices" | "orders" | "offers";
+        filter?: "invoices" | "orders" | "offers"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<TaxReductionListItemList, any>({
         path: `/3/taxreductions`,
@@ -12377,7 +12452,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   termsofdeliveries = {
     /**
      * @description The terms of deliveries register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
@@ -12441,7 +12516,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/3/termsofdeliveries/{Code}
      * @response `200` `TermsOfDeliveryWrap` the updated terms of delivery
      */
-    updateTermsOfDeliveriesResource: (code: string, termsOfDelivery: TermsOfDeliveryWrap, params: RequestParams = {}) =>
+    updateTermsOfDeliveriesResource: (
+      code: string,
+      termsOfDelivery: TermsOfDeliveryWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<TermsOfDeliveryWrap, any>({
         path: `/3/termsofdeliveries/${code}`,
         method: "PUT",
@@ -12450,7 +12529,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   termsofpayments = {
     /**
      * No description
@@ -12514,7 +12593,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/3/termsofpayments/{Code}
      * @response `200` `TermsOfPaymentWrap` the updated term of payment
      */
-    updateTermsOfPaymentsResource: (code: string, termOfPayment: TermsOfPaymentWrap, params: RequestParams = {}) =>
+    updateTermsOfPaymentsResource: (
+      code: string,
+      termOfPayment: TermsOfPaymentWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<TermsOfPaymentWrap, any>({
         path: `/3/termsofpayments/${code}`,
         method: "PUT",
@@ -12539,7 +12622,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   emailsenders = {
     /**
      * No description
@@ -12569,7 +12652,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createTrustedEmailSendersResource: (
       trustedEmailSender: TrustedEmailSenderTrustedSenderWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<TrustedEmailSenderTrustedSenderWrap, any>({
         path: `/3/emailsenders/trusted`,
@@ -12595,7 +12678,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   units = {
     /**
      * @description The units register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
@@ -12684,7 +12767,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   vacationdebtbasis = {
     /**
      * No description
@@ -12702,7 +12785,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   voucherfileconnections = {
     /**
      * @description The voucher file connections register can return a list of records or a single record. By specifying a FileId in the URL, a single record will be returned. Not specifying a FileId will return a list of records.
@@ -12732,7 +12815,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     createVoucherFileConnectionsResource: (
       voucherFileConnection: VoucherFileConnectionWrap,
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<VoucherFileConnectionWrap, any>({
         path: `/3/voucherfileconnections/`,
@@ -12775,7 +12858,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   vouchers = {
     /**
      * No description
@@ -12794,9 +12877,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * filter on financial year
          * @format int32
          */
-        financialyear?: number;
+        financialyear?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<VoucherWrap, any>({
         path: `/3/vouchers/${voucherSeries}/${voucherNumber}`,
@@ -12821,9 +12904,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * filter on financial year
          * @format int32
          */
-        financialyear?: number;
+        financialyear?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<VoucherListItemList, any>({
         path: `/3/vouchers/`,
@@ -12849,9 +12932,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * Financial year id, used to determine which financial year the voucher is created in
          * @format int32
          */
-        financialyear?: number;
+        financialyear?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<VoucherWrap, any>({
         path: `/3/vouchers/`,
@@ -12879,9 +12962,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
          * filter on financial year
          * @format int32
          */
-        financialyear?: number;
+        financialyear?: number
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<VoucherListItemList, any>({
         path: `/3/vouchers/sublist/${voucherSeries}`,
@@ -12890,7 +12973,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   voucherseries = {
     /**
      * @description The voucher series register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
@@ -12954,7 +13037,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/3/voucherseries/{Code}
      * @response `200` `VoucherSeriesWrap` the updated voucher series
      */
-    updateVoucherSeriesResource: (code: string, voucherSeries: VoucherSeriesWrap, params: RequestParams = {}) =>
+    updateVoucherSeriesResource: (
+      code: string,
+      voucherSeries: VoucherSeriesWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<VoucherSeriesWrap, any>({
         path: `/3/voucherseries/${code}`,
         method: "PUT",
@@ -12963,7 +13050,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         format: "json",
         ...params,
       }),
-  };
+  }
   wayofdeliveries = {
     /**
      * @description The way of delivery register can return a list of records or a single record. By specifying a Code in the URL, a single record will be returned. Not specifying a Code will return a list of records.
@@ -13027,7 +13114,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/3/wayofdeliveries/{Code}
      * @response `200` `WayOfDeliveryWrap` the updated way of delivery
      */
-    updateWayOfDeliveriesResource: (code: string, wayOfDelivery: WayOfDeliveryWrap, params: RequestParams = {}) =>
+    updateWayOfDeliveriesResource: (
+      code: string,
+      wayOfDelivery: WayOfDeliveryWrap,
+      params: RequestParams = {}
+    ) =>
       this.request<WayOfDeliveryWrap, any>({
         path: `/3/wayofdeliveries/${code}`,
         method: "PUT",
@@ -13052,7 +13143,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
   fileattachments = {
     /**
      * No description
@@ -13066,11 +13157,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getAttachments: (
       query: {
         /** ids of the entities whose attachments should be fetched */
-        entityid: number[];
+        entityid: number[]
         /** type of the entities whose attachments should be fetched */
-        entitytype: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG";
+        entitytype: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<Attachment[], any>({
         path: `/api/fileattachments/attachments-v1`,
@@ -13111,11 +13202,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     getNumberOfAttachmentsForEntity: (
       query: {
         /** ids of the entities to look for number of attachments on */
-        entityids: number[];
+        entityids: number[]
         /** type of the entities  to look for number of attachments on */
-        entitytype: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG";
+        entitytype: "OF" | "O" | "F" | "C" | "LGR_IO" | "LGR_IG"
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<NumberOfAttachments[], any>({
         path: `/api/fileattachments/attachments-v1/numberofattachments`,
@@ -13177,5 +13268,5 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         method: "DELETE",
         ...params,
       }),
-  };
+  }
 }
