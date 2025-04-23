@@ -7,7 +7,8 @@
     "dev": "tsc --watch",
     "test": "nodemon test.js",
     "build": "tsc",
-    "openapi": "npx swagger-typescript-api -p https://apps.fortnox.se/api/apidocs/swagger-v1 -o ./src -n api.ts -r --axios --module-name-index 1"
+    "openapi": "npx swagger-typescript-api -p https://apps.fortnox.se/api/apidocs/swagger-v1 -o ./src -n api.ts -r --axios --module-name-index 1",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
