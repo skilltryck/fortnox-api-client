@@ -1,5 +1,5 @@
 {
-  "name": "@skilltryck/fortnox-api-client",
+  "name": "fortnox-api-client",
   "version": "1.1.1-custom",
   "description": "",
   "main": "dist/index.js",
