@@ -8275,7 +8275,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/3/articles/{ArticleNumber}
      * @response `200` `ArticleWrap` the existing article
      */
-    getArticlesResourceArticles: (articleNumber: number, params: RequestParams = {}) =>
+    getArticlesResourceArticles: (articleNumber: number | string, params: RequestParams = {}) =>
       this.request<ArticleWrap, any>({
         path: `/3/articles/${articleNumber}`,
         method: "GET",

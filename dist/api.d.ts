@@ -6386,7 +6386,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @request GET:/3/articles/{ArticleNumber}
          * @response `200` `ArticleWrap` the existing article
          */
-        getArticlesResourceArticles: (articleNumber: number, params?: RequestParams) => Promise<AxiosResponse<ArticleWrap, any>>;
+        getArticlesResourceArticles: (articleNumber: number | string, params?: RequestParams) => Promise<AxiosResponse<ArticleWrap, any>>;
         /**
          * @description Updates the specified article with the values provided in the properties. Any property not provided will be left unchanged. You need to supply the unique article number that was returned when the article was created or retrieved from the list of articles. Note that even though the article number is writeable you can not change the number of an existing article.
          *
