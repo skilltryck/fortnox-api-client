@@ -74,6 +74,7 @@ Object.defineProperty(exports, "FileBuffer", { enumerable: true, get: function (
 var https_1 = __importDefault(require("https"));
 var cacheable_lookup_1 = __importDefault(require("cacheable-lookup"));
 var form_data_1 = __importDefault(require("form-data"));
+var fs = require("fs");
 // DNS cache to prevent ENOTFOUND and other such issues
 var dnsCache = new cacheable_lookup_1.default();
 var dnsCacheInstalled = false;
@@ -84,20 +85,20 @@ var httpsAgent = new agentkeepalive_1.HttpsAgent({
     maxFreeSockets: 10,
     timeout: 30000,
     freeSocketTimeout: 4500,
-    socketActiveTTL: 60000
+    socketActiveTTL: 60000,
 });
 var FortnoxApiClient = /** @class */ (function () {
     function FortnoxApiClient(options, config) {
         if (config === void 0) { config = {}; }
         this.tokens = {};
         // Set default config
-        config.baseURL = config.baseURL || 'https://api.fortnox.se';
+        config.baseURL = config.baseURL || "https://api.fortnox.se";
         config.timeout = config.timeout || 120000;
         if (!options.clientId) {
-            throw new Error('Fortnox API Client error: Missing options.clientId');
+            throw new Error("Fortnox API Client error: Missing options.clientId");
         }
         if (!options.clientSecret) {
-            throw new Error('Fortnox API Client error: Missing options.clientSecret');
+            throw new Error("Fortnox API Client error: Missing options.clientSecret");
         }
         if (!options.accessToken && !options.refreshToken) {
             throw new Error("Fortnox API Client error: Missing accessToken and refreshToken in constructor (on of them is required)");
@@ -145,6 +146,30 @@ var FortnoxApiClient = /** @class */ (function () {
         this.installSecurityWorker();
         // Install axios error handler
         this.installErrorHandler();
+        // Logga alla requests
+        this.api.instance.interceptors.request.use(function (config) {
+            var _a;
+            // Log request details
+            var logFilePath = "./logs/fortnox_requests.log";
+            var ts = new Date().toISOString();
+            var method = ((_a = config.method) === null || _a === void 0 ? void 0 : _a.toUpperCase()) || "UNKNOWN";
+            var request = config.url || "UNKNOWN";
+            var requestData = config.data ? JSON.stringify(config.data, null, 2) : "UNKNOWN";
+            var logMessage = "".concat(ts, " ").concat(method, " ").concat(request, " ").concat(requestData, "\n");
+            fs.appendFileSync(logFilePath, logMessage, "utf8");
+            return config;
+        }, function (error) {
+            throw error;
+        });
+        // Add a response interceptor to log the response
+        this.api.instance.interceptors.response.use(function (response) {
+            var logFilePath = "./logs/fortnox_requests.log";
+            var responseLogMessage = "Response: ".concat(JSON.stringify(response.data, null, 2), "\n\n");
+            fs.appendFileSync(logFilePath, responseLogMessage, "utf8");
+            return response;
+        }, function (error) {
+            throw error;
+        });
     }
     // Add securityWorker as request interceptor because endpoints are not flagged as secure(?)
     FortnoxApiClient.prototype.installSecurityWorker = function () {
@@ -160,18 +185,18 @@ var FortnoxApiClient = /** @class */ (function () {
                     case 1:
                         securityConfig = _a.sent();
                         if (securityConfig === null || securityConfig === void 0 ? void 0 : securityConfig.headers) {
-                            config.headers.set('Authorization', securityConfig.headers.Authorization);
+                            config.headers.set("Authorization", securityConfig.headers.Authorization);
                         }
                         _a.label = 2;
                     case 2:
                         // // The API requires these headers to be set
                         if (config.data instanceof form_data_1.default) {
-                            config.headers.set('Content-Type', 'multipart/form-data');
+                            config.headers.set("Content-Type", "multipart/form-data");
                         }
                         else {
-                            config.headers.set('Content-Type', 'application/json');
+                            config.headers.set("Content-Type", "application/json");
                         }
-                        config.headers.set('Accept', 'application/json');
+                        config.headers.set("Accept", "application/json");
                         return [2 /*return*/, config];
                 }
             });
@@ -181,10 +206,20 @@ var FortnoxApiClient = /** @class */ (function () {
     };
     FortnoxApiClient.prototype.installErrorHandler = function () {
         this.api.instance.interceptors.response.use(function (response) { return response; }, function (error) {
+            var _a, _b, _c, _d, _e;
             if (error === null || error === void 0 ? void 0 : error.response) {
                 error.message =
-                    "Fortnox HTTP error ".concat(error.response.status, " (").concat(error.response.statusText, "): ") + JSON.stringify(error.response.data);
+                    "Fortnox HTTP error ".concat(error.response.status, " (").concat(error.response.statusText, "): ") +
+                        JSON.stringify(error.response.data);
             }
+            // Log error to a file
+            var logFilePath = "./logs/fortnox_error.log";
+            var ts = new Date().toISOString();
+            var method = ((_b = (_a = error.config) === null || _a === void 0 ? void 0 : _a.method) === null || _b === void 0 ? void 0 : _b.toUpperCase()) || "UNKNOWN";
+            var request = ((_c = error.config) === null || _c === void 0 ? void 0 : _c.url) || "UNKNOWN";
+            var requestData = ((_d = error.config) === null || _d === void 0 ? void 0 : _d.data) ? JSON.stringify(error.config.data, null, 2) : "UNKNOWN";
+            var errorMessage = "".concat(ts, " ").concat(method, " ").concat(request, " ").concat(requestData, " \nError: ").concat(error.message, " \n Response: ").concat(JSON.stringify(((_e = error.response) === null || _e === void 0 ? void 0 : _e.data) || {}, null, 2), "\n\n");
+            fs.appendFileSync(logFilePath, errorMessage, "utf8");
             throw error;
         });
     };
@@ -198,20 +233,21 @@ var FortnoxApiClient = /** @class */ (function () {
                             throw new Error("Fortnox API Client refreshTokens Error: Missing refreshToken");
                         }
                         params = new URLSearchParams({
-                            grant_type: 'refresh_token',
-                            refresh_token: this.tokens.refreshToken
+                            grant_type: "refresh_token",
+                            refresh_token: this.tokens.refreshToken,
                         });
                         return [4 /*yield*/, axios_1.default
-                                .post('https://apps.fortnox.se/oauth-v1/token', params, {
+                                .post("https://apps.fortnox.se/oauth-v1/token", params, {
                                 headers: {
-                                    'Content-Type': 'application/x-www-form-urlencoded',
-                                    Authorization: "Basic ".concat(Buffer.from("".concat(this.options.clientId, ":").concat(this.options.clientSecret)).toString('base64'))
-                                }
+                                    "Content-Type": "application/x-www-form-urlencoded",
+                                    Authorization: "Basic ".concat(Buffer.from("".concat(this.options.clientId, ":").concat(this.options.clientSecret)).toString("base64")),
+                                },
                             })
                                 .catch(function (error) {
                                 if (error === null || error === void 0 ? void 0 : error.response) {
                                     error.message =
-                                        "Fortnox HTTP error ".concat(error.response.status, " (").concat(error.response.statusText, "): ") + JSON.stringify(error.response.data);
+                                        "Fortnox HTTP error ".concat(error.response.status, " (").concat(error.response.statusText, "): ") +
+                                            JSON.stringify(error.response.data);
                                 }
                                 throw error;
                             })];
@@ -239,7 +275,7 @@ var FortnoxApiClient = /** @class */ (function () {
                     case 2:
                         axiosRequestConfig = {};
                         axiosRequestConfig.headers = {
-                            Authorization: "Bearer ".concat(fortnox.tokens.accessToken)
+                            Authorization: "Bearer ".concat(fortnox.tokens.accessToken),
                         };
                         return [2 /*return*/, axiosRequestConfig];
                 }
@@ -251,15 +287,15 @@ var FortnoxApiClient = /** @class */ (function () {
         if (!scope.length) {
             throw new Error("Fortnox API Client createAuthorizationUri Error: Missing scope");
         }
-        var authorizationUri = new URL('https://apps.fortnox.se/oauth-v1/auth');
-        authorizationUri.searchParams.append('client_id', clientId);
-        authorizationUri.searchParams.append('redirect_uri', redirectUri);
-        authorizationUri.searchParams.append('scope', scope.join(' '));
-        authorizationUri.searchParams.append('state', state);
-        authorizationUri.searchParams.append('access_type', 'offline');
-        authorizationUri.searchParams.append('response_type', 'code');
+        var authorizationUri = new URL("https://apps.fortnox.se/oauth-v1/auth");
+        authorizationUri.searchParams.append("client_id", clientId);
+        authorizationUri.searchParams.append("redirect_uri", redirectUri);
+        authorizationUri.searchParams.append("scope", scope.join(" "));
+        authorizationUri.searchParams.append("state", state);
+        authorizationUri.searchParams.append("access_type", "offline");
+        authorizationUri.searchParams.append("response_type", "code");
         if (accountType) {
-            authorizationUri.searchParams.append('account_type', accountType);
+            authorizationUri.searchParams.append("account_type", accountType);
         }
         return authorizationUri.toString();
     };
@@ -270,27 +306,31 @@ var FortnoxApiClient = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         params = new URLSearchParams({
-                            grant_type: 'authorization_code',
+                            grant_type: "authorization_code",
                             code: code,
-                            redirect_uri: redirectUri
+                            redirect_uri: redirectUri,
                         });
                         return [4 /*yield*/, axios_1.default
-                                .post('https://apps.fortnox.se/oauth-v1/token', params, {
+                                .post("https://apps.fortnox.se/oauth-v1/token", params, {
                                 headers: {
-                                    'Content-Type': 'application/x-www-form-urlencoded',
-                                    Authorization: "Basic ".concat(Buffer.from("".concat(clientId, ":").concat(clientSecret)).toString('base64'))
-                                }
+                                    "Content-Type": "application/x-www-form-urlencoded",
+                                    Authorization: "Basic ".concat(Buffer.from("".concat(clientId, ":").concat(clientSecret)).toString("base64")),
+                                },
                             })
                                 .catch(function (error) {
                                 if (error === null || error === void 0 ? void 0 : error.response) {
                                     error.message =
-                                        "Fortnox HTTP error ".concat(error.response.status, " (").concat(error.response.statusText, "): ") + JSON.stringify(error.response.data);
+                                        "Fortnox HTTP error ".concat(error.response.status, " (").concat(error.response.statusText, "): ") +
+                                            JSON.stringify(error.response.data);
                                 }
                                 throw error;
                             })];
                     case 1:
                         accessTokenRequest = _a.sent();
-                        return [2 /*return*/, { accessToken: accessTokenRequest.data.access_token, refreshToken: accessTokenRequest.data.refresh_token }];
+                        return [2 /*return*/, {
+                                accessToken: accessTokenRequest.data.access_token,
+                                refreshToken: accessTokenRequest.data.refresh_token,
+                            }];
                 }
             });
         });
@@ -317,7 +357,7 @@ var FortnoxApiClientInstance = /** @class */ (function (_super) {
                 if (isFileType) {
                     formData.append(key, formItem.buffer, {
                         filename: formItem.name,
-                        contentType: formItem.type
+                        contentType: formItem.type,
                     });
                 }
                 else {
