@@ -811,6 +811,7 @@ export interface PriceWrap {
 
 export interface CustomerListItemList {
   Customers?: CustomerListItem[]
+  MetaInformation?: MetaInformation
 }
 
 export interface ProjectWrap {
