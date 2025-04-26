@@ -7089,6 +7089,8 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
             lastmodified?: string;
             /** field to sort returned list */
             sortby?: "customernumber" | "name";
+            /** filter by page */
+            page?: number;
         }, params?: RequestParams) => Promise<AxiosResponse<CustomerListItemList, any>>;
         /**
          * @description The created customer will be returned if everything succeeded, if there was any problems an error will be returned.
