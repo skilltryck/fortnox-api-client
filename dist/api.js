@@ -3093,7 +3093,7 @@ var Api = /** @class */ (function (_super) {
              */
             preview: function (documentNumber, params) {
                 if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/3/invoices/".concat(documentNumber, "/preview"), method: "GET" }, params));
+                return _this.request(__assign({ path: "/3/invoices/".concat(documentNumber, "/preview"), method: "GET", responseType: "arraybuffer" }, params));
             },
             /**
              * No description

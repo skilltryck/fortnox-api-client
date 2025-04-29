@@ -4906,6 +4906,7 @@ export interface FullRequestParams extends Omit<AxiosRequestConfig, "data" | "pa
     format?: ResponseType;
     /** request body */
     body?: unknown;
+    responseType?: ResponseType;
 }
 export type RequestParams = Omit<FullRequestParams, "body" | "method" | "query" | "path">;
 export interface ApiConfig<SecurityDataType = unknown> extends Omit<AxiosRequestConfig, "data" | "cancelToken"> {
