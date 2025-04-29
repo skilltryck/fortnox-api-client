@@ -5674,6 +5674,8 @@ export interface FullRequestParams
   format?: ResponseType
   /** request body */
   body?: unknown
+
+  responseType?: ResponseType
 }
 
 export type RequestParams = Omit<FullRequestParams, "body" | "method" | "query" | "path">
@@ -10478,6 +10480,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       this.request<string, any>({
         path: `/3/invoices/${documentNumber}/preview`,
         method: "GET",
+        responseType: "arraybuffer",
         ...params,
       }),
 
