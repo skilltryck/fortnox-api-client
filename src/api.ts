@@ -10483,16 +10483,17 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     //     responseType: "arraybuffer",
     //     ...params,
     //   }),
-      preview: async (documentNumber: string, params: RequestParams = {}) => {
-        const response = await this.request<ArrayBuffer, any>({
-          path: `/3/invoices/${documentNumber}/preview`,
-          method: "GET",
-          responseType: "arraybuffer",
-          ...params,
-        })
+    preview: async (documentNumber: string, params: RequestParams = {}) => {
+      const response = await this.request<ArrayBuffer, any>({
+        path: `/3/invoices/${documentNumber}/preview`,
+        method: "GET",
+        responseType: "arraybuffer",
+        decompress: false,
+        ...params,
+      })
 
-        return Buffer.from(response.data)
-      }
+      return Buffer.from(response.data)
+    },
 
     /**
      * No description
