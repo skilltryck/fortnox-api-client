@@ -10487,8 +10487,6 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       const response = await this.request<ArrayBuffer, any>({
         path: `/3/invoices/${documentNumber}/preview`,
         method: "GET",
-        responseType: "arraybuffer",
-        decompress: false,
         ...params,
       })
 

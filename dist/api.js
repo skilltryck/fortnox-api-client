@@ -3104,7 +3104,7 @@ var Api = /** @class */ (function (_super) {
                     var response;
                     return __generator(this, function (_a) {
                         switch (_a.label) {
-                            case 0: return [4 /*yield*/, this.request(__assign({ path: "/3/invoices/".concat(documentNumber, "/preview"), method: "GET", responseType: "arraybuffer", decompress: false }, params))];
+                            case 0: return [4 /*yield*/, this.request(__assign({ path: "/3/invoices/".concat(documentNumber, "/preview"), method: "GET" }, params))];
                             case 1:
                                 response = _a.sent();
                                 return [2 /*return*/, Buffer.from(response.data)];
