@@ -3091,10 +3091,37 @@ var Api = /** @class */ (function (_super) {
              * @request GET:/3/invoices/{DocumentNumber}/preview
              * @response `200` `string` the invoice as PDF
              */
+            // preview: (documentNumber: string, params: RequestParams = {}) =>
+            //   this.request<string, any>({
+            //     path: `/3/invoices/${documentNumber}/preview`,
+            //     method: "GET",
+            //     responseType: "arraybuffer",
+            //     ...params,
+            //   }),
             preview: function (documentNumber, params) {
                 if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/3/invoices/".concat(documentNumber, "/preview"), method: "GET", responseType: "arraybuffer" }, params));
-            },
+                return __awaiter(_this, void 0, void 0, function () {
+                    var response;
+                    return __generator(this, function (_a) {
+                        switch (_a.label) {
+                            case 0: return [4 /*yield*/, this.request(__assign({ path: "/3/invoices/".concat(documentNumber, "/preview"), method: "GET", responseType: "arraybuffer" }, params))];
+                            case 1:
+                                response = _a.sent();
+                                return [2 /*return*/, Buffer.from(response.data)];
+                        }
+                    });
+                });
+            }
+            /**
+             * No description
+             *
+             * @tags InvoicesResource
+             * @name EPrint
+             * @summary Send an invoice as e-print
+             * @request GET:/3/invoices/{DocumentNumber}/eprint
+             * @response `200` `InvoiceWrap` sent invoice
+             */
+            ,
             /**
              * No description
              *

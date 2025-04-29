@@ -10476,13 +10476,23 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/3/invoices/{DocumentNumber}/preview
      * @response `200` `string` the invoice as PDF
      */
-    preview: (documentNumber: string, params: RequestParams = {}) =>
-      this.request<string, any>({
-        path: `/3/invoices/${documentNumber}/preview`,
-        method: "GET",
-        responseType: "arraybuffer",
-        ...params,
-      }),
+    // preview: (documentNumber: string, params: RequestParams = {}) =>
+    //   this.request<string, any>({
+    //     path: `/3/invoices/${documentNumber}/preview`,
+    //     method: "GET",
+    //     responseType: "arraybuffer",
+    //     ...params,
+    //   }),
+      preview: async (documentNumber: string, params: RequestParams = {}) => {
+        const response = await this.request<ArrayBuffer, any>({
+          path: `/3/invoices/${documentNumber}/preview`,
+          method: "GET",
+          responseType: "arraybuffer",
+          ...params,
+        })
+
+        return Buffer.from(response.data)
+      }
 
     /**
      * No description

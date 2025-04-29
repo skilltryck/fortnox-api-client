@@ -1,3 +1,4 @@
+/// <reference types="node" />
 export interface Delete {
     Date?: string;
 }
@@ -7672,7 +7673,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @request GET:/3/invoices/{DocumentNumber}/preview
          * @response `200` `string` the invoice as PDF
          */
-        preview: (documentNumber: string, params?: RequestParams) => Promise<AxiosResponse<string, any>>;
+        preview: (documentNumber: string, params?: RequestParams) => Promise<Buffer>;
         /**
          * No description
          *
